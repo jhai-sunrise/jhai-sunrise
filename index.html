@@ -226,10 +226,10 @@ const DEPTS=[
 const STATIC_SOPS={
   "SFA Project Management":[
     {
-      sop_title:"SFA Project — Full PM Workflow (End-to-End)",
+      sop_title:"SFA Project Setup & Pre-Part 1 Workflow",
       role:"Team Member",
-      tags:"sfa,new project,documents,project id,ilsfa,recipient verification,zoho,crm",
-      summary:"Complete end-to-end project management workflow for SFA projects — from initial assignment all the way through Part 1, installation, inspection, PTO, and Part 2.",
+      tags:"sfa,new project,documents,project id,ilsfa,recipient verification,zoho,crm,setup,pre-part 1",
+      summary:"Everything from initial project assignment through sending the Site Suitability Report — before Part 1 submission begins.",
       department:"SFA Project Management",
       status:"active",
       steps:[
@@ -716,77 +716,10 @@ const STATIC_SOPS={
           </div>`
         },
         {
-          title:"Send Permit Application Request",
-          detail:`Send a request to the <strong>"Permit Application"</strong> Google Chat group with the following information:<br><br>
-          <div class="steps">
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Name</strong></div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>CRM Link</strong> (direct link to the project record in Zoho)</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>HOA Info</strong> (include HOA contact details if applicable)</div></div>
-          </div>`
-        },
-        {
-          title:"Send IC Application Request",
-          detail:`Send a request to the <strong>"Interconnection Application Request"</strong> Google Chat group with the following information:<br><br>
-          <div class="steps">
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Name</strong></div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>CRM Link</strong> (direct link to the project record in Zoho)</div></div>
-          </div>`
-        },
-        {
-          title:"Confirm Installation Date with Homeowner",
-          detail:`The <strong>Install Team</strong> will inform the PM of the proposed installation date.<br><br>
-          Once received, the <strong>Project Manager</strong> must confirm the installation date directly with the <strong>Homeowner (HO)</strong> to make sure they are available and prepared for the visit.`
-        },
-        {
-          title:"Post-Installation — Layout Changes & Placard Decision",
-          detail:`By the <strong>end of the installation day</strong>, the <strong>Design Team</strong> will inform the PM of one of the following:<br><br>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <div style="padding:9px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 7px 7px 0;font-size:12.5px;color:#065F46">
-              &#10003; <strong>No changes</strong> — proceed with Placard ordering as-is
-            </div>
-            <div style="padding:9px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 7px 7px 0;font-size:12.5px;color:#78350F">
-              &#9998; <strong>Layout changes made</strong> — wait for the updated planset before ordering the Placard
-            </div>
-          </div>`
-        },
-        {
-          title:"Order the Placard",
-          detail:`Once confirmed by the Design Team, send an email to order the Placard:<br><br>
-          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
-            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Email Details</div>
-            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
-              <div><span style="color:var(--muted);min-width:50px;display:inline-block">To:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-size:11px;font-family:'JetBrains Mono',monospace">Branden@fcdlabels.com, order@familycustomdesigns.com</code></div>
-              <div><span style="color:var(--muted);min-width:50px;display:inline-block">CC:</span> Drew, Hester, SPM, Judy, Jhai</div>
-              <div><span style="color:var(--muted);min-width:50px;display:inline-block">Attach:</span> Stamped Planset</div>
-            </div>
-          </div>
-          <strong>Email Template:</strong><br><br>
-          <div style="padding:14px 16px;background:var(--bg);border-radius:8px;border:1px solid var(--border);font-size:12.5px;line-height:1.9;color:var(--text)">
-            <div style="margin-bottom:6px">Hi Team,</div>
-            <div style="margin-bottom:6px">Good day!</div>
-            <div style="margin-bottom:6px">I would like to request the ordering of a placard for the attached stamped plan set.</div>
-            <div style="margin-bottom:6px">If possible, could you please prioritize this project? The placard will be required for the upcoming inspection.</div>
-            <div style="margin-bottom:2px"><strong>Installer:</strong> Sunrise Solar</div>
-            <div style="margin-bottom:2px"><strong>Name:</strong> [Homeowner's Full Name]</div>
-            <div style="margin-bottom:6px"><strong>Shipping Address:</strong> 825 W 75th St, Unit E, Willowbrook, IL 60527</div>
-            <div style="margin-bottom:6px">[Add any additional notes if required by the AHJ or inspector]</div>
-            <div style="margin-bottom:6px">Please let us know if this is possible.</div>
-            <div>Thank you!</div>
-          </div>
-          <div style="margin-top:10px;padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
-            The <strong>shipping address is always Sunrise Solar's office</strong> (825 W 75th St, Unit E, Willowbrook, IL 60527) — never the homeowner's address.
-          </div>`
-        },
-        {
-          title:"Confirm Inspection Date with Homeowner",
-          detail:`The <strong>Install Team</strong> will inform the PM of the proposed inspection date.<br><br>
-          Once received, the <strong>Project Manager</strong> must confirm the inspection date directly with the <strong>Homeowner (HO)</strong> to make sure they are available for the visit.`
-        },
-        {
-          title:"Part 2 Submittal — Await SPM Go Signal",
-          detail:`Once <strong>PTO (Permission to Operate) is approved</strong>, the <strong>Senior Project Manager (SPM)</strong> will give the go signal to submit Part 2 in the ILSFA Portal.<br><br>
-          <div style="padding:8px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 6px 6px 0;font-size:12px;color:#065F46">
-            Do <strong>not</strong> submit Part 2 without the SPM's confirmation — wait for their go signal after PTO approval.
+          title:"➡ Proceed to Part 1 Submittal — ILSFA Portal",
+          detail:`<div style="padding:12px 16px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:13px;color:#14532D;line-height:1.7">
+            ✅ Pre-Part 1 setup is complete!<br><br>
+            Now proceed to the <strong>Part 1 Submittal — ILSFA Portal</strong> SOP card below to begin the Part 1 submission process.
           </div>`
         }
       ],
@@ -1028,6 +961,103 @@ const STATIC_SOPS={
         }
       ],
       note:"Always verify all signatures are on documents before uploading. For Pilot Projects, make sure to create exactly 3 mitigations under Electrical with Minor severity."
+    },
+    {
+      sop_title:"SFA Post-Part 1: Installation to PTO Workflow",
+      role:"Team Member",
+      tags:"sfa,post part 1,installation,permit,ic application,placard,inspection,pto,pjm,install",
+      summary:"Covers everything from permit and IC application through installation, inspection, and PTO — after Part 1 has been approved and batched.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"⚠ Before Proceeding — Part 1 Must Be Approved & Batched",
+          detail:`<div style="padding:12px 16px;background:#FEF3C7;border:1px solid #FDE68A;border-radius:8px;font-size:13px;color:#78350F;line-height:1.8">
+            <strong>Important:</strong> Before starting any steps in this workflow, make sure:<br><br>
+            <ul>
+              <li>Part 1 has been <strong>submitted successfully</strong> in the ILSFA Portal</li>
+              <li>Part 1 has been <strong>Batched</strong></li>
+              <li>It has been <strong>confirmed that ILSFA funds have been received</strong></li>
+            </ul><br>
+            The <strong>Project Liaison for Part 1</strong> will give the <strong>Go Signal</strong> to proceed. Do not start this workflow until that confirmation is received.
+          </div>`
+        },
+        {
+          title:"Send Permit Application Request",
+          detail:`Send a request to the <strong>"Permit Application"</strong> Google Chat group with the following information:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Name</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>CRM Link</strong> (direct link to the project record in Zoho)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>HOA Info</strong> (include HOA contact details if applicable)</div></div>
+          </div>`
+        },
+        {
+          title:"Send IC Application Request",
+          detail:`Send a request to the <strong>"Interconnection Application Request"</strong> Google Chat group with the following information:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Name</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>CRM Link</strong> (direct link to the project record in Zoho)</div></div>
+          </div>`
+        },
+        {
+          title:"Confirm Installation Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed installation date.<br><br>
+          Once received, the <strong>Project Manager</strong> must confirm the installation date directly with the <strong>Homeowner (HO)</strong> to make sure they are available and prepared for the visit.`
+        },
+        {
+          title:"Post-Installation — Layout Changes & Placard Decision",
+          detail:`By the <strong>end of the installation day</strong>, the <strong>Design Team</strong> will inform the PM of one of the following:<br><br>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:9px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 7px 7px 0;font-size:12.5px;color:#065F46">
+              &#10003; <strong>No changes</strong> — proceed with Placard ordering as-is
+            </div>
+            <div style="padding:9px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 7px 7px 0;font-size:12.5px;color:#78350F">
+              &#9998; <strong>Layout changes made</strong> — wait for the updated planset before ordering the Placard
+            </div>
+          </div>`
+        },
+        {
+          title:"Order the Placard",
+          detail:`Once confirmed by the Design Team, send an email to order the Placard:<br><br>
+          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Email Details</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:50px;display:inline-block">To:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-size:11px;font-family:'JetBrains Mono',monospace">Branden@fcdlabels.com, order@familycustomdesigns.com</code></div>
+              <div><span style="color:var(--muted);min-width:50px;display:inline-block">CC:</span> Drew, Hester, SPM, Judy, Jhai</div>
+              <div><span style="color:var(--muted);min-width:50px;display:inline-block">Attach:</span> Stamped Planset</div>
+            </div>
+          </div>
+          <strong>Email Template:</strong><br><br>
+          <div style="padding:14px 16px;background:var(--bg);border-radius:8px;border:1px solid var(--border);font-size:12.5px;line-height:1.9;color:var(--text)">
+            <div style="margin-bottom:6px">Hi Team,</div>
+            <div style="margin-bottom:6px">Good day!</div>
+            <div style="margin-bottom:6px">I would like to request the ordering of a placard for the attached stamped plan set.</div>
+            <div style="margin-bottom:6px">If possible, could you please prioritize this project? The placard will be required for the upcoming inspection.</div>
+            <div style="margin-bottom:2px"><strong>Installer:</strong> Sunrise Solar</div>
+            <div style="margin-bottom:2px"><strong>Name:</strong> [Homeowner's Full Name]</div>
+            <div style="margin-bottom:6px"><strong>Shipping Address:</strong> 825 W 75th St, Unit E, Willowbrook, IL 60527</div>
+            <div style="margin-bottom:6px">[Add any additional notes if required by the AHJ or inspector]</div>
+            <div style="margin-bottom:6px">Please let us know if this is possible.</div>
+            <div>Thank you!</div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            The <strong>shipping address is always Sunrise Solar's office</strong> (825 W 75th St, Unit E, Willowbrook, IL 60527) — never the homeowner's address.
+          </div>`
+        },
+        {
+          title:"Confirm Inspection Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed inspection date.<br><br>
+          Once received, the <strong>Project Manager</strong> must confirm the inspection date directly with the <strong>Homeowner (HO)</strong> to make sure they are available for the visit.`
+        },
+        {
+          title:"Await SPM Go Signal for Part 2",
+          detail:`Once <strong>PTO (Permission to Operate) is approved</strong>, the <strong>Senior Project Manager (SPM)</strong> will give the go signal to submit Part 2 in the ILSFA Portal.<br><br>
+          <div style="padding:8px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 6px 6px 0;font-size:12px;color:#065F46">
+            Do <strong>not</strong> submit Part 2 without the SPM's confirmation — wait for the go signal after PTO approval. Then proceed to the <strong>Part 2 Submittal — ILSFA Portal</strong> SOP.
+          </div>`
+        }
+      ],
+      note:"Do not start this workflow until the Project Liaison confirms Part 1 has been batched and ILSFA funds received."
     },
     {
       sop_title:"Part 2 Submittal — ILSFA Portal",

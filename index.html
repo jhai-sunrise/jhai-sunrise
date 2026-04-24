@@ -61,6 +61,27 @@ header{background:var(--navy);padding:0 2rem;position:sticky;top:0;z-index:200;b
 .rs+.rs{border-top:1px solid var(--border)}
 .rh{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .rp{font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;font-family:'JetBrains Mono',monospace}
+/* Announcements & FAQ */
+.ann-section{padding:1rem 1.25rem;border-top:1px solid var(--border)}
+.ann-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.ann-title{display:flex;align-items:center;gap:8px}
+.ann-pill{font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;font-family:'JetBrains Mono',monospace;background:#FEF3C7;color:#92400E;border:1px solid #FDE68A}
+.ann-empty{font-size:12px;color:var(--muted);font-style:italic;padding:8px 0}
+.ann-card{border-radius:8px;border:1px solid var(--border);overflow:hidden;margin-bottom:8px}
+.ann-card-top{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;cursor:pointer;transition:background 0.15s}
+.ann-card-top:hover{background:var(--bg)}
+.ann-type-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.ann-card-title{font-size:13px;font-weight:500;color:var(--text);flex:1}
+.ann-card-meta{font-size:11px;color:var(--muted);margin-top:2px;font-family:'JetBrains Mono',monospace}
+.ann-chev{font-size:11px;color:var(--muted);transition:transform 0.2s;flex-shrink:0;margin-top:2px}
+.ann-card.open .ann-chev{transform:rotate(180deg)}
+.ann-card-body{display:none;padding:0 14px 12px;font-size:12.5px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:10px;margin-top:0}
+.ann-card.open .ann-card-body{display:block}
+.ann-type-badge{font-size:10px;padding:2px 7px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-weight:500;white-space:nowrap}
+.badge-announcement{background:#FEF3C7;color:#92400E}
+.badge-faq{background:#EEE9FA;color:#4C1D95}
+.badge-reminder{background:#FEE2E2;color:#991B1B}
+.badge-update{background:#D1FAE5;color:#065F46}
 .rp.mgr{background:#0F2D4A;color:#fff}
 .rp.mem{background:var(--bg);color:var(--muted);border:1px solid var(--border)}
 .rd{font-size:11px;color:var(--muted)}
@@ -166,7 +187,7 @@ footer span{color:var(--sun)}
     <div class="sc" style="background:var(--sun-lt);border-color:rgba(232,119,34,0.25)">
       <div class="stt" style="color:var(--sun-dk)">Edit SOPs</div>
       <p style="font-size:12px;color:#7A3A00;line-height:1.6">Open your Google Sheet to add, edit, or remove SOPs. Changes appear on this page instantly on refresh.</p>
-      <button onclick="openSheet()" style="margin-top:10px;width:100%;padding:7px;border-radius:8px;background:var(--sun);border:none;color:#fff;font-family:'Sora',sans-serif;font-size:12px;cursor:pointer">Open Google Sheet &#8599;</button>
+      <a href="https://docs.google.com/spreadsheets/d/1VVFbWgbcPwDgmSHzKQkWJkw3vki9WXtGv6Fa3Q7BHJs/edit" target="_blank" style="display:block;margin-top:10px;width:100%;padding:7px;border-radius:8px;background:var(--sun);border:none;color:#fff;font-family:'Sora',sans-serif;font-size:12px;cursor:pointer;text-align:center;text-decoration:none;box-sizing:border-box">Open Google Sheet &#8599;</a>
     </div>
   </aside>
 
@@ -202,10 +223,10 @@ const DEPTS=[
 const STATIC_SOPS={
   "SFA Project Management":[
     {
-      sop_title:"SFA Project Onboarding — New Project Assignment",
+      sop_title:"SFA Project — Full PM Workflow (End-to-End)",
       role:"Team Member",
       tags:"sfa,new project,documents,project id,ilsfa,recipient verification,zoho,crm",
-      summary:"End-to-end process for onboarding a new SFA project from assignment through recipient verification.",
+      summary:"Complete end-to-end project management workflow for SFA projects — from initial assignment all the way through Part 1, installation, inspection, PTO, and Part 2.",
       department:"SFA Project Management",
       status:"active",
       steps:[
@@ -581,8 +602,158 @@ const STATIC_SOPS={
               <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Password:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">Solar!@34</code></div>
             </div>
           </div>
-          Log in to DocuSign and send the <strong>Site Suitability Report</strong> to the Homeowner (HO) for their signature.<br><br>
-          Make sure to use the correct template and verify the HO's email address before sending.`
+
+          <div style="margin-bottom:12px;padding:8px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 6px 6px 0;font-size:12px;color:#78350F">
+            Before sending via DocuSign, fill out the SSR completely using the guide below.
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 1 — Choose & Download the correct template</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+            <a href="https://drive.google.com/uc?export=download&id=11stDPGPW6uI2gHRvuEW2UL9Zjz0Ekoyg" target="_blank" style="display:flex;align-items:center;gap:8px;padding:10px 16px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:8px;text-decoration:none;color:#1E3A8A;font-size:12.5px;font-weight:500;transition:background 0.15s" onmouseover="this.style.background='#D1E9F7'" onmouseout="this.style.background='#EBF5FB'">
+              <span style="font-size:16px">📄</span>
+              <span>Regular SSR Template<br><span style="font-size:10px;font-weight:400;color:#2563EB">Click to download ↓</span></span>
+            </a>
+            <a href="https://drive.google.com/uc?export=download&id=1qwlx4q-Eo7TXJuXBm71kiB-aKEQ9Sjz2" target="_blank" style="display:flex;align-items:center;gap:8px;padding:10px 16px;background:#FEE2E2;border:1px solid #FECACA;border-radius:8px;text-decoration:none;color:#7F1D1D;font-size:12.5px;font-weight:500;transition:background 0.15s" onmouseover="this.style.background='#FCD0D0'" onmouseout="this.style.background='#FEE2E2'">
+              <span style="font-size:16px">📄</span>
+              <span>Pilot Program SSR Template<br><span style="font-size:10px;font-weight:400;color:#DC2626">Click to download ↓</span></span>
+            </a>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 2 — Page 12: Project Information</div>
+          <div class="steps" style="margin-bottom:14px">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Site Address:</strong> City, State, Zip Code</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Type:</strong> ✅ 1-4 unit &nbsp;&nbsp; ✅ Rooftop</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Proposed Project Size (kW AC):</strong> Refer to Proposal or Plan Set</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Building Owner Name:</strong> Homeowner's full name</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Approved Vendor/Designee:</strong> SUNRISE SOLAR LLC</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>ILSFA Approved Vendor ID#:</strong> SFA2168</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Date:</strong> Today's date</div></div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 3 — Page 13: Site Assessment Statement</div>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;font-style:italic;color:var(--text);margin-bottom:14px">
+            ✅ Check: "This building/site meets all site suitability requirements in its current condition."
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 4 — Page 12: Roof Assessment</div>
+          <div style="margin-bottom:6px;padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;font-style:italic;color:var(--text)">
+            ✅ Check: "The roof is in good, very good, or excellent condition and is suitable for PV installation."
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:8px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 6px 6px 0;font-size:12px;color:#065F46"><strong>No issues:</strong> Type → "Roof is in good condition, no repairs needed."</div>
+            <div style="padding:8px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D"><strong>If roof issue:</strong> Leave the box empty → check "Minor repairs or upgrades are needed" below and note the repairs.</div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 5 — Page 15: Structural Assessment</div>
+          <div style="margin-bottom:6px;padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;font-style:italic;color:var(--text)">
+            ✅ Check: "The supporting structure is suitable for PV installation in its current condition. No upgrades are needed."
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:8px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 6px 6px 0;font-size:12px;color:#065F46"><strong>No issues:</strong> Type → "The structure is in good condition, and no repairs are needed."</div>
+            <div style="padding:8px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D"><strong>If structural issue:</strong> Check "Minor repairs or upgrades are needed" and note the repairs.</div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 6 — Page 16: Electrical Assessment</div>
+          <div style="margin-bottom:6px;padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;font-style:italic;color:var(--text)">
+            ✅ Check: "The electrical system is suitable for PV installation. No upgrades are needed."
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A"><strong>Regular Project:</strong> Type → "The electrical infrastructure is in good condition, and no repairs are needed."</div>
+            <div style="padding:8px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 6px 6px 0;font-size:12px;color:#78350F"><strong>Pilot Project:</strong> Check "Minor repairs or upgrades are needed" → Type → "This project needs a _______________." (describe the specific upgrade needed)</div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 7 — Page 18: Space, Accessibility, Health & Safety</div>
+          <div style="margin-bottom:6px;padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;font-style:italic;color:var(--text)">
+            ✅ Check: "The site meets space, accessibility, health, and safety requirements."
+          </div>
+          <div style="padding:8px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 6px 6px 0;font-size:12px;color:#065F46;margin-bottom:14px">
+            Type → "The site offers open spaces, and all work areas meet the required standards for accessibility, health, and safety."
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 8 — Last Page: Attestation</div>
+          <div class="steps" style="margin-bottom:14px">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">✅ Check: "I verify that the information on this form is true, complete, and accurate."</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Name:</strong> Ragheed Alfarra &nbsp;|&nbsp; <strong>Title:</strong> CPO &nbsp;|&nbsp; <strong>Date:</strong> Today's date</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Company Name:</strong> SUNRISE SOLAR LLC &nbsp;|&nbsp; ✅ Check: Approved Vendor</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept" style="color:#DC2626"><strong>Participant signature &amp; date</strong> → Leave blank. Will be filled by the HO via DocuSign.</div></div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 9 — Send via DocuSign</div>
+          Log in to DocuSign and send the completed <strong>Site Suitability Report</strong> to the Homeowner (HO) for their signature. Verify the HO's email address before sending.`
+        },
+        {
+          title:"Send Permit Application Request",
+          detail:`Send a request to the <strong>"Permit Application"</strong> Google Chat group with the following information:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Name</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>CRM Link</strong> (direct link to the project record in Zoho)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>HOA Info</strong> (include HOA contact details if applicable)</div></div>
+          </div>`
+        },
+        {
+          title:"Send IC Application Request",
+          detail:`Send a request to the <strong>"Interconnection Application Request"</strong> Google Chat group with the following information:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Name</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>CRM Link</strong> (direct link to the project record in Zoho)</div></div>
+          </div>`
+        },
+        {
+          title:"Confirm Installation Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed installation date.<br><br>
+          Once received, the <strong>Project Manager</strong> must confirm the installation date directly with the <strong>Homeowner (HO)</strong> to make sure they are available and prepared for the visit.`
+        },
+        {
+          title:"Post-Installation — Layout Changes & Placard Decision",
+          detail:`By the <strong>end of the installation day</strong>, the <strong>Design Team</strong> will inform the PM of one of the following:<br><br>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:9px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 7px 7px 0;font-size:12.5px;color:#065F46">
+              &#10003; <strong>No changes</strong> — proceed with Placard ordering as-is
+            </div>
+            <div style="padding:9px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 7px 7px 0;font-size:12.5px;color:#78350F">
+              &#9998; <strong>Layout changes made</strong> — wait for the updated planset before ordering the Placard
+            </div>
+          </div>`
+        },
+        {
+          title:"Order the Placard",
+          detail:`Once confirmed by the Design Team, send an email to order the Placard:<br><br>
+          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Email Details</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:50px;display:inline-block">To:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-size:11px;font-family:'JetBrains Mono',monospace">Branden@fcdlabels.com, order@familycustomdesigns.com</code></div>
+              <div><span style="color:var(--muted);min-width:50px;display:inline-block">CC:</span> Drew, Hester, SPM, Judy, Jhai</div>
+              <div><span style="color:var(--muted);min-width:50px;display:inline-block">Attach:</span> Stamped Planset</div>
+            </div>
+          </div>
+          <strong>Email Template:</strong><br><br>
+          <div style="padding:14px 16px;background:var(--bg);border-radius:8px;border:1px solid var(--border);font-size:12.5px;line-height:1.9;color:var(--text)">
+            <div style="margin-bottom:6px">Hi Team,</div>
+            <div style="margin-bottom:6px">Good day!</div>
+            <div style="margin-bottom:6px">I would like to request the ordering of a placard for the attached stamped plan set.</div>
+            <div style="margin-bottom:6px">If possible, could you please prioritize this project? The placard will be required for the upcoming inspection.</div>
+            <div style="margin-bottom:2px"><strong>Installer:</strong> Sunrise Solar</div>
+            <div style="margin-bottom:2px"><strong>Name:</strong> [Homeowner's Full Name]</div>
+            <div style="margin-bottom:6px"><strong>Shipping Address:</strong> 825 W 75th St, Unit E, Willowbrook, IL 60527</div>
+            <div style="margin-bottom:6px">[Add any additional notes if required by the AHJ or inspector]</div>
+            <div style="margin-bottom:6px">Please let us know if this is possible.</div>
+            <div>Thank you!</div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            The <strong>shipping address is always Sunrise Solar's office</strong> (825 W 75th St, Unit E, Willowbrook, IL 60527) — never the homeowner's address.
+          </div>`
+        },
+        {
+          title:"Confirm Inspection Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed inspection date.<br><br>
+          Once received, the <strong>Project Manager</strong> must confirm the inspection date directly with the <strong>Homeowner (HO)</strong> to make sure they are available for the visit.`
+        },
+        {
+          title:"Part 2 Submittal — Await SPM Go Signal",
+          detail:`Once <strong>PTO (Permission to Operate) is approved</strong>, the <strong>Senior Project Manager (SPM)</strong> will give the go signal to submit Part 2 in the ILSFA Portal.<br><br>
+          <div style="padding:8px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 6px 6px 0;font-size:12px;color:#065F46">
+            Do <strong>not</strong> submit Part 2 without the SPM's confirmation — wait for their go signal after PTO approval.
+          </div>`
         }
       ],
       note:"Never process the IPA if documents are missing or unreadable. Always inform the SR immediately for any missing documents before proceeding."
@@ -813,9 +984,252 @@ const STATIC_SOPS={
         }
       ],
       note:"Always verify all signatures are on documents before uploading. For Pilot Projects, make sure to create exactly 3 mitigations under Electrical with Minor severity."
+    },
+    {
+      sop_title:"Part 2 Submittal — ILSFA Portal",
+      role:"Team Member",
+      tags:"part 2,ilsfa,submittal,post construction,pjm,gats,staff info,arrays,net metering,coc,permit,system design",
+      summary:"Full step-by-step process for submitting Part 2 in the ILSFA Portal after PTO is approved — including site suitability, system design, arrays, documents, and staff info.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Add Part II Tab",
+          detail:`Go to your project in the ILSFA Portal and click <strong>Add Part II Tab</strong>. Fill in the following:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Required Permitting Attestation:</strong> ✅ Check the box</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>How many permits were required?</strong> → 1</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Upload Permit</strong> → Upload the permit document</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Date of system energization:</strong> → COC Approval Date</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Certificate of Completion signed by the Utility:</strong> → Upload COC</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Net metering approval letter:</strong> → Upload the Net Metering docs</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Registry in which the system is tracked:</strong> → PJM-GATS</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Name on PJM-GATS or M-RETS Account:</strong> → Project ID_Street Address</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>PJM-GATS or M-RETS Unit ID:</strong> → Unit ID from PJM (e.g. NON12345)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Proof of Accepted Irrevocable Transfer Agreement:</strong> → Upload screenshot from PJM</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Total Installed System Cost:</strong> → DC size × 1000 × 4.5</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>What entity performed the installation?</strong> → APPROVED VENDOR</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>ICC Qualified Person:</strong> → ABDAL BONDOKJI / <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:11px">abdal@sunrisesolar-il.com</code></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Did the customer contract change from Part I?</strong> → NO</div></div>
+          </div><br>
+          Click <strong>Review and Submit!</strong> then go back to the Project.`
+        },
+        {
+          title:"Site Suitability Section — Part II Post-Construction",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Complete work specified in the site report?</strong> → YES</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Did your site conditions report change?</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Mitigation completed?</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Final site documentation?</strong> → Upload JCO</div></div>
+          </div><br>
+          Click <strong>SAVE!</strong>`
+        },
+        {
+          title:"System Design Section — Part II Post-Construction",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Has your system capacity changed?</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Has your system design changed?</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Has your shading analysis changed?</strong> → NO</div></div>
+          </div><br>
+          Click <strong>SAVE!</strong>`
+        },
+        {
+          title:"System Design Section — Alt Capacity Factor",
+          detail:`Under <strong>Part II Submitted:</strong><br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Qualify for No Shading?</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>REC Quantity Method?</strong> → OTHER</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>REC Quantity Method Other:</strong> → Type <strong>"Alt Capacity Factor"</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Under <strong>Part I — Eligible:</strong> Copy the numbers and paste them into the box under the <strong>Part II Submitted</strong> column</div></div>
+          </div><br>
+          Click <strong>SAVE!</strong><br><br>
+          <div style="padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            <strong>Shade Study:</strong> Upload the correct shade study if there were any changes with the installation.
+          </div>`
+        },
+        {
+          title:"Arrays — Part II",
+          detail:`Under <strong>Arrays</strong>, click <strong>Edit</strong> on each array:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Scroll down to the <strong>Part II Submittal</strong> section</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">✅ Check the box</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Copy all answers from the <strong>Part I Submittal</strong> above and paste them in</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click <strong>Save!</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Repeat for all arrays if the project has multiple arrays</div></div>
+          </div><br>
+          Then review the <strong>Project Size &amp; Production Table</strong> — verify all numbers are matching.<br><br>
+          <div style="padding:9px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D;line-height:1.6">
+            <strong>⚠ If there were layout changes during installation:</strong> You must update the Arrays with the new layout, and also provide an updated <strong>Planset</strong>, <strong>Proposal</strong>, and <strong>Shading Study</strong> reflecting the changes before saving.
+          </div>`
+        },
+        {
+          title:"Additional Post-Construction Part II Documents",
+          detail:`Upload all required documents. For photo uploads marked "Upload link", use the CompanyCam gallery link:<br><br>
+          <div style="margin-bottom:10px">
+            <a href="https://drive.google.com/file/d/1deTP4M1O4wIB7sxTmdJsh72oTPWC1tps/view?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:8px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">
+              <span style="font-size:15px">📁</span>
+              <span>Photo Links Reference Document<br><span style="font-size:10px;font-weight:400;color:#2563EB">Click to open ↗</span></span>
+            </a>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Municipal Certification of Completion</strong><br><span style="color:var(--muted)">Upload the passed inspection result</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Photograph(s) of Inverter(s)</strong><br><span style="color:var(--muted)">Upload JCO</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Other Electronics</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Interconnection</strong><br><span style="color:var(--muted)">Upload screenshot from Enphase, Tesla, or Fox monitoring app</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Photo of Site Suitability Mitigations</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Anchoring System</strong><br><span style="color:var(--muted)">Click Angled Roof → click right arrow</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Angled Roof</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>All Installed Modules Photo</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Photo of the Meter</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>General Electrical (Array)</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>General Structure</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Shading</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
+          </div><br>
+          Click <strong>SAVE!</strong>`
+        },
+        {
+          title:"Add Staff Info Tab — Eligible Job Trainee",
+          detail:`Click the <strong>Add Staff Info</strong> tab and fill in the following:<br><br>
+          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:10px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Eligible Job Trainee</div>
+            <div style="display:flex;flex-direction:column;gap:4px;font-size:12px;line-height:1.8">
+              <div><strong>Type of staff:</strong> Eligible Job Trainee</div>
+              <div><strong>First Name:</strong> Shadi &nbsp;|&nbsp; <strong>Last Name:</strong> Alazzawi Alazhari</div>
+              <div><strong>Email:</strong> <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:11px">shadi@sunrisesolar-il.com</code></div>
+              <div><strong>Phone:</strong> 6303663791</div>
+              <div><strong>Address:</strong> 322 W Naperville Rd, APT 10, Westmont, IL 60559</div>
+              <div><strong>Race:</strong> White &nbsp;|&nbsp; <strong>Ethnicity:</strong> Not Hispanic or Latino</div>
+              <div><strong>Job Training Program:</strong> HeatSpring: 58 Hour Advanced PV Certification</div>
+              <div><strong>Hours:</strong> System Design: 0 | Installation: 0 | Commissioning: 0 | O&amp;M: 4 | Sales/Other: 0</div>
+              <div><strong>Job Training Affidavit:</strong> Upload the Job Training Affidavit</div>
+              <div><strong>Additional Job Training Documents:</strong> Upload the Job Training Certificate link</div>
+            </div>
+          </div>
+          <div style="padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            Skip the question: "Are you aware of the trainee fitting into one of these groups?"
+          </div><br>
+          Review everything, then click <strong>SAVE!</strong>`
+        },
+        {
+          title:"Add Staff Info Tab — General Staff",
+          detail:`Under <strong>"What type of staff would you like to add?"</strong> select <strong>General Staff</strong>.<br><br>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:10px">
+            <strong>Demographic waiver?</strong> → NO
+          </div>
+          <strong>Add demographic info for general staff:</strong><br><br>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px;align-items:center">
+              <span style="min-width:180px;font-weight:500">ALEX VERNON</span><span style="color:var(--muted)">60442 — White — Not Hispanic</span>
+            </div>
+            <div style="padding:7px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px;align-items:center">
+              <span style="min-width:180px;font-weight:500">ALDO SANTOS</span><span style="color:var(--muted)">60171 — Hawaiian or Other Pacific Islander — Hispanic</span>
+            </div>
+            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px;align-items:center">
+              <span style="min-width:180px;font-weight:500">Pedro Love'paramo'mascote</span><span style="color:var(--muted)">60431 — Hawaiian or Other Pacific Islander — Hispanic</span>
+            </div>
+            <div style="padding:7px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px;align-items:center">
+              <span style="min-width:180px;font-weight:500">Kerim Omerbasic</span><span style="color:var(--muted)">60090 — White — Not Hispanic</span>
+            </div>
+          </div>
+          <div style="padding:10px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;line-height:1.8">
+            <strong>Name of Approved Vendor Representative:</strong> Ragheed Alfarra<br>
+            <strong>Date of Attestation:</strong> Today's date
+          </div><br>
+          Review everything once again, then click <strong>SAVE!</strong><br><br>
+          <div style="padding:9px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            After saving, go to <strong>Staff Information</strong> → click <strong>View/Edit</strong> for each staff member starting from <strong>Alex Vernon</strong> through <strong>Kerim Omerbasic</strong> to update their Participant Start/End Dates (see next step).
+          </div>`
+        },
+        {
+          title:"Job Training Certification — Part II",
+          detail:`Fill in the Job Training Certification section:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Will job training hours be counted on this project?</strong> → YES, THIS PROJECT WILL CONTAIN TRAINING HOURS</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Start Date:</strong> → Contract Date</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Installation Complete Date:</strong> → Install Date</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Approved Vendor Representative:</strong> → Ragheed Alfarra</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Click <strong>SUBMIT!</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Staff Information — Update Participant Dates",
+          detail:`Under <strong>Staff Information</strong>, click <strong>View/Edit</strong> for each general staff member — starting from <strong>Alex Vernon</strong> through <strong>Kerim Omerbasic</strong>.<br><br>
+          For each staff member:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">On the popup, scroll down to <strong>Participant Start Date</strong> and <strong>Participant End Date</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Participant Start Date:</strong> → Date <em>before</em> the install date</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Participant End Date:</strong> → Actual install date</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click <strong>Save</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Repeat for all 4 general staff members</div></div>
+          </div><br>
+          <div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            After saving all 4 staff, verify the <strong>Staff Information summary</strong>:<br>
+            Total Trainee Hours: <strong>4.00</strong> &nbsp;|&nbsp; Total General Staff Hours: <strong>32.00</strong> &nbsp;|&nbsp; Project Total Hours: <strong>36.00</strong>
+          </div>`
+        },
+        {
+          title:"Final Step — Complete the Project 🎉",
+          detail:`Go back to the <strong>top of the project page</strong>.<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>ACCEPT</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">✅ Check the box</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Click <strong>COMPLETE!</strong></div></div>
+          </div><br>
+          <div style="padding:10px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:13px;color:#14532D;text-align:center;font-weight:500">
+            🎉 Part 2 is now submitted! The project is complete.
+          </div>`
+        }
+      ],
+      note:"Do not submit Part 2 until SPM gives the go signal after PTO is confirmed. Always double-check all numbers in the Project Size & Production Table before submitting. NOTE: For Pilot Program projects with a roofing issue, you can submit 2 permit fees."
     }
   ]
 };
+
+const STATIC_SOPS_EXTRA = {
+  "Regular Project Management": [
+    { sop_title:"Sunrun — Full PM Workflow (End-to-End)", role:"Team Member", tags:"sunrun,regular,pm,workflow", summary:"Complete end-to-end PM workflow for Sunrun projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Lightreach — Full PM Workflow (End-to-End)", role:"Team Member", tags:"lightreach,regular,pm,workflow", summary:"Complete end-to-end PM workflow for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Loan — Full PM Workflow (End-to-End)", role:"Team Member", tags:"loan,regular,pm,workflow,financing", summary:"Complete end-to-end PM workflow for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Cash — Full PM Workflow (End-to-End)", role:"Team Member", tags:"cash,regular,pm,workflow,payment", summary:"Complete end-to-end PM workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Prepaid — Full PM Workflow (End-to-End)", role:"Team Member", tags:"prepaid,regular,pm,workflow,payment", summary:"Complete end-to-end PM workflow for Prepaid projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+  ],
+  "Utility Department": [
+    { sop_title:"Interconnection Application — ComEd", role:"Team Member", tags:"interconnection,ic,comed,utility,grid", summary:"Process for submitting an IC Application to ComEd.", department:"Utility Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Veronica Serna for guidance."}], note:"" },
+    { sop_title:"Interconnection Application — Ameren", role:"Team Member", tags:"interconnection,ic,ameren,utility,grid", summary:"Process for submitting an IC Application to Ameren.", department:"Utility Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Veronica Serna for guidance."}], note:"" },
+    { sop_title:"PTO Application — ComEd", role:"Team Member", tags:"pto,permission to operate,comed,utility", summary:"Process for submitting PTO to ComEd.", department:"Utility Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Veronica Serna for guidance."}], note:"" },
+    { sop_title:"PTO Application — Ameren", role:"Team Member", tags:"pto,permission to operate,ameren,utility", summary:"Process for submitting PTO to Ameren.", department:"Utility Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Veronica Serna for guidance."}], note:"" },
+    { sop_title:"Rebate Application — ComEd", role:"Team Member", tags:"rebate,comed,utility,incentive", summary:"Process for submitting a Rebate Application to ComEd.", department:"Utility Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Veronica Serna for guidance."}], note:"" },
+    { sop_title:"Rebate Application — Ameren", role:"Team Member", tags:"rebate,ameren,utility,incentive", summary:"Process for submitting a Rebate Application to Ameren.", department:"Utility Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Veronica Serna for guidance."}], note:"" },
+  ],
+  "Operations Department": [
+    { sop_title:"Permitting", role:"Team Member", tags:"permit,ahj,permitflow,authority,jurisdiction", summary:"Process for submitting permit applications to the AHJ.", department:"Operations Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Sheena Rozon for guidance."}], note:"" },
+    { sop_title:"Installation Scheduling", role:"Team Member", tags:"install,scheduling,calendar,date,homeowner", summary:"Process for scheduling installations from proposed date through HO confirmation.", department:"Operations Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Sheena Rozon for guidance."}], note:"" },
+    { sop_title:"Revisit Scheduling & Coordination", role:"Team Member", tags:"revisit,scheduling,install,inspection,drywall,roof", summary:"Process for requesting and tracking revisits for installs, inspections, and repairs.", department:"Operations Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Sheena Rozon for guidance."}], note:"" },
+    { sop_title:"Installation Photo QA & Daily Review", role:"Team Member", tags:"install,photo,qa,quality,review,daily,company cam", summary:"Process for reviewing installer photos during installation day to ensure quality.", department:"Operations Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Sheena Rozon for guidance."}], note:"" },
+    { sop_title:"JULIE Utility Locate Coordination", role:"Team Member", tags:"julie,utility locate,dig,811,underground,safety", summary:"Process for coordinating JULIE utility locate requests before digging or trenching.", department:"Operations Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Sheena Rozon for guidance."}], note:"" },
+    { sop_title:"Inspections", role:"Team Member", tags:"inspection,ahj,scheduling,pass,fail,post install", summary:"Process for scheduling and managing inspections with the AHJ after installation.", department:"Operations Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Sheena Rozon for guidance."}], note:"" },
+  ],
+  "Design Department": [
+    { sop_title:"Project Intake — IPA, PPA & Site Survey Scheduling", role:"Team Member", tags:"project intake,ipa,ppa,site survey,calendar,scheduling", summary:"Covers IPA and PPA processing plus site survey calendar management.", department:"Design Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Eugene Emblawa for guidance."}], note:"" },
+    { sop_title:"Pipeline Review", role:"Team Member", tags:"pipeline review,planset,design,proposal,approval,status", summary:"Process for submitting projects to Pipeline Review and tracking status.", department:"Design Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Eugene Emblawa for guidance."}], note:"" },
+    { sop_title:"Planset Approvals & Revisions", role:"Team Member", tags:"planset,approval,revision,pe stamp,design,unstamped,stamped", summary:"Process for reviewing, approving, and managing planset revisions.", department:"Design Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Eugene Emblawa for guidance."}], note:"" },
+  ],
+  "Liaison Department": [
+    { sop_title:"Part 1 — Liaison Process", role:"Team Member", tags:"part 1,liaison,ilsfa,submittal,documents", summary:"Liaison process for handling and coordinating Part 1 submissions.", department:"Liaison Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Trisha San Roque or Judy Rabe for guidance."}], note:"" },
+    { sop_title:"Part 2 — Liaison Process", role:"Team Member", tags:"part 2,liaison,ilsfa,submittal,post construction,pto", summary:"Liaison process for handling and coordinating Part 2 submissions.", department:"Liaison Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Trisha San Roque or Judy Rabe for guidance."}], note:"" },
+  ],
+  "Customer Service / Customer Success": [
+    { sop_title:"Customer Service Concerns", role:"Team Member", tags:"customer service,concerns,complaints,support,homeowner", summary:"Process for handling and resolving customer service concerns.", department:"Customer Service / Customer Success", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Dyana Banian for guidance."}], note:"" },
+    { sop_title:"Customer Success Concerns", role:"Team Member", tags:"customer success,concerns,satisfaction,retention,follow up", summary:"Process for managing customer success concerns post-installation.", department:"Customer Service / Customer Success", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Dyana Banian for guidance."}], note:"" },
+    { sop_title:"Welcome Call", role:"Team Member", tags:"welcome call,customer,onboarding,homeowner,script,sfa,regular", summary:"Script and process for conducting welcome calls with new homeowners.", department:"Customer Service / Customer Success", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Dyana Banian for guidance."}], note:"" },
+  ],
+};
+
+// Merge extra SOPs into STATIC_SOPS
+Object.keys(STATIC_SOPS_EXTRA).forEach(dept => {
+  if (!STATIC_SOPS[dept]) STATIC_SOPS[dept] = [];
+  STATIC_SOPS[dept] = STATIC_SOPS[dept].concat(STATIC_SOPS_EXTRA[dept]);
+});
 
 let allSops=JSON.parse(JSON.stringify(STATIC_SOPS));
 let activeDept="all", activeRole="all", searchQ="", openCards=new Set();
@@ -889,8 +1303,11 @@ function closeCard(id,e){
 }
 function toggle(id){
   id=id.replace(/[^a-zA-Z0-9\-_]/g,"_");
-  if(openCards.has(id)) return;
-  openCard(id);
+  if(openCards.has(id)){
+    closeCard(id, {stopPropagation:()=>{}});
+  } else {
+    openCard(id);
+  }
 }
 
 function sopHTML(s,prefix,idx){
@@ -967,7 +1384,20 @@ function render(){
     const avs=d.managers.map(m=>`<span class="av" style="background:${d.light};color:${d.tc}" title="${m}">${ini(m)}</span>`).join("");
     const mgrSec=showM?`<div class="rs"><div class="rh"><span class="rp mgr">Manager SOPs</span><span class="rd">Oversight, approvals &amp; escalation</span><span class="scb">${ms.length} SOP${ms.length!==1?"s":""}</span></div>${ms.length?ms.map((s,i)=>sopHTML(s,d.id+"-mgr",i)).join(""):emptySection("manager")}</div>`:"";
     const memSec=showT?`<div class="rs"><div class="rh"><span class="rp mem">Team Member SOPs</span><span class="rd">Day-to-day procedures for all team members</span><span class="scb">${ts.length} SOP${ts.length!==1?"s":""}</span></div>${ts.length?ts.map((s,i)=>sopHTML(s,d.id+"-mem",i)).join(""):emptySection("member")}</div>`:"";
-    return `<div class="ds"><div class="dsh"><div class="dstripe" style="background:${d.color}"></div><div class="di"><h2>${hl(d.id,q)}</h2><div class="ml">${avs}<span style="margin-left:2px">${d.managers.length>1?"Managers":"Manager"}: <b>${hl(d.managers.join(", "),q)}</b></span></div></div><span class="dbadge" style="background:${d.light};color:${d.tc}">${d.id.split(" ")[0]}</span></div><div class="dept-body">${mgrSec}${memSec}</div></div>`;
+    const annItems = ANNOUNCEMENTS[d.id] || [];
+    const annId = d.id.replace(/[^a-zA-Z0-9]/g,"_")+"_annpanel";
+    const annSec = `<div style="border-top:1px solid var(--border)">
+      <div onclick="toggleAnnPanel('${annId}')" id="annpanel-btn-${annId}" style="display:flex;align-items:center;gap:8px;padding:10px 1.25rem;cursor:pointer;transition:background 0.15s;user-select:none" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='transparent'">
+        <span style="font-size:14px">📌</span>
+        <span style="font-size:12.5px;font-weight:500;color:var(--muted)">Announcements, FAQs &amp; Reminders</span>
+        <span style="font-size:10px;padding:2px 7px;border-radius:10px;background:#FEF3C7;color:#92400E;font-family:'JetBrains Mono',monospace;font-weight:500">${annItems.length} item${annItems.length!==1?"s":""}</span>
+        <span id="annpanel-chev-${annId}" style="margin-left:auto;font-size:11px;color:var(--muted);transition:transform 0.2s">▾</span>
+      </div>
+      <div id="annpanel-${annId}" style="display:none;padding:0 1.25rem 1rem">
+        ${annHTML(annItems, d.id)}
+      </div>
+    </div>`;
+    return `<div class="ds"><div class="dsh"><div class="dstripe" style="background:${d.color}"></div><div class="di"><h2>${hl(d.id,q)}</h2><div class="ml">${avs}<span style="margin-left:2px">${d.managers.length>1?"Managers":"Manager"}: <b>${hl(d.managers.join(", "),q)}</b></span></div></div></div><div class="dept-body">${mgrSec}${memSec}${annSec}</div></div>`;
   }).join("");
 }
 
@@ -975,7 +1405,98 @@ function renderOffline(){
   allSops=JSON.parse(JSON.stringify(STATIC_SOPS));updateCounts();render();
 }
 
-// Init — always load static SOPs first, then try sheet if connected
+// ── ANNOUNCEMENTS & FAQ DATA ─────────────────────────────
+const ANNOUNCEMENTS = {
+  "SFA Project Management": [
+    {
+      type: "announcement",
+      title: "Welcome to the SFA Project Management Portal!",
+      date: "Apr 2026",
+      body: "This SOP portal is now live for all SFA PMs. All steps from project assignment through Part 2 completion are documented here. If you notice anything missing or incorrect, please reach out to Mary Ann Sante."
+    },
+    {
+      type: "reminder",
+      title: "Always verify all signatures before uploading documents to ILSFA Portal",
+      date: "Apr 2026",
+      body: "A common mistake is uploading unsigned documents to the portal. Always double-check that the IPA, PPA, and SSR are fully signed before proceeding with Part 1 submission."
+    },
+    {
+      type: "faq",
+      title: "What do I do if the Utility Bill doesn't have 12 months of usage?",
+      date: "Apr 2026",
+      body: "Use Energybot to calculate the estimated annual usage (~11,999 kWh). Screenshot the result, attach it alongside the Utility Bill, and note in the Additional Information field in the IPA that Energybot was used."
+    },
+    {
+      type: "faq",
+      title: "What if the offset is more than 150%?",
+      date: "Apr 2026",
+      body: "The homeowner must provide an EV Letter stating they will purchase an electric vehicle. The maximum allowed offset is 200%. If the offset exceeds 200%, remove panels to bring it within range. If the high offset is due to a battery, add a note: 'The offset is more than 150% because the system has a battery.'"
+    }
+  ],
+  "Regular Project Management": [],
+  "Utility Department": [],
+  "Operations Department": [],
+  "Design Department": [],
+  "Liaison Department": [],
+  "Call Center Department": [],
+  "Customer Service / Customer Success": []
+};
+
+const ANN_OPEN = new Set();
+
+function toggleAnnPanel(id) {
+  const panel = document.getElementById("annpanel-"+id);
+  const chev = document.getElementById("annpanel-chev-"+id);
+  if (!panel) return;
+  const isOpen = panel.style.display !== "none";
+  panel.style.display = isOpen ? "none" : "block";
+  if (chev) chev.style.transform = isOpen ? "" : "rotate(180deg)";
+}
+
+
+function toggleAnn(id) {
+  const el = document.getElementById("ann-"+id);
+  const body = document.getElementById("annb-"+id);
+  const chev = document.getElementById("annc-"+id);
+  if (!el) return;
+  if (ANN_OPEN.has(id)) {
+    ANN_OPEN.delete(id);
+    el.classList.remove("open");
+  } else {
+    ANN_OPEN.add(id);
+    el.classList.add("open");
+  }
+}
+
+function annHTML(items, deptId) {
+  const typeColors = { announcement:"#E87722", faq:"#7C3AED", reminder:"#DC2626", update:"#059669" };
+  const typeLabels = { announcement:"📢 Announcement", faq:"❓ FAQ", reminder:"⚠ Reminder", update:"✅ Update" };
+  const badgeClass = { announcement:"badge-announcement", faq:"badge-faq", reminder:"badge-reminder", update:"badge-update" };
+
+  if (!items || items.length === 0) {
+    return `<div class="ann-empty">No announcements or FAQs yet for this department. Ask your manager to add them.</div>`;
+  }
+  return items.map((item, i) => {
+    const id = deptId.replace(/[^a-zA-Z0-9]/g,"_")+"_ann_"+i;
+    const isOpen = ANN_OPEN.has(id);
+    return `<div class="ann-card${isOpen?" open":""}" id="ann-${id}">
+      <div class="ann-card-top" onclick="toggleAnn('${id}')">
+        <div class="ann-type-dot" style="background:${typeColors[item.type]||"#9CA3AF"}"></div>
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;flex-wrap:wrap">
+            <span class="ann-type-badge ${badgeClass[item.type]||""}">${typeLabels[item.type]||item.type}</span>
+            <span class="ann-card-meta">${item.date||""}</span>
+          </div>
+          <div class="ann-card-title">${item.title}</div>
+        </div>
+        <span class="ann-chev" id="annc-${id}">▾</span>
+      </div>
+      <div class="ann-card-body" id="annb-${id}">${item.body}</div>
+    </div>`;
+  }).join("");
+}
+
+
 allSops=JSON.parse(JSON.stringify(STATIC_SOPS));
 updateCounts();
 render();

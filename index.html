@@ -1236,7 +1236,7 @@ const STATIC_SOPS={
         },
         {
           title:"Staff Information — Update Participant Dates",
-          detail:`Under <strong>Staff Information</strong>, click <strong>View/Edit</strong> for each general staff member — starting from <strong>Alex Vernon</strong> through <strong>Kerim Omerbasic</strong>.<br><br>
+          detail:`Under <strong>Staff Information</strong>, click <strong>View/Edit</strong> for each general staff member — starting from <strong>Pedro Love'paramo'mascote</strong> through <strong>Antonio Rosado</strong>.<br><br>
           For each staff member:<br><br>
           <div class="steps">
             <div class="step"><div class="stepn">1</div><div class="stept">On the popup, scroll down to <strong>Participant Start Date</strong> and <strong>Participant End Date</strong></div></div>
@@ -1270,7 +1270,254 @@ const STATIC_SOPS={
 
 const STATIC_SOPS_EXTRA = {
   "Regular Project Management": [
-    { sop_title:"Sunrun — Full PM Workflow (End-to-End)", role:"Team Member", tags:"sunrun,regular,pm,workflow", summary:"Complete end-to-end PM workflow for Sunrun projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    {
+      sop_title:"Sunrun — Full PM Workflow (End-to-End)",
+      role:"Team Member",
+      tags:"sunrun,regular,pm,workflow,crm,ntp,planset,site survey,company cam,upgrade,msp,greentech",
+      summary:"Complete end-to-end project management workflow for Sunrun projects — from project assignment through NTP submission, installation, and PTO.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Receive Project Assignment",
+          detail:`The <strong>SPM</strong> will assign the project through the Google Chat group <strong>"New Assigned Project."</strong><br><br>
+          Acknowledge receipt in the group chat before proceeding.`
+        },
+        {
+          title:"Search or Create Opportunity in CRM (Zoho)",
+          detail:`Search for the opportunity in the CRM first. If it already exists, continue using it. If not, create a new contact and opportunity.<br><br>
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">If no existing record — Create a Contact first</div>
+          <div class="steps" style="margin-bottom:14px">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>Contacts</strong> in the CRM</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Create Contact"</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Fill out: <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Phone</strong>, <strong>Email</strong> → click <strong>Save</strong></div></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Create the Opportunity</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">4</div><div class="stept">Open the contact → click <strong>Opportunities</strong> in the left sidebar → click <strong>"New Opportunity"</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Make sure it is under <strong>"Standard"</strong> pipeline type</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Fill out the following fields:<br><br>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div class="kv-row" style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border)"><span class="kv-k" style="min-width:160px">Opportunity Name</span><span class="kv-v">Customer Name — Project Address</span></div>
+                <div class="kv-row" style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border)"><span class="kv-k" style="min-width:160px">Senior Project Manager</span><span class="kv-v"><strong>Ara Pascual</strong> (always)</span></div>
+                <div class="kv-row" style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border)"><span class="kv-k" style="min-width:160px">Project Manager</span><span class="kv-v">Name of the assigned PM</span></div>
+                <div class="kv-row" style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border)"><span class="kv-k" style="min-width:160px">Program</span><span class="kv-v"><strong>Sunrun</strong></span></div>
+                <div class="kv-row" style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border)"><span class="kv-k" style="min-width:160px">Financer Portal</span><span class="kv-v">Link to the Sunrun account in the Sunrun portal</span></div>
+                <div class="kv-row" style="padding:5px 10px;font-size:12px"><span class="kv-k" style="min-width:160px">Project Address</span><span class="kv-v">Full street, city, state, zip, county, own/rent</span></div>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Click <strong>Save</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Upload Documents from Portal to CRM",
+          detail:`Once the Opportunity is created, upload all relevant documents from the Sunrun portal into the CRM.<br><br>
+          Documents to upload include (as applicable):<br><br>
+          <ul class="blist">
+            <li>Customer Agreement (PPA/Contract)</li>
+            <li>EPC (Engineering, Procurement, and Construction document)</li>
+            <li>Proposal / Design Plans</li>
+            <li>Any other project-specific documents from the Sunrun portal</li>
+          </ul>`
+        },
+        {
+          title:"Create Company Cam Site Survey Checklist",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Login Credentials</div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Link:</span> <a href="https://companycam.com/" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open CompanyCam</a></div>
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Username:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">jhai@sunrisesolar-il.com</code></div>
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Password:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">Sunrise1234%</code></div>
+            </div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click the <strong>circle with a Plus (+) icon</strong> on the upper left of the CompanyCam dashboard.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Create a Project"</strong> from the menu that appears.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Add the <strong>Project Name</strong> and <strong>Project Address</strong>. Make sure the correct house is pinned on the map, then click <strong>"Create a Project."</strong></div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Inside the project, go to the <strong>"Checklists"</strong> tab.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Create a Checklist"</strong> then choose <strong>"Use a Template."</strong></div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Select the <strong>"Site Survey Template"</strong> (5 sections · 50 fields, last updated Apr 13, 2026) then click <strong>"Use Template."</strong></div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Click the <strong>"Site Survey Template"</strong> checklist, then fill out the <strong>"Homeowner &amp; Project Information"</strong> section:<br><br>
+              <ul style="margin-top:4px">
+                <li><strong>Homeowner Name</strong> — add the customer's full name</li>
+                <li><strong>Homeowner Address</strong> — add the full project address</li>
+                <li><strong>Project Scope</strong> — select: Ground Mount, Roof Mount, or Flat Roof</li>
+                <li><strong>Project Scope Notes</strong> — select: <strong>SunRun Project</strong></li>
+              </ul>
+            </div></div>
+            <div class="step"><div class="stepn">8</div><div class="stept">Upload the <strong>Proposal Layout</strong> to the <strong>"Homeowner &amp; Project Information / Project Proposal"</strong> section. Photos are required for this field.</div></div>
+            <div class="step"><div class="stepn">9</div><div class="stept">Click the <strong>"Assign"</strong> button and assign: the <strong>assigned Surveyor</strong>, <strong>Brian Pastirik</strong>, and <strong>Isaac Irizarry</strong>.</div></div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:var(--navy-lt,#E6F0F9);border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            Once the checklist is fully set up, send the CompanyCam project link to the Google Chat group <strong>"SS Request for Kean/Mark"</strong> with all relevant project details.
+          </div>`
+        },
+        {
+          title:"Pipeline Review",
+          detail:`After the site survey is completed:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Download SS photos → upload to your Google Drive.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Submit the project to <strong>Pipeline Review Summary Sheet</strong> with: PM, Source, Battery, Status, Module, Inverter, Customer Name, Address, Panel Count, Array Count, SS Link.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Wait for Prince's comment and check the review result.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">GREEN or CYAN = proceed to Planset Request. RED = revise and resubmit.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">After planset is delivered, send to Prince via <strong>ILSFA Planset Approval GC</strong> for final approval.</div></div>
+          </div>
+          <div style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><span style="padding:2px 8px;border-radius:8px;background:#FEE2E2;color:#991B1B;font-size:10px;font-family:'JetBrains Mono',monospace;font-weight:500">RED</span> Send back for revision</div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><span style="padding:2px 8px;border-radius:8px;background:#FEF3C7;color:#92400E;font-size:10px;font-family:'JetBrains Mono',monospace;font-weight:500">ORANGE</span> Still under review</div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><span style="padding:2px 8px;border-radius:8px;background:#D1FAE5;color:#065F46;font-size:10px;font-family:'JetBrains Mono',monospace;font-weight:500">GREEN</span> Good to go</div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><span style="padding:2px 8px;border-radius:8px;background:#CFFAFE;color:#155E75;font-size:10px;font-family:'JetBrains Mono',monospace;font-weight:500">CYAN</span> Good to go — use EDITED version</div>
+          </div>`
+        },
+        {
+          title:"Request Planset from Greentech",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Login</div>
+            <div style="font-size:12px"><a href="https://greentechrenewables.com" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open Greentech</a> &nbsp;|&nbsp; Account: <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">98650 - CREDIT</code></div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Log in → go to <strong>Projects</strong> tab → click <strong>+ New Project</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Project Name: enter <strong>exactly as it appears on the Utility Bill</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Get CompanyCam share link: open project → Share → Share All Images → Copy Link</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Paste link in <strong>Share Project Link</strong> field → click <strong>Save Project</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">From Project Dashboard → click <strong>Create a Service Order</strong> → Order Type: <strong>Residential Intake</strong></div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Services: Residential Permit = Unstamped | Electrical Stamp = YES | Structural Stamp = YES</div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Fill out Site Info, Utility, Site Sketch (upload Proposal + UB), Existing Equipment, Electrical Notes from Pipeline Review → <strong>Submit Service Order</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Request PE Stamp from Greentech",
+          detail:`Once the Design Team confirms the planset is <strong>good to go</strong> via the "Planset Approval" group chat:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Log back in to <strong>Greentech</strong> and open the project.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Go to the <strong>Plansets</strong> section on the left menu.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Locate the planset in <strong>Pre-Stamp Approval</strong> status.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Review the planset to confirm everything is correct.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Approve Documents"</strong> to proceed with PE Stamping.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Wait for status to change to <strong>Deliverables Ready</strong> — stamped and complete.</div></div>
+          </div>`
+        },
+        {
+          title:"Upgrade Notification Email (If Applicable)",
+          detail:`If after Pipeline Review there is an <strong>MSP Upgrade, Meter Upgrade, Roof Upgrade</strong>, or any other kind of upgrade required, notify the Sales Rep by email.<br><br>
+          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Email Details</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">To:</span> Sales Rep, Sales Organization Leader</div>
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">CC:</span> <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">jhai@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">ara@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">keith@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">abdal@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">karim@sunrisesolar-il.com</code></div>
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">Attach:</span> Adders reference document</div>
+            </div>
+          </div>
+          <strong>Email Template:</strong><br><br>
+          <div style="padding:14px 16px;background:var(--bg);border-radius:8px;border:1px solid var(--border);font-size:12.5px;line-height:1.9;color:var(--text)">
+            <div style="margin-bottom:4px"><strong>Subject:</strong> [UPGRADE TYPE] &amp; [UPGRADE TYPE] CONFIRMATION | [CUSTOMER FULL NAME]</div>
+            <div style="border-top:1px solid var(--border);margin:8px 0;padding-top:8px">Hi [Sales Rep Name],</div>
+            <div style="margin-bottom:6px">I hope you're doing well.</div>
+            <div style="margin-bottom:6px">Following our pipeline review for <strong>[Customer Full Name]</strong>, we have determined that a <strong>[describe upgrade — e.g. Meter Upgrade and Main Service Panel]</strong> is required to proceed with the project. The cost for the upgrade is as follows:</div>
+            <div style="margin-bottom:6px;padding:8px 12px;background:var(--white);border-radius:6px;border:1px solid var(--border);font-weight:500">[Upgrade Type]: $[Amount]</div>
+            <div style="margin-bottom:6px">Please confirm whether you will cover the cost or if the homeowner will be responsible for it. Kindly provide your response within <strong>24 hours</strong>. If we do not receive a reply, we will proceed with the project.</div>
+            <div style="margin-bottom:6px">Let us know if you have any questions.</div>
+            <div>Regards,<br>[Your Name]<br>Project Manager<br>Sunrise Solar</div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            📎 Attach the <strong>Adders reference PDF</strong> to the email so the SR has pricing context. (File to be added here once provided.)
+          </div>`
+        },
+        {
+          title:"Sunrun NTP — Log In & Access the Proposal",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Sunrun Portal Login</div>
+            <a href="https://sunrun.my.site.com/partners/PartnerPortalLogin?ec=302&startURL=%2Fpartners%2Fs%2F" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:12px">&#8599; Open Sunrun Partner Portal</a>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Log in to your Sunrun account and search for the project name.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click the <strong>Proposal ID</strong>. Make sure the Status/Stage is <strong>SR Approved</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Navigate to the search bar, enter the customer name, locate and open the correct proposal.</div></div>
+          </div>`
+        },
+        {
+          title:"Sunrun NTP — Modify the Proposal",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>Navigate Program</strong> → select <strong>Modify Proposal</strong> → click <strong>Go</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Review Horizon Photos:</strong> check for nearby trees or structures causing shading. Ensure shading is accurately reflected.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Select the Roof → click Edit Story:</strong><br>Adjust the roof tilt based on the CompanyCam roof pitch photo. Apply a ±5° allowance for pitch adjustments.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept"><strong>Add Obstructions (if applicable):</strong> if the roof has vents, chimneys, etc., insert them using the Obstruction Settings tool.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Verify that the planset and layout match accurately.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Click <strong>Save</strong> once all adjustments are complete.</div></div>
+          </div>`
+        },
+        {
+          title:"Sunrun NTP — Verify Equipment & Finalize Design",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">After saving, click the dropdown beside <strong>Finalized Design</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Confirm the following match the approved planset: <strong>Solar panels, Battery, Inverter</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">If discrepancies are found: click <strong>Edit</strong> → select the correct equipment → redraw the panel layout per planset.<br><br>
+              <div style="padding:7px 10px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+                If panels do not fit, adjust orientation (landscape or portrait) while keeping the same panel quantity and complying with the approved layout.
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept"><strong>System size changes (increase or decrease):</strong> a <strong>Change Order</strong> must be initiated and processed.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Once all updates are verified, click <strong>Finalize Design</strong>.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Proceed to the <strong>Pricing</strong> section → review and confirm all pricing details.</div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Click <strong>"Finish"</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Sunrun NTP — Complete Documents & Submit",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Copy the <strong>Original Proposal ID</strong> (e.g. PKVA6DVF3DA6-D) and paste it in the search bar. Choose the Proposal ID ending in <strong>001-D</strong> (e.g. PKVA6DVF3DA6:001-D).</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Under <strong>Working Documents</strong>, click the dropdown beside <strong>"Actions"</strong> → click <strong>"Upload Documents"</strong> → <strong>Go</strong>. Upload:<br><br>
+              <ul style="margin-top:4px">
+                <li><strong>Plan set</strong> → Document Type: <strong>Design Plans</strong> | Status: <strong>Signed</strong></li>
+                <li><strong>Horizon Photos</strong> → Document Type: <strong>Shade Reports</strong> | Status: <strong>Not Applicable</strong></li>
+                <li><strong>ComEd/Ameren file</strong> → Document Type: <strong>Utility Approval Letter</strong> | Status: <strong>Not Applicable</strong></li>
+              </ul>
+            </div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Under <strong>Working Documents</strong>, click the dropdown → <strong>"Initiate Signature"</strong> → <strong>Go</strong>.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click the dropdown beside Document Type → choose <strong>EPC</strong>.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept"><strong>Countersigning Sales Rep</strong> = the Project Manager processing. Click <strong>"Initiate Signature."</strong></div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Check your email and <strong>sign the EPC</strong>. Once signed, refresh the Sunrun account.</div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Verify these 3 documents are checked in Working Documents: <strong>Customer Agreement ✓, EPC ✓, Design Plans ✓</strong></div></div>
+            <div class="step"><div class="stepn">8</div><div class="stept">Scroll up → click <strong>"Submit Proposal"</strong> → confirm on the popup by clicking <strong>"Submit Proposal."</strong></div></div>
+            <div class="step"><div class="stepn">9</div><div class="stept">Update the <strong>Google Sheet</strong> status: <em>"NTP submitted."</em> Copy and paste the Proposal ID.</div></div>
+          </div>`
+        },
+        {
+          title:"Post-NTP — Send Permit & IC Application Requests",
+          detail:`Send a request to the <strong>"Permit Application"</strong> Google Chat group:<br><br>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:10px">
+            <strong>Project Name</strong> | <strong>CRM Link</strong> | <strong>HOA Info</strong> (if applicable)
+          </div>
+          Send a request to the <strong>"Interconnection Application Request"</strong> Google Chat group:<br><br>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+            <strong>Project Name</strong> | <strong>CRM Link</strong>
+          </div>`
+        },
+        {
+          title:"Confirm Installation Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed installation date.<br><br>
+          PM must confirm the installation date directly with the <strong>Homeowner (HO)</strong> — ensure they are available and someone will be home during the installation.`
+        },
+        {
+          title:"Post-Installation — Layout Changes & Placard Decision",
+          detail:`By the <strong>end of the installation day</strong>, the Design Team will inform the PM:<br><br>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:9px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 7px 7px 0;font-size:12.5px;color:#065F46">
+              &#10003; <strong>No changes</strong> → proceed with Placard ordering
+            </div>
+            <div style="padding:9px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 7px 7px 0;font-size:12.5px;color:#78350F">
+              &#9998; <strong>Layout changes made</strong> → wait for updated planset before ordering Placard
+            </div>
+          </div>`
+        },
+        {
+          title:"Confirm Inspection Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed inspection date.<br><br>
+          PM must confirm the inspection date directly with the <strong>Homeowner (HO)</strong> to make sure they are available for the inspection.`
+        }
+      ],
+      note:"Always verify documents match the approved planset before submitting for NTP. The NTP submission must be completed before scheduling installation."
+    },
     { sop_title:"Lightreach — Full PM Workflow (End-to-End)", role:"Team Member", tags:"lightreach,regular,pm,workflow", summary:"Complete end-to-end PM workflow for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
     { sop_title:"Loan — Full PM Workflow (End-to-End)", role:"Team Member", tags:"loan,regular,pm,workflow,financing", summary:"Complete end-to-end PM workflow for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
     { sop_title:"Cash — Full PM Workflow (End-to-End)", role:"Team Member", tags:"cash,regular,pm,workflow,payment", summary:"Complete end-to-end PM workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },

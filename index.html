@@ -1165,67 +1165,73 @@ const STATIC_SOPS={
           Click <strong>SAVE!</strong>`
         },
         {
-          title:"Add Staff Info Tab — Eligible Job Trainee",
-          detail:`Click the <strong>Add Staff Info</strong> tab and fill in the following:<br><br>
-          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:10px">
-            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Eligible Job Trainee</div>
-            <div style="display:flex;flex-direction:column;gap:4px;font-size:12px;line-height:1.8">
-              <div><strong>Type of staff:</strong> Eligible Job Trainee</div>
-              <div><strong>First Name:</strong> Shadi &nbsp;|&nbsp; <strong>Last Name:</strong> Alazzawi Alazhari</div>
-              <div><strong>Email:</strong> <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:11px">shadi@sunrisesolar-il.com</code></div>
-              <div><strong>Phone:</strong> 6303663791</div>
-              <div><strong>Address:</strong> 322 W Naperville Rd, APT 10, Westmont, IL 60559</div>
-              <div><strong>Race:</strong> White &nbsp;|&nbsp; <strong>Ethnicity:</strong> Not Hispanic or Latino</div>
-              <div><strong>Job Training Program:</strong> HeatSpring: 58 Hour Advanced PV Certification</div>
-              <div><strong>Hours:</strong> System Design: 0 | Installation: 0 | Commissioning: 0 | O&amp;M: 4 | Sales/Other: 0</div>
-              <div><strong>Job Training Affidavit:</strong> Upload the Job Training Affidavit</div>
-              <div><strong>Additional Job Training Documents:</strong> Upload the Job Training Certificate link</div>
-            </div>
-          </div>
-          <div style="padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
-            Skip the question: "Are you aware of the trainee fitting into one of these groups?"
-          </div><br>
-          Review everything, then click <strong>SAVE!</strong>`
+          title:"Assign Staff to Project",
+          detail:`Navigate to the <strong>Staff Information</strong> section within the project.<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>"Assign Staff to Project"</strong> button</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">You will be taken to the Staff Directory page. Click <strong>"Assign Staff to Project"</strong> again on that page.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select all the required staff from the list. The default staff to assign are:<br><br>
+              <div style="margin-bottom:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-family:'JetBrains Mono',monospace">Eligible Job Trainees</div>
+              <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:12px">
+                <div style="padding:6px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px;font-weight:500;color:#1E3A8A">✓ Shadi Alazzawi Alazhari</div>
+                <div style="padding:6px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px;font-weight:500;color:#1E3A8A">✓ Qais Gharaibeh</div>
+              </div>
+              <div style="margin-bottom:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-family:'JetBrains Mono',monospace">General Staff</div>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Pedro Love'paramo'mascote</div>
+                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Layth Qurayshi</div>
+                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Ndigo Calix</div>
+                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Nicholas Joseph Perez</div>
+                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Antonio Rosado</div>
+              </div>
+            </div></div>
+          </div>`
         },
         {
-          title:"Add Staff Info Tab — General Staff",
-          detail:`Under <strong>"What type of staff would you like to add?"</strong> select <strong>General Staff</strong>.<br><br>
-          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:10px">
-            <strong>Demographic waiver?</strong> → NO
+          title:"Staff Information — Edit Hours & Start/End Dates",
+          detail:`Once staff are assigned, go back to the <strong>Staff Information</strong> section on the project page.<br><br>
+          For each assigned staff member, click <strong>View/Edit</strong> and fill in the correct hours and dates.<br><br>
+          <div style="padding:9px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 6px 6px 0;font-size:12px;color:#78350F;margin-bottom:12px;line-height:1.6">
+            <strong>⚠ Important:</strong> Always refer to the actual install day records when filling in hours. Use the install date as the End Date and the day before install as the Start Date.
           </div>
-          <strong>Add demographic info for general staff:</strong><br><br>
-          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px;align-items:center">
-              <span style="min-width:180px;font-weight:500">ALEX VERNON</span><span style="color:var(--muted)">60442 — White — Not Hispanic</span>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Hours Reference Guide</div>
+          <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--white);margin-bottom:10px">
+            <div style="display:grid;grid-template-columns:1.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;background:#0F2D4A;padding:6px 10px;gap:4px">
+              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace">Name</div>
+              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">Sys Des</div>
+              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">Install</div>
+              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">Sys Comm</div>
+              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">O&M</div>
+              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">Other</div>
             </div>
-            <div style="padding:7px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px;align-items:center">
-              <span style="min-width:180px;font-weight:500">ALDO SANTOS</span><span style="color:var(--muted)">60171 — Hawaiian or Other Pacific Islander — Hispanic</span>
-            </div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px;align-items:center">
-              <span style="min-width:180px;font-weight:500">Pedro Love'paramo'mascote</span><span style="color:var(--muted)">60431 — Hawaiian or Other Pacific Islander — Hispanic</span>
-            </div>
-            <div style="padding:7px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px;align-items:center">
-              <span style="min-width:180px;font-weight:500">Kerim Omerbasic</span><span style="color:var(--muted)">60090 — White — Not Hispanic</span>
-            </div>
+            ${[
+              ["Nicholas Joseph Perez","0","8","0","0","0"],
+              ["Layth Qurayshi","0","4","4","0","0"],
+              ["Pedro Love'paramo'mascote","4","0","0","4","0"],
+              ["Antonio Rosado","0","8","0","0","0"],
+              ["Ndigo Calix","0","8","0","0","0"],
+            ].map(([n,...h],i)=>`<div style="display:grid;grid-template-columns:1.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;padding:6px 10px;gap:4px;background:${i%2===0?"var(--bg)":"var(--white)"};border-top:1px solid var(--border)">
+              <div style="font-size:11px;font-weight:500;color:var(--text)">${n}</div>
+              ${h.map(v=>`<div style="font-size:11px;color:var(--muted);text-align:center;font-family:'JetBrains Mono',monospace">${v}.00</div>`).join("")}
+            </div>`).join("")}
           </div>
-          <div style="padding:10px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;line-height:1.8">
-            <strong>Name of Approved Vendor Representative:</strong> Ragheed Alfarra<br>
-            <strong>Date of Attestation:</strong> Today's date
-          </div><br>
-          Review everything once again, then click <strong>SAVE!</strong><br><br>
-          <div style="padding:9px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
-            After saving, go to <strong>Staff Information</strong> → click <strong>View/Edit</strong> for each staff member starting from <strong>Alex Vernon</strong> through <strong>Kerim Omerbasic</strong> to update their Participant Start/End Dates (see next step).
+          <div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            <strong>Start Date:</strong> Day before install &nbsp;|&nbsp; <strong>End Date:</strong> Actual install date
           </div>`
         },
         {
           title:"Job Training Certification — Part II",
-          detail:`Fill in the Job Training Certification section:<br><br>
+          detail:`Fill in the <strong>Job Training Certification — Part II</strong> section:<br><br>
           <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Demographic & geographic waiver?</strong> → NO</div></div>
             <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Will job training hours be counted on this project?</strong> → YES, THIS PROJECT WILL CONTAIN TRAINING HOURS</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Start Date:</strong> → Contract Date</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Installation Complete Date:</strong> → Install Date</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Start Date:</strong> → <strong>PPA Sign Date</strong> (date the customer signed the PPA/contract)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Installation Complete Date:</strong> → <strong>Install Date</strong> (actual date of installation)</div></div>
             <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Approved Vendor Representative:</strong> → Ragheed Alfarra</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Click <strong>SUBMIT!</strong></div></div>
+          </div><br>
+          Click <strong>Save</strong> first, then click <strong>Submit Project Staff Summary</strong>.<br><br>
+          <div style="padding:8px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D">
+            <strong>⚠ Important:</strong> Always click <strong>Save</strong> before clicking <strong>Submit Project Staff Summary</strong> — as noted on the portal page.
           </div>`
         },
         {

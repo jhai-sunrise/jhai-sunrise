@@ -1062,208 +1062,189 @@ const STATIC_SOPS={
     {
       sop_title:"Part 2 Submittal — ILSFA Portal",
       role:"Team Member",
-      tags:"part 2,ilsfa,submittal,post construction,pjm,gats,staff info,arrays,net metering,coc,permit,system design",
-      summary:"Full step-by-step process for submitting Part 2 in the ILSFA Portal after PTO is approved — including site suitability, system design, arrays, documents, and staff info.",
+      tags:"part 2,ilsfa,submittal,post construction,pjm,gats,staff info,arrays,net metering,coc,permit,system design,acf,alt capacity factor",
+      summary:"Complete process for submitting Part 2 in the ILSFA Portal after PTO is approved — from Add Part II Tab through Final Submission.",
       department:"SFA Project Management",
       status:"active",
       steps:[
         {
-          title:"Add Part II Tab",
-          detail:`Go to your project in the ILSFA Portal and click <strong>Add Part II Tab</strong>. Fill in the following:<br><br>
+          title:"Login to ILSFA Portal",
+          detail:`<div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Login Credentials</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Link:</span> <a href="https://elevateenergy.my.site.com/ApprovedVendor/s/login/" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open ILSFA Portal</a></div>
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Username:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">ragheed@sunrisesolar-il.com</code></div>
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Password:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">Judy@2026</code></div>
+            </div>
+          </div>`
+        },
+        {
+          title:"Step 1 — Add Part II Tab",
+          detail:`Open the project and click <strong>"Add Part II Tab."</strong><br><br>
+          Complete the following fields:<br><br>
           <div class="steps">
             <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Required Permitting Attestation:</strong> ✅ Check the box</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>How many permits were required?</strong> → 1</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Upload Permit</strong> → Upload the permit document</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Date of system energization:</strong> → COC Approval Date</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Certificate of Completion signed by the Utility:</strong> → Upload COC</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Net metering approval letter:</strong> → Upload the Net Metering docs</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Registry in which the system is tracked:</strong> → PJM-GATS</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Name on PJM-GATS or M-RETS Account:</strong> → Project ID_Street Address</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>PJM-GATS or M-RETS Unit ID:</strong> → Unit ID from PJM (e.g. NON12345)</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Proof of Accepted Irrevocable Transfer Agreement:</strong> → Upload screenshot from PJM</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Total Installed System Cost:</strong> → DC size × 1000 × 4.5</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>What entity performed the installation?</strong> → APPROVED VENDOR</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>ICC Qualified Person:</strong> → ABDAL BONDOKJI / <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:11px">abdal@sunrisesolar-il.com</code></div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Did the customer contract change from Part I?</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Number of Permits:</strong> → 1</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Upload Permit</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Date of System Energization:</strong> → COC Approval Date</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Certificate of Completion (COC):</strong> → Upload signed COC from Utility</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Net Metering Approval Letter:</strong> → Upload Net Metering document</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Registry:</strong> → Select <strong>PJM-GATS</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Account Name Format:</strong> → ProjectID_Street Address<br><span style="font-size:11px;color:var(--muted)">Example: P-12031 - PY25-26_21429 E Cuba Rd</span></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Unit ID:</strong> → Enter PJM Unit ID (e.g. NON12345)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Irrevocable Transfer Agreement Proof:</strong> → <a href="https://drive.google.com/file/d/1N0SrlsGGdOOpka-g2OoxYibprUoXw7zP/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline">Upload screenshot from PJM &#8599;</a></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Total Installed System Cost:</strong> → DC Size × 1000 × 4.5</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Installer:</strong> → Select <strong>Approved Vendor</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>ICC Qualified Person:</strong> → ABDAL BONDOKJI (<code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:11px">abdal@sunrisesolar-il.com</code>)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Customer Contract Change:</strong> → NO</div></div>
           </div><br>
-          Click <strong>Review and Submit!</strong> then go back to the Project.`
+          ✅ Click <strong>REVIEW AND SUBMIT</strong>`
         },
         {
-          title:"Site Suitability Section — Part II Post-Construction",
+          title:"Step 2 — Site Suitability (Part II — Post-Construction)",
           detail:`<div class="steps">
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Complete work specified in the site report?</strong> → YES</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Did your site conditions report change?</strong> → NO</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Mitigation completed?</strong> → NO</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Final site documentation?</strong> → Upload JCO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Work Completed as Specified:</strong> → YES</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Site Conditions Changed:</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Mitigation Completed:</strong>
+              <ul style="margin-top:4px"><li>NO (Default)</li><li>YES (If Pilot Project)</li></ul>
+            </div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Final Site Documentation:</strong> → Upload JCO<br><br>
+              <div style="padding:8px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 6px 6px 0;font-size:12px;color:#78350F">
+                ⚠ Ensure: Inverter &amp; module photos are clear and correctly oriented. Upload separate clear photos if needed.
+              </div>
+            </div></div>
           </div><br>
-          <div style="padding:9px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00;line-height:1.7">
-            <strong>⚠ If the project has any upgrades</strong> (e.g. MSP Upgrade, Meter Upgrade, Cold Water Ground, Roof Upgrade), you must upload <strong>separate photos</strong> for each upgrade in addition to the JCO. Attach all upgrade photos to the <strong>Final Site Documentation</strong> field as well.
-          </div><br>
-          Click <strong>SAVE!</strong>`
+          <div style="padding:9px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D;margin-bottom:10px">
+            <strong>⚠ If the project has any upgrades</strong> (MSP Upgrade, Meter Upgrade, Cold Water Ground, Roof Upgrade) — upload <strong>separate photos</strong> for each upgrade in addition to the JCO and attach to <strong>Final Site Documentation</strong>.
+          </div>
+          ✅ Click <strong>SAVE</strong><br><br>
+          <strong>If Applicable:</strong> Upload Updated SSR &amp; Upload Upgrade Photos`
         },
         {
-          title:"System Design Section — Part II Post-Construction",
+          title:"Step 3 — Mitigation Section (Pilot Projects Only)",
+          detail:`Upload the <strong>Final Pilot Invoice</strong> using the template below:<br><br>
+          <a href="https://docs.google.com/spreadsheets/d/1q1ectrXc_NI_0VM-axlbdd6pB_iZ4RLe5_XgzcHIgm4/edit?gid=1483315145#gid=1483315145" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:8px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">
+            📄 Final Pilot Invoice Template &#8599;
+          </a>`
+        },
+        {
+          title:"Step 4 — System Design (Part II — Post-Construction)",
           detail:`<div class="steps">
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Has your system capacity changed?</strong> → NO</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Has your system design changed?</strong> → NO</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Has your shading analysis changed?</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>System Capacity Changed:</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>System Design Changed:</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Shading Analysis Changed:</strong> → NO</div></div>
           </div><br>
-          Click <strong>SAVE!</strong>`
-        },
-        {
-          title:"System Design Section — Alt Capacity Factor",
-          detail:`Under <strong>Part II Submitted:</strong><br><br>
+          <strong>If Changes Exist:</strong> Upload updated System Design/Plan set and Shading Study.<br><br>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Alt Capacity Factor (ACF)</div>
           <div class="steps">
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Qualify for No Shading?</strong> → NO</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>REC Quantity Method?</strong> → OTHER</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>REC Quantity Method Other:</strong> → Type <strong>"Alt Capacity Factor"</strong></div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Under <strong>Part I — Eligible:</strong> Copy the numbers and paste them into the box under the <strong>Part II Submitted</strong> column</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Qualify for No Shading:</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>REC Quantity Method:</strong> → OTHER</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Enter:</strong> "Alt Capacity Factor"</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>ACF Rule:</strong>
+              <ul style="margin-top:4px"><li>If revised ACF is <strong>lower</strong> → Update it</li><li>If revised ACF is <strong>higher</strong> → Retain the Part I Eligible ACF</li></ul>
+            </div></div>
           </div><br>
-          Click <strong>SAVE!</strong><br><br>
           <div style="padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
             <strong>Shade Study:</strong> Upload the correct shade study if there were any changes with the installation.
-          </div>`
-        },
-        {
-          title:"Arrays — Part II",
-          detail:`Under <strong>Arrays</strong>, click <strong>Edit</strong> on each array:<br><br>
-          <div class="steps">
-            <div class="step"><div class="stepn">1</div><div class="stept">Scroll down to the <strong>Part II Submittal</strong> section</div></div>
-            <div class="step"><div class="stepn">2</div><div class="stept">✅ Check the box</div></div>
-            <div class="step"><div class="stepn">3</div><div class="stept">Copy all answers from the <strong>Part I Submittal</strong> above and paste them in</div></div>
-            <div class="step"><div class="stepn">4</div><div class="stept">Click <strong>Save!</strong></div></div>
-            <div class="step"><div class="stepn">5</div><div class="stept">Repeat for all arrays if the project has multiple arrays</div></div>
           </div><br>
-          Then review the <strong>Project Size &amp; Production Table</strong> — verify all numbers are matching.<br><br>
-          <div style="padding:9px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D;line-height:1.6">
-            <strong>⚠ If there were layout changes during installation:</strong> You must update the Arrays with the new layout, and also provide an updated <strong>Planset</strong>, <strong>Proposal</strong>, and <strong>Shading Study</strong> reflecting the changes before saving.
-          </div>`
+          ✅ Click <strong>SAVE</strong>`
         },
         {
-          title:"Additional Post-Construction Part II Documents",
-          detail:`Upload all required documents. For photo uploads marked "Upload link", use the CompanyCam gallery link:<br><br>
-          <div style="margin-bottom:10px">
-            <a href="https://drive.google.com/file/d/1deTP4M1O4wIB7sxTmdJsh72oTPWC1tps/view?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:8px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">
-              <span style="font-size:15px">📁</span>
-              <span>Photo Links Reference Document<br><span style="font-size:10px;font-weight:400;color:#2563EB">Click to open ↗</span></span>
-            </a>
+          title:"Step 5 — Arrays",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to <strong>Arrays</strong> → click <strong>Edit</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Scroll to the <strong>Part II Submittal</strong> section</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">✅ Check the box</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Copy all answers from <strong>Part I</strong><br><span style="font-size:11px;color:var(--muted)">⚠ If changes exist → follow Final Shading Study</span></div></div>
+          </div><br>
+          <div style="padding:9px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D;margin-bottom:10px">
+            <strong>⚠ Layout changes during installation:</strong> Update Arrays with the new layout AND provide updated Planset, Proposal, and Shading Study before saving.
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Municipal Certification of Completion</strong><br><span style="color:var(--muted)">Upload the passed inspection result</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Photograph(s) of Inverter(s)</strong><br><span style="color:var(--muted)">Upload JCO</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Other Electronics</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Interconnection</strong><br><span style="color:var(--muted)">Upload screenshot from Enphase, Tesla, or Fox monitoring app</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Photo of Site Suitability Mitigations</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Anchoring System</strong><br><span style="color:var(--muted)">Click Angled Roof → click right arrow</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Angled Roof</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>All Installed Modules Photo</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Photo of the Meter</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>General Electrical (Array)</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>General Structure</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
-            <div style="padding:7px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Shading</strong><br><span style="color:var(--muted)">Upload from photo links doc</span></div>
-          </div><br>
-          Click <strong>SAVE!</strong>`
+          ✅ Click <strong>SAVE</strong> — 🔁 Repeat for all arrays`
         },
         {
-          title:"Assign Staff to Project",
+          title:"Step 6 — Project Size & Production Table",
+          detail:`Review all values and verify they <strong>match the Final Shading Study</strong>.<br><br>
+          All numbers must be consistent before proceeding to the next step.`
+        },
+        {
+          title:"Step 7 — Additional Post-Construction Documents",
+          detail:`Upload the following documents:<br><br>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:10px">
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Municipal Certification of Completion</strong><br><span style="color:var(--muted)">Passed Inspection result</span></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Inverter Photos</strong><br><span style="color:var(--muted)">Upload JCO</span></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Other Electronics</strong><br><a href="https://drive.google.com/file/d/1fMHB8Dt9sDq9E4gAgMjiRC8D3_UaTgZw/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:11px">&#8599; Upload from Drive link</a></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Interconnection Proof</strong><br><span style="color:var(--muted)">Screenshot from Enphase/Tesla/Fox app</span><br><span style="font-size:11px;color:#DC2626">⚠ Must show project address or HO name</span></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Mitigation Photos</strong><br><a href="https://drive.google.com/file/d/1fMHB8Dt9sDq9E4gAgMjiRC8D3_UaTgZw/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:11px">&#8599; Upload from Drive link</a></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Anchoring System</strong><br><span style="color:var(--muted)">Select Angled Roof → Right Arrow</span><br><a href="https://drive.google.com/file/d/1fMHB8Dt9sDq9E4gAgMjiRC8D3_UaTgZw/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:11px">&#8599; Upload from Drive link</a></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>All Installed Modules</strong><br><a href="https://drive.google.com/file/d/1fMHB8Dt9sDq9E4gAgMjiRC8D3_UaTgZw/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:11px">&#8599; Upload from Drive link</a></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Meter Photo</strong><br><a href="https://drive.google.com/file/d/1fMHB8Dt9sDq9E4gAgMjiRC8D3_UaTgZw/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:11px">&#8599; Upload from Drive link</a></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>General Electrical (Array)</strong><br><a href="https://drive.google.com/file/d/1fMHB8Dt9sDq9E4gAgMjiRC8D3_UaTgZw/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:11px">&#8599; Upload from Drive link</a></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>General Structure</strong><br><a href="https://drive.google.com/file/d/1fMHB8Dt9sDq9E4gAgMjiRC8D3_UaTgZw/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:11px">&#8599; Upload from Drive link</a></div>
+            <div style="padding:8px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Shading</strong><br><a href="https://drive.google.com/file/d/1fMHB8Dt9sDq9E4gAgMjiRC8D3_UaTgZw/view?usp=sharing" target="_blank" style="color:#2563EB;text-decoration:underline;font-size:11px">&#8599; Upload from Drive link</a></div>
+          </div>
+          ✅ Click <strong>SAVE</strong>`
+        },
+        {
+          title:"Step 8 — Assign Staff to Project",
           detail:`Navigate to the <strong>Staff Information</strong> section within the project.<br><br>
           <div class="steps">
             <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>"Assign Staff to Project"</strong> button</div></div>
-            <div class="step"><div class="stepn">2</div><div class="stept">You will be taken to the Staff Directory page. Click <strong>"Assign Staff to Project"</strong> again on that page.</div></div>
-            <div class="step"><div class="stepn">3</div><div class="stept">Select all the required staff from the list. The default staff to assign are:<br><br>
-              <div style="margin-bottom:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-family:'JetBrains Mono',monospace">Eligible Job Trainees</div>
-              <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:12px">
-                <div style="padding:6px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px;font-weight:500;color:#1E3A8A">✓ Shadi Alazzawi Alazhari</div>
-                <div style="padding:6px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px;font-weight:500;color:#1E3A8A">✓ Qais Gharaibeh</div>
-              </div>
-              <div style="margin-bottom:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-family:'JetBrains Mono',monospace">General Staff</div>
-              <div style="display:flex;flex-direction:column;gap:4px">
-                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Pedro Love'paramo'mascote</div>
-                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Layth Qurayshi</div>
-                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Ndigo Calix</div>
-                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Nicholas Joseph Perez</div>
-                <div style="padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text)">✓ Antonio Rosado</div>
+            <div class="step"><div class="stepn">2</div><div class="stept">You will be taken to the Staff Directory page. Click <strong>"Assign Staff to Project"</strong> again.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select all required staff — see reference options below for the correct default staff list:<br><br>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+                <a href="https://drive.google.com/file/d/1RWIuMkhUSznYfLzRYtkpIqFxvGyhsWsr/view?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:7px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">&#128196; Option 1 Staff List &#8599;</a>
+                <a href="https://drive.google.com/file/d/12RDrTjFMvnrfOWZiAH3KO6NNZVo5r9wU/view?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:7px;text-decoration:none;color:#14532D;font-size:12px;font-weight:500">&#128196; Option 2 Staff List &#8599;</a>
               </div>
             </div></div>
-          </div>`
-        },
-        {
-          title:"Staff Information — Edit Hours & Start/End Dates",
-          detail:`Once staff are assigned, go back to the <strong>Staff Information</strong> section on the project page.<br><br>
-          For each assigned staff member, click <strong>View/Edit</strong> and fill in the correct hours and dates.<br><br>
-          <div style="padding:9px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 6px 6px 0;font-size:12px;color:#78350F;margin-bottom:12px;line-height:1.6">
-            <strong>⚠ Important:</strong> Always refer to the actual install day records when filling in hours. Use the install date as the End Date and the day before install as the Start Date.
-          </div>
-          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Hours Reference Guide</div>
-          <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--white);margin-bottom:10px">
-            <div style="display:grid;grid-template-columns:1.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;background:#0F2D4A;padding:6px 10px;gap:4px">
-              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace">Name</div>
-              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">Sys Des</div>
-              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">Install</div>
-              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">Sys Comm</div>
-              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">O&M</div>
-              <div style="font-size:10px;font-weight:600;color:#fff;font-family:'JetBrains Mono',monospace;text-align:center">Other</div>
-            </div>
-            ${[
-              ["Nicholas Joseph Perez","0","8","0","0","0"],
-              ["Layth Qurayshi","0","4","4","0","0"],
-              ["Pedro Love'paramo'mascote","4","0","0","4","0"],
-              ["Antonio Rosado","0","8","0","0","0"],
-              ["Ndigo Calix","0","8","0","0","0"],
-            ].map(([n,...h],i)=>`<div style="display:grid;grid-template-columns:1.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;padding:6px 10px;gap:4px;background:${i%2===0?"var(--bg)":"var(--white)"};border-top:1px solid var(--border)">
-              <div style="font-size:11px;font-weight:500;color:var(--text)">${n}</div>
-              ${h.map(v=>`<div style="font-size:11px;color:var(--muted);text-align:center;font-family:'JetBrains Mono',monospace">${v}.00</div>`).join("")}
-            </div>`).join("")}
-          </div>
-          <div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
-            <strong>Start Date:</strong> Day before install &nbsp;|&nbsp; <strong>End Date:</strong> Actual install date
-          </div>`
-        },
-        {
-          title:"Job Training Certification — Part II",
-          detail:`Fill in the <strong>Job Training Certification — Part II</strong> section:<br><br>
-          <div class="steps">
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Demographic & geographic waiver?</strong> → NO</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Will job training hours be counted on this project?</strong> → YES, THIS PROJECT WILL CONTAIN TRAINING HOURS</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Start Date:</strong> → <strong>PPA Sign Date</strong> (date the customer signed the PPA/contract)</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Installation Complete Date:</strong> → <strong>Install Date</strong> (actual date of installation)</div></div>
-            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Approved Vendor Representative:</strong> → Ragheed Alfarra</div></div>
           </div><br>
-          Click <strong>Save</strong> first, then click <strong>Submit Project Staff Summary</strong>.<br><br>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Add Hours</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:10px">
+            <strong>Start Date:</strong> 1 day before install completion &nbsp;|&nbsp; <strong>End Date:</strong> Installation completion date
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+            <a href="https://drive.google.com/file/d/1DIaZv9_l1N7Kb8bOtGGgO0FAn_uTGnVn/view?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:7px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">&#9203; Option 1 Hours Reference &#8599;</a>
+            <a href="https://drive.google.com/file/d/1TSjXZHdBNhZo-r510FNErE0eKv0FY1Pu/view?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:7px;text-decoration:none;color:#14532D;font-size:12px;font-weight:500">&#9203; Option 2 Hours Reference &#8599;</a>
+          </div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Training Documents (Required)</div>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:10px">
+            Log in to <a href="https://www.docusign.com" target="_blank" style="color:#2563EB;text-decoration:underline">DocuSign &#8599;</a> → complete required forms → send for signature → upload signed documents to the Staff tab in the portal.
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+            <a href="https://drive.google.com/file/d/1gOjZbTzjq5nKZpWDEHUw8A1M-ozkrzno/view?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:#FEF0E3;border:1px solid #FED7AA;border-radius:7px;text-decoration:none;color:#7A3A00;font-size:12px;font-weight:500">&#128196; Qais Training Certificate &amp; Affidavit &#8599;</a>
+            <a href="https://drive.google.com/file/d/1f1XryuBvtwkgbzFBtpOwUe8nPKgyfxQP/view?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:#FEF0E3;border:1px solid #FED7AA;border-radius:7px;text-decoration:none;color:#7A3A00;font-size:12px;font-weight:500">&#128196; Shadi Training Certificate &amp; Affidavit &#8599;</a>
+          </div>
+          Double-check all entries → Click <strong>SAVE</strong> → Go to <strong>Project Detail Page</strong>`
+        },
+        {
+          title:"Step 9 — Job Training Certification (Part II)",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Demographic/Geographic Waiver:</strong> → NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Training Hours Counted:</strong> → YES</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Project Start Date:</strong> → PPA Sign Date (Contract Date)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Installation Completion Date:</strong> → Install Completion Date</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Approved Vendor Rep:</strong> → Ragheed Alfarra</div></div>
+          </div><br>
+          ✅ Click <strong>SAVE</strong> &nbsp;&nbsp; ✅ Click <strong>Submit Project Staff Summary</strong><br><br>
           <div style="padding:8px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D">
-            <strong>⚠ Important:</strong> Always click <strong>Save</strong> before clicking <strong>Submit Project Staff Summary</strong> — as noted on the portal page.
+            <strong>⚠ Important:</strong> Always click <strong>Save</strong> before clicking <strong>Submit Project Staff Summary.</strong>
           </div>`
         },
         {
-          title:"Staff Information — Update Participant Dates",
-          detail:`Under <strong>Staff Information</strong>, click <strong>View/Edit</strong> for each general staff member — starting from <strong>Pedro Love'paramo'mascote</strong> through <strong>Antonio Rosado</strong>.<br><br>
-          For each staff member:<br><br>
-          <div class="steps">
-            <div class="step"><div class="stepn">1</div><div class="stept">On the popup, scroll down to <strong>Participant Start Date</strong> and <strong>Participant End Date</strong></div></div>
-            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Participant Start Date:</strong> → Date <em>before</em> the install date</div></div>
-            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Participant End Date:</strong> → Actual install date</div></div>
-            <div class="step"><div class="stepn">4</div><div class="stept">Click <strong>Save</strong></div></div>
-            <div class="step"><div class="stepn">5</div><div class="stept">Repeat for all 4 general staff members</div></div>
-          </div><br>
-          <div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
-            After saving all 4 staff, verify the <strong>Staff Information summary</strong>:<br>
-            Total Trainee Hours: <strong>4.00</strong> &nbsp;|&nbsp; Total General Staff Hours: <strong>32.00</strong> &nbsp;|&nbsp; Project Total Hours: <strong>36.00</strong>
-          </div>`
-        },
-        {
-          title:"Final Step — Complete the Project 🎉",
-          detail:`Go back to the <strong>top of the project page</strong>.<br><br>
-          <div class="steps">
-            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>ACCEPT</strong></div></div>
-            <div class="step"><div class="stepn">2</div><div class="stept">✅ Check the box</div></div>
-            <div class="step"><div class="stepn">3</div><div class="stept">Click <strong>COMPLETE!</strong></div></div>
+          title:"Step 10 — Final Submission 🎉",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to the <strong>top of the project page</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>ACCEPT</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">✅ Check the box</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click <strong>COMPLETE</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">📸 Take a screenshot and send it to the group chat</div></div>
           </div><br>
           <div style="padding:10px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:13px;color:#14532D;text-align:center;font-weight:500">
             🎉 Part 2 is now submitted! The project is complete.
           </div>`
         }
       ],
-      note:"Do not submit Part 2 until SPM gives the go signal after PTO is confirmed. Always double-check all numbers in the Project Size & Production Table before submitting. NOTE: For Pilot Program projects with a roofing issue, you can submit 2 permit fees."
+      note:"⏱ REC Entry Deadline: Must be entered in PJM within 90 days after Part 2 submission. 🛠 Pilot Projects with Roofing Issue: Two permit fees may be submitted."
     }
   ]
 };

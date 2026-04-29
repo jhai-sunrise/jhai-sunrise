@@ -226,6 +226,445 @@ const DEPTS=[
 const STATIC_SOPS={
   "SFA Project Management":[
     {
+      sop_title:"SPM Overview — Roles & Responsibilities",
+      role:"Manager",
+      tags:"spm,manager,responsibilities,overview,supervisor,pipeline review,pjm,standing order,time tracker",
+      summary:"Full overview of the Senior Project Manager's key responsibilities — supervising PMs, processing projects, PJM/Standing Orders, pipeline reviews, and team management.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Key Responsibilities Overview",
+          detail:`The Senior Project Manager (SPM) is responsible for overseeing project operations and ensuring all projects progress efficiently. The role includes both supervisory and operational responsibilities:<br><br>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px"><strong>👥 Team Supervision</strong><br><span style="color:var(--muted)">Supervise and support all Project Managers</span></div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px"><strong>📊 Project Monitoring</strong><br><span style="color:var(--muted)">Monitor status and progress of all active projects</span></div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px"><strong>📋 Project Processing</strong><br><span style="color:var(--muted)">Handle assigned projects from Part 1 to Part 2</span></div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px"><strong>🔄 Project Assignment</strong><br><span style="color:var(--muted)">Assign new projects to Project Managers fairly</span></div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px"><strong>📅 Pipeline Reviews</strong><br><span style="color:var(--muted)">Weekly one-on-one reviews with each PM</span></div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px"><strong>⚡ PJM & Standing Orders</strong><br><span style="color:var(--muted)">Submit and monitor PJM entries and Standing Orders</span></div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px"><strong>⏱ Time Tracking</strong><br><span style="color:var(--muted)">Oversee PM timesheets and payroll accuracy</span></div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px"><strong>🛟 Issue Resolution</strong><br><span style="color:var(--muted)">Assist PMs with issues, escalations, and coverage</span></div>
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
+      sop_title:"Task 1 — Assigning New Projects",
+      role:"Manager",
+      tags:"assign,projects,distribution,workload,project manager,spm,balance",
+      summary:"Ensure fair and balanced distribution of new projects among Project Managers based on active project count.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Objective",
+          detail:`To ensure <strong>fair and balanced distribution</strong> of projects among Project Managers.`
+        },
+        {
+          title:"Procedure",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">New projects shall be assigned based on the <strong>total number of active projects</strong> handled by each Project Manager.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">The goal is to maintain an <strong>equal distribution</strong> of projects across all Project Managers.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">The assigned personnel must <strong>regularly monitor</strong> each Project Manager's workload before assigning new projects.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">In case of imbalance, <strong>priority should be given</strong> to Project Managers with fewer active projects.</div></div>
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
+      sop_title:"Task 2 — PJM GATS Project Entry (ComEd)",
+      role:"Manager",
+      tags:"pjm,gats,comed,entry,registration,solar,rec,standing order,utility",
+      summary:"Register a solar project in PJM GATS after PTO is received for ComEd projects.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Login to PJM GATS",
+          detail:`<div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Login Credentials</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Link:</span> <a href="https://gats.pjm-eis.com/GATS2" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open PJM GATS</a></div>
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Username:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">SunriseLLC</code></div>
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Password:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">Trisha@123456</code></div>
+            </div>
+          </div>
+          Navigate: <strong>Dashboard → Assets Tab → Select "Register Solar Photovoltaic Generator"</strong>`
+        },
+        {
+          title:"Fill Out the Registration Form",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>System Name 1 & 2:</strong> PROJECT ID_STREET ADDRESS</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>System Size (kW):</strong> Get both AC & DC sizes</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Street Address:</strong> Fill with HO's address</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Are you the physical owner?</strong> → YES</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Owner Information:</strong> Sunrise Solar LLC</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Online Date:</strong> Date of install</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Utility Interconnection Date:</strong> Date you received PTO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Utility:</strong> ComEd</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Balancing Authority:</strong> PJM Interconnection</div></div>
+          </div>`
+        },
+        {
+          title:"System Characteristics (from Plan Set)",
+          detail:`Go to Plan Set and enter all array information:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Module Quantity:</strong> # of panels per array</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Module Size:</strong> Module type (e.g. 440)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Tilt:</strong> Roof tilt per array</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Orientation:</strong> Azimuth per array</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Array Type:</strong> Default (Fixed - Roof Mount)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Generation Entry:</strong> Actual Generation (kWh)</div></div>
+          </div>`
+        },
+        {
+          title:"Meter Information",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Meter Name:</strong> Meter number from the bill (2nd page)</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Initial Meter Read (kWh):</strong> Always 0</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Initial Meter Read Date:</strong> Date you received PTO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Maximum Meter Read (kWh):</strong> SKIP</div></div>
+          </div>
+          <div style="padding:8px 12px;background:var(--sun-lt);border-left:3px solid var(--sun);border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00;margin-top:8px">
+            If using a <strong>string inverter</strong>: use the inverter as meter reference — Initial Meter Read is always 0 (inverter has never received production before).
+          </div>`
+        },
+        {
+          title:"Final Steps & Submit",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">SKIP the Solar - Photovoltaic (Primary Fuel) section → scroll down</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Third Party Reporter:</strong> Select NONE</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Documents:</strong> No need to check the box</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click <strong>SAVE ONLY</strong> if you don't have the Approved COC yet</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>SAVE AND SUBMIT</strong> if you have everything completed</div></div>
+          </div>`
+        }
+      ],
+      note:"If using string inverters, you can list the string inverter information as the meter information since they are all smart meters."
+    },
+    {
+      sop_title:"Task 2b — M-RETS Project Entry (Ameren)",
+      role:"Manager",
+      tags:"mrets,ameren,entry,registration,solar,rec,utility,generator",
+      summary:"Register a solar project in M-RETS after PTO is received for Ameren projects.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Login to M-RETS",
+          detail:`<div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Login Credentials</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Link:</span> <a href="https://app.mrets.org/login" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open M-RETS</a></div>
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Username:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">ragheed@sunrisesolar-il.com</code></div>
+              <div><span style="color:var(--muted);min-width:80px;display:inline-block">Password:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">SunriseRules!@34</code></div>
+            </div>
+          </div>
+          Navigate: <strong>Dashboard → Generator Tab → Add New Generator</strong>`
+        },
+        {
+          title:"General Information",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Facility Name:</strong> Project ID + Street Address</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Unit Name:</strong> Project ID + Street Address</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>EIA Number:</strong> SKIP</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Qualifying Facility:</strong> NO</div></div>
+          </div>
+          <div style="margin-top:10px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Location</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Country:</strong> USA &nbsp;|&nbsp; <strong>State:</strong> IL &nbsp;|&nbsp; <strong>County:</strong> Refer to HO's address</div></div>
+          </div>
+          <div style="margin-top:10px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Reporting & Issuance</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Reporting Entity:</strong> SELF REPORTING</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Reporting Unit ID:</strong> Project ID</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Issuance Account:</strong> DEFAULT</div></div>
+          </div>`
+        },
+        {
+          title:"Owner, Operator & Engineering Tabs",
+          detail:`<div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Owner Tab</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Single-owner facility:</strong> YES &nbsp;|&nbsp; <strong>Ownership Type:</strong> Privately Owned Distributed Generation</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Do you have a PPA:</strong> YES &nbsp;|&nbsp; <strong>Assignment of Registration Rights:</strong> NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Company Name:</strong> Sunrise Solar LLC</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Address:</strong> 825 W 75th St., Unit E, Willowbrook, IL 60527 USA</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Phone:</strong> 7085155386 &nbsp;|&nbsp; <strong>Email:</strong> ragheed@sunrisesolar-il.com</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Website:</strong> https://sunrisesolar-il.com/</div></div>
+          </div>
+          <div style="margin-top:10px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Operator Tab</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Click <strong>"Pull Data from Owner Tab"</strong></div></div>
+          </div>
+          <div style="margin-top:10px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Engineering Tab</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Generator Classification:</strong> Customer-Sited Distributed Generation</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Interconnected Utility:</strong> Ameren Illinois Company</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Aggregate Metering:</strong> NO &nbsp;|&nbsp; <strong>Revenue Quality Meter:</strong> NO</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Meter ID:</strong> Meter number from Bill or Plan Set</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Commenced Operation Date:</strong> COC Date</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Nameplate Capacity:</strong> AC Size ÷ 1000</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Capacity Factor:</strong> Approved Alt Capacity Factor from ILSFA Portal</div></div>
+          </div>`
+        },
+        {
+          title:"Fuel Tab & Submit",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>"Add New Fuel Type"</strong> (highlighted in green)</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Fuel Type:</strong> SOLAR &nbsp;|&nbsp; <strong>Fuel Sources:</strong> SOLAR PV</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Program Eligibility:</strong> Choose <strong>IL ABP</strong></div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept"><strong>ABP App ID:</strong> Put the Project ID</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept"><strong>Documents Tab:</strong> SKIP</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Click <strong>Submit Generator!</strong></div></div>
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
+      sop_title:"Task 3 — Checking PJM Approval",
+      role:"Manager",
+      tags:"pjm,approval,asset management,screenshot,crm,portal,status",
+      summary:"Verify the PJM approval status and document it in the ILSFA Portal and CRM.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Check PJM Approval Status",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to the <strong>Asset Management</strong> section in PJM GATS.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click the <strong>"More"</strong> option located at the lower right side of the page.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Enter the <strong>Project ID</strong> in the Plant / Unit Search Box.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Check the status — confirm if it is marked as <strong>"Approved."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Document & Upload",
+          detail:`Once verified as Approved:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Take a <strong>screenshot</strong> showing the approved status. Include the Project ID in the file name.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Upload the screenshot to the <strong>ILSFA Portal</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Upload the screenshot to the <strong>CRM system</strong>.</div></div>
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
+      sop_title:"Task 4 — Standing Order Submission",
+      role:"Manager",
+      tags:"standing order,pjm,submission,certificates,utility buyer,comed,ameren,ipa",
+      summary:"Create and submit a Standing Order in the PJM Portal ensuring all project details are accurate and aligned with CRM records.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Access the Standing Order Page",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to the <strong>PJM Portal</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>Certificates → Standing Order → Create Standing Order</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Enter Project Details",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">In the <strong>Plant-Unit (Fuel Type)</strong> field, enter the Project ID → click <strong>Find</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">The system will display: <em>Project ID – Street Address</em> (e.g. P-10822 – PY7_1 N Grace St).</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Double-check that the address <strong>matches the address in the CRM system</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Select Account Holder & Buyer",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">In the <strong>Account Holder Search Box</strong>, enter the approved Utility Buyer → click Find. Verify from ICC Approval or Liaison Department.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Choose the correct buyer based on utility:<br><br>
+              <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px">
+                <div style="padding:6px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px"><strong>ComEd</strong> → ComEd ABP</div>
+                <div style="padding:6px 10px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:6px;font-size:12px"><strong>Ameren</strong> → Ameren ABP</div>
+                <div style="padding:6px 10px;background:var(--sun-lt);border:1px solid #FED7AA;border-radius:6px;font-size:12px"><strong>IPA / Illinois Solar For All</strong> → IPA</div>
+              </div>
+            </div></div>
+          </div>`
+        },
+        {
+          title:"Complete Required Fields & Submit",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept"><strong>Percent Box:</strong> Enter 100</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>From Date:</strong> Select the earliest available date</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Note / Transferee:</strong> Paste the Project ID (for IPA and Ameren only). For ComEd — no Project ID needed.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">✅ Check the box: <strong>Standing Order is Irrevocable</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Take a <strong>full screenshot</strong> of the entire page before saving. Include Project ID in file name.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Click <strong>Save</strong> to submit the Standing Order.</div></div>
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
+      sop_title:"Task 5 — Standing Order Approval",
+      role:"Manager",
+      tags:"standing order,pjm,approval,status,screenshot,upload,follow up,utility buyer",
+      summary:"Verify the approval status of the submitted Standing Order and document it properly in the Portal and CRM.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Check Standing Order Status",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to PJM Portal → <strong>Certificates → Standing Order → My Standing Order → Outgoing</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">In the <strong>Facility Name</strong> field, enter the Project ID to search.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Review the status — confirm if it is marked as <strong>"Approved."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"If Status is Approved",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Take a <strong>screenshot</strong> of the approved Standing Order.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Retrieve the <strong>initial screenshot</strong> taken during submission.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Merge both screenshots</strong> into one file. Save as: <em>ProjectID_Standing Order</em>.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Upload the merged file to the <strong>Portal</strong> and <strong>CRM system</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"If Status is Still Pending",
+          detail:`If the status remains pending for several days:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Proceed with <strong>follow-up</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Send a <strong>follow-up email</strong> to the Utility Buyer to check the status of the Standing Order approval.</div></div>
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
+      sop_title:"Task 6 — Weekly Pipeline Review with PMs",
+      role:"Manager",
+      tags:"pipeline review,weekly,project manager,tracking,follow up,pending,sales rep",
+      summary:"Every Tuesday, conduct one-on-one pipeline reviews with each Project Manager to track progress, pending items, and follow-ups.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Pipeline Review Meeting (Every Tuesday)",
+          detail:`During the one-on-one pipeline review with each Project Manager, the following are discussed:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Projects that need <strong>more attention</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Pending documents</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Pending pipeline items</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Pending planset updates</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Tracking & Follow-up",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">All identified items are recorded in a <strong>master tracking sheet</strong>. Each PM has a separate sheet for their projects.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">After the review, all notes and action items are sent to the <strong>Sales Representative</strong> or concerned departments for follow-up.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">On the <strong>following week's review</strong>, all previously listed pending items are revisited one by one:<br><br>
+              <ul style="margin-top:4px">
+                <li>Check which items have been <strong>resolved</strong></li>
+                <li>Identify which items are <strong>still pending</strong></li>
+                <li>Follow up on <strong>unresolved concerns</strong></li>
+                <li>Add <strong>new projects</strong> that require attention</li>
+              </ul>
+            </div></div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            This process ensures continuous tracking, accountability, and timely resolution of all project-related concerns.
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
+      sop_title:"Task 7 — Time Tracker & Leave Management",
+      role:"Manager",
+      tags:"time tracker,timesheet,payroll,leave request,attendance,project manager",
+      summary:"Oversee Project Manager timesheets and manage leave requests to ensure accurate payroll and continuous operations.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Time Tracker — Daily Monitoring",
+          detail:`The SFA Team uses a Time Tracker system where each PM has their own individual timesheet.<br><br>
+          The SPM is responsible for:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Monitoring each PM's <strong>daily time-in and time-out</strong></div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Accurately recording entries in the <strong>timesheet</strong></div></div>
+          </div><br>
+          At the end of each <strong>payroll cut-off period</strong>:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Each PM must <strong>double-check and confirm</strong> their recorded time entries</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">A copy of the finalized timesheet is submitted to the <strong>Director</strong> for review and processing</div></div>
+          </div>`
+        },
+        {
+          title:"Leave Request Process",
+          detail:`PMs are required to submit a <strong>leave request via email</strong> and wait for approval before proceeding with planned leave.<br><br>
+          <div style="padding:9px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D;margin-bottom:10px">
+            <strong>⚠ Multiple Project Managers are NOT allowed to go on leave at the same time</strong> to ensure continuous operations.
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">PM submits leave request via email and waits for approval.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Prior to the leave, PM must provide a <strong>complete update</strong> on all assigned projects and clearly endorse projects requiring immediate attention.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">During absence, the <strong>SPM will take over</strong> and handle any pending tasks or urgent matters.</div></div>
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
+      sop_title:"Task 8 — Assisting PMs with Issues & Concerns",
+      role:"Manager",
+      tags:"support,issues,concerns,escalation,coordination,project manager,spm",
+      summary:"The SPM supports Project Managers in resolving issues that may affect project progress, timelines, or submissions.",
+      department:"SFA Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Issue Identification",
+          detail:`The PM raises the concern through <strong>chat, email, or during pipeline review</strong>.<br><br>
+          Issues may involve: pending documents, planset revisions, permitting, interconnection, site survey, or coordination with other departments.`
+        },
+        {
+          title:"Assessment & Validation",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">SPM reviews the issue and checks all related <strong>project details, documents, and current status</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Confirm if the issue is due to <strong>missing requirements, process delays, or coordination gaps</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Guidance & Immediate Support",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Provide <strong>clear instructions or next steps</strong> to the PM on how to resolve the issue.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">If applicable, share the <strong>correct process, templates, or previous references</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Coordination with Concerned Team",
+          detail:`If the issue requires escalation or action from another department (Sales, Permitting, Design, OPS):<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">SPM will <strong>coordinate directly</strong> or guide the PM on proper endorsement.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Ensure all <strong>necessary details and documents</strong> are included in the endorsement.</div></div>
+          </div>`
+        },
+        {
+          title:"Escalation, Monitoring & Documentation",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept"><strong>Escalation:</strong> For critical or unresolved issues, escalate to the appropriate lead or manager for faster resolution.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Monitoring:</strong> Track the issue until resolved. Ensure PM provides updates and follows through.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Documentation:</strong> Record the issue and resolution in the tracking sheet for reference and accountability.</div></div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            This process ensures Project Managers receive timely support, issues are resolved efficiently, and project delays are minimized.
+          </div>`
+        }
+      ],
+      note:""
+    },
+    {
       sop_title:"SFA Project Setup & Pre-Part 1 Workflow",
       role:"Team Member",
       tags:"sfa,new project,documents,project id,ilsfa,recipient verification,zoho,crm,setup,pre-part 1",
@@ -1158,7 +1597,7 @@ const STATIC_SOPS={
             <div class="step"><div class="stepn">4</div><div class="stept">Copy all answers from <strong>Part I</strong><br><span style="font-size:11px;color:var(--muted)">⚠ If changes exist → follow Final Shading Study</span></div></div>
           </div><br>
           <div style="padding:9px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D;margin-bottom:10px">
-            <strong>⚠ Layout changes during installation:</strong> Update Arrays with the new layout AND provide updated Planset, Proposal, and Shading Study before saving.
+            <strong>⚠ Layout changes during installation:</strong> Update Arrays with the new layout AND provide updated Planset, and Shading Study before saving.
           </div>
           ✅ Click <strong>SAVE</strong> — 🔁 Repeat for all arrays`
         },

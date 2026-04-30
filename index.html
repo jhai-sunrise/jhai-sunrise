@@ -1691,10 +1691,10 @@ const STATIC_SOPS={
 const STATIC_SOPS_EXTRA = {
   "Regular Project Management": [
     {
-      sop_title:"Sunrun — Full PM Workflow (End-to-End)",
+      sop_title:"Sunrun — Pre-M1 Workflow",
       role:"Team Member",
-      tags:"sunrun,regular,pm,workflow,crm,ntp,planset,site survey,company cam,upgrade,msp,greentech",
-      summary:"Complete end-to-end project management workflow for Sunrun projects — from project assignment through NTP submission, installation, and PTO.",
+      tags:"sunrun,regular,pm,workflow,crm,ntp,planset,site survey,company cam,upgrade,msp,greentech,pre-m1",
+      summary:"Complete pre-M1 workflow for Sunrun projects — from project assignment through NTP submission and installation.",
       department:"Regular Project Management",
       status:"active",
       steps:[
@@ -1929,14 +1929,45 @@ const STATIC_SOPS_EXTRA = {
               &#9998; <strong>Layout changes made</strong> → wait for updated planset before ordering Placard
             </div>
           </div>`
-        },
+        }
+      ],
+      note:"Always verify documents match the approved planset before submitting for NTP. The NTP submission must be completed before scheduling installation."
+    },
+    {
+      sop_title:"Sunrun — M1 Submission",
+      role:"Team Member",
+      tags:"sunrun,m1,milestone,submission,inspection,passed",
+      summary:"M1 milestone submission process for Sunrun after inspection is passed.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[{title:"Coming Soon",detail:"M1 submission process to be added. Contact Ara Pascual for guidance."}],
+      note:""
+    },
+    {
+      sop_title:"Sunrun — Pre-M2 & M3 Workflow",
+      role:"Team Member",
+      tags:"sunrun,pre-m2,m2,m3,milestone,inspection,confirmation",
+      summary:"Pre-M2 step — confirming inspection date with the homeowner before M2 submission.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
         {
           title:"Confirm Inspection Date with Homeowner",
           detail:`The <strong>Install Team</strong> will inform the PM of the proposed inspection date.<br><br>
           PM must confirm the inspection date directly with the <strong>Homeowner (HO)</strong> to make sure they are available for the inspection.`
         }
       ],
-      note:"Always verify documents match the approved planset before submitting for NTP. The NTP submission must be completed before scheduling installation."
+      note:"No Pre-M2 workflow needed — M2 only requires the passed inspection result to move the project forward."
+    },
+    {
+      sop_title:"Sunrun — M2 & M3 Submission",
+      role:"Team Member",
+      tags:"sunrun,m2,m3,milestone,submission,inspection,passed",
+      summary:"M2 and M3 milestone submission process for Sunrun projects.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[{title:"Coming Soon",detail:"M2 and M3 submission process to be added. Contact Ara Pascual for guidance."}],
+      note:"M2 only requires uploading the passed inspection result to the Sunrun portal to trigger the milestone."
     },
     { sop_title:"Lightreach — Full PM Workflow (End-to-End)", role:"Team Member", tags:"lightreach,regular,pm,workflow", summary:"Complete end-to-end PM workflow for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
     { sop_title:"Loan — Full PM Workflow (End-to-End)", role:"Team Member", tags:"loan,regular,pm,workflow,financing", summary:"Complete end-to-end PM workflow for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },

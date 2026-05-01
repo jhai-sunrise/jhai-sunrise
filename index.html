@@ -1996,8 +1996,153 @@ const STATIC_SOPS_EXTRA = {
     { sop_title:"Planset Approvals & Revisions", role:"Team Member", tags:"planset,approval,revision,pe stamp,design,unstamped,stamped", summary:"Process for reviewing, approving, and managing planset revisions.", department:"Design Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Eugene Emblawa for guidance."}], note:"" },
   ],
   "Liaison Department": [
-    { sop_title:"Part 1 — Liaison Process", role:"Team Member", tags:"part 1,liaison,ilsfa,submittal,documents", summary:"Liaison process for handling and coordinating Part 1 submissions.", department:"Liaison Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Trisha San Roque or Judy Rabe for guidance."}], note:"" },
+    {
+      sop_title:"Part 1 — Liaison Process",
+      role:"Team Member",
+      tags:"part 1,liaison,ilsfa,submittal,documents,eligibility letter,el,icc,correction,crm,sfa",
+      summary:"SFA Part I process — from project submission through ILSFA review, correction handling, Eligibility Letter processing, and ICC Approval.",
+      department:"Liaison Department",
+      status:"active",
+      steps:[
+        {
+          title:"Project Review Initiation",
+          detail:`After project submission, ILSFA will begin reviewing all projects submitted by Sunrise.<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">Projects <strong>without funding</strong> will be tagged as <strong>Waitlisted</strong>.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Only projects <strong>with corresponding funds</strong> will proceed to review.</div></div>
+</div>
+<div class="ssumm">Possible outcomes: <strong>Eligibility Letter (EL)</strong> or <strong>Part I Correction Notice</strong></div>`
+        },
+        {
+          title:"Part I Correction Handling",
+          detail:`If a project has missing documents or incorrect information in the ILSFA Portal, Sunrise will receive a Part I Correction Notice outlining the issues.<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">There is <strong>no fixed timeline</strong> for resolving corrections.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">All corrections must be addressed <strong>as soon as possible</strong>.</div></div>
+</div>`
+        },
+        {
+          title:"Internal Coordination and Tracking",
+          detail:`Upon receipt of a Part I Correction:<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">Forward the correction details to the <strong>Project Manager (PM)</strong>.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Update the <strong>CRM</strong> with: reason for correction and status of correction.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept">Conduct <strong>regular follow-ups</strong> with the PM to ensure continuous progress and timely resolution.</div></div>
+</div>`
+        },
+        {
+          title:"Submission of Corrections to ILSFA",
+          detail:`Once the Project Manager resolves the correction:<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">Send an <strong>email response to ILSFA</strong> addressing all correction points.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Attach all <strong>supporting documents</strong>.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept">Upload the same documents to the <strong>ILSFA Portal</strong>.</div></div>
+</div>`
+        },
+        {
+          title:"ILSFA Review Outcome",
+          detail:`After resubmission, ILSFA will review the updated documents.<br><br>
+<div class="ssumm">Possible outcomes: <strong>Additional corrections issued</strong> or <strong>Issuance of the Eligibility Letter (EL)</strong></div>`
+        },
+        {
+          title:"Monitoring and Control",
+          detail:`Maintain active monitoring of all corrections to ensure:<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">No correction is <strong>overlooked</strong>.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Eligibility Letters are obtained <strong>promptly</strong>.</div></div>
+</div>`
+        },
+        {
+          title:"Eligibility Letter (EL) Processing",
+          detail:`Once the EL is received, notify the ILSFA team that the Eligibility Letter is approved.<br><br>
+<strong style="font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted)">A. CRM Updates</strong>
+<div class="steps" style="margin-top:6px">
+  <div class="step"><div class="stepn">1</div><div class="stept">Upload the <strong>Eligibility Letter</strong> to the CRM.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Update the following CRM fields: Part I Eligible DC System Size, Part I Eligible AC System Size, Part I Eligible Annual Production, Number of REC, Weighted REC Value, REC Value.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept">If under the <strong>Pilot Program</strong>, update all relevant Pilot Program fields.</div></div>
+</div>
+<strong style="font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted)">B. Validation Requirement</strong>
+<div class="steps" style="margin-top:6px">
+  <div class="step"><div class="stepn">4</div><div class="stept">Carefully review the EL against: <strong>Part I Submitted data</strong> and <strong>Part I Eligible data</strong> in the ILSFA Portal. Ensure all figures match exactly.</div></div>
+  <div class="step"><div class="stepn">5</div><div class="stept">If discrepancies are found: notify the ILSFA Team immediately and request a <strong>revised Eligibility Letter</strong>.</div></div>
+</div>`
+        },
+        {
+          title:"ICC Approval Process",
+          detail:`After EL issuance, expect ICC Approval within <strong>2 weeks to 1 month</strong>.<br><br>
+<strong style="font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted)">Upon Receipt of ICC — Update the CRM:</strong>
+<div class="steps" style="margin-top:6px">
+  <div class="step"><div class="stepn">1</div><div class="stept">Upload the <strong>ICC document</strong>.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Check <strong>ICC Approved</strong> (checkbox).</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept">Enter <strong>ICC Approved Date</strong> — as indicated on the ICC Document.</div></div>
+  <div class="step"><div class="stepn">4</div><div class="stept">Enter <strong>Utility Buyer</strong> — as indicated on the ICC Document.</div></div>
+  <div class="step"><div class="stepn">5</div><div class="stept">Enter <strong>Collateral Amount</strong> — as indicated in the ILSFA Portal.</div></div>
+  <div class="step"><div class="stepn">6</div><div class="stept">Set <strong>Collateral Amount Due Date</strong> — 1 month after the ICC Approved Date.</div></div>
+</div>`
+        }
+      ],
+      note:"Key Reminders: Timely follow-up and monitoring are critical. Ensure all CRM entries are accurate and up to date. Always validate documents before submission to minimize repeated corrections. Promptly escalate discrepancies to avoid delays in approval."
+    },
     { sop_title:"Part 2 — Liaison Process", role:"Team Member", tags:"part 2,liaison,ilsfa,submittal,post construction,pto", summary:"Liaison process for handling and coordinating Part 2 submissions.", department:"Liaison Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Trisha San Roque or Judy Rabe for guidance."}], note:"" },
+    {
+      sop_title:"Pipeline Review with Sales Representatives (SRs)",
+      role:"Manager",
+      tags:"pipeline,review,sales representative,sr,meeting,recap,action items,liaison,judy rabe",
+      summary:"Standardizes the process of conducting pipeline review meetings with Sales Representatives — covering scheduling, preparation, facilitation, and post-meeting follow-up.",
+      department:"Liaison Department",
+      status:"active",
+      steps:[
+        {
+          title:"Scheduling the Pipeline Review",
+          detail:`Initiate communication with the SR to determine their preferred date and time.<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">Contact the SR to confirm their availability. <strong>Note:</strong> This is critical as SRs often have field appointments.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Once availability is confirmed, schedule the meeting on the calendar. Default schedule is <strong>weekly</strong>, unless otherwise requested (bi-weekly or monthly — adjust calendar accordingly).</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept">Send a calendar invitation with complete meeting details.</div></div>
+</div>`
+        },
+        {
+          title:"Pre-Meeting Preparation",
+          detail:`Before the meeting, review all projects under the SR's pipeline.<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">Review all active projects assigned to the SR.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Identify projects requiring <strong>immediate attention</strong>.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept">Note any <strong>recent updates or changes</strong> since the last review.</div></div>
+  <div class="step"><div class="stepn">4</div><div class="stept">Flag any <strong>potential issues or communication gaps</strong> that need to be addressed.</div></div>
+</div>`
+        },
+        {
+          title:"Conducting the Pipeline Review",
+          detail:`Begin the meeting at the scheduled time and follow the discussion framework below.<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">Start the meeting on time. Allow a grace period of <strong>up to 15 minutes</strong> for late arrivals.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Expected duration: <strong>15–30 minutes</strong> for SRs with fewer projects; <strong>1 hour or more</strong> for SRs with larger pipelines.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept"><strong>Discussion Focus:</strong> Provide detailed updates on all relevant projects. Prioritize projects needing action from SRs or homeowners, and new updates or changes since the last review.</div></div>
+  <div class="step"><div class="stepn">4</div><div class="stept">Adjust approach based on SR preference — some may only want key updates and action items.</div></div>
+  <div class="step"><div class="stepn">5</div><div class="stept"><strong>Collaboration & Issue Resolution:</strong> Address concerns raised by the SR. Clarify and resolve miscommunication and gaps in information. Ensure alignment on next steps and responsibilities.</div></div>
+</div>`
+        },
+        {
+          title:"Closing the Meeting",
+          detail:`Before ending the call, complete the following:<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">Ask the SR if they have any additional <strong>concerns, questions, or clarifications</strong>.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">Confirm all <strong>agreed action items</strong>.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept">Confirm <strong>next steps and responsibilities</strong> for all parties.</div></div>
+</div>`
+        },
+        {
+          title:"Post-Meeting Follow-Up",
+          detail:`After the meeting, prepare and send a recap to the SR.<br><br>
+<div class="steps">
+  <div class="step"><div class="stepn">1</div><div class="stept">Prepare a <strong>recap/report</strong> and send it to the SR.</div></div>
+  <div class="step"><div class="stepn">2</div><div class="stept">The recap must include: key updates, action items, and identified issues with resolutions.</div></div>
+  <div class="step"><div class="stepn">3</div><div class="stept">Ensure the SR can review the recap and take necessary actions after the meeting.</div></div>
+</div>`
+        }
+      ],
+      note:"SOP authored by Judy Rabe. Default meeting cadence is weekly. See Section 5 for closing steps and Section 6 for post-meeting recap requirements."
+    },
   ],
   "Customer Service / Customer Success": [
     { sop_title:"Customer Service Concerns", role:"Team Member", tags:"customer service,concerns,complaints,support,homeowner", summary:"Process for handling and resolving customer service concerns.", department:"Customer Service / Customer Success", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Dyana Banian for guidance."}], note:"" },

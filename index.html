@@ -2159,8 +2159,10 @@ Object.keys(STATIC_SOPS_EXTRA).forEach(dept => {
 
 let allSops=JSON.parse(JSON.stringify(STATIC_SOPS));
 let activeDept="all", activeRole="all", searchQ="", openCards=new Set();
-let sheetUrl=localStorage.getItem("sunrise_sheet_url")||"";
-let sheetLink=localStorage.getItem("sunrise_sheet_link")||"";
+localStorage.removeItem("sunrise_sheet_url");
+localStorage.removeItem("sunrise_sheet_link");
+let sheetUrl="";
+let sheetLink="";
 
 function ini(n){return n.split(" ").map(p=>p[0]).join("").slice(0,2).toUpperCase()}
 function qs(q){document.getElementById("main-search").value=q;searchQ=q.toLowerCase();setDept("all");render();}

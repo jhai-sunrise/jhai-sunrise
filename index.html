@@ -146,7 +146,6 @@ footer span{color:var(--sun)}
       <svg class="si" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="text" id="main-search" placeholder="Search SOPs, managers, keywords..." oninput="doSearch()" autocomplete="off">
     </div>
-    <span id="conn-status"></span>
   </div>
 </header>
 
@@ -160,8 +159,16 @@ footer span{color:var(--sun)}
       <div class="hst"><span class="hst-n" id="stat-show">8</span><span class="hst-l">Showing</span></div>
       <div class="hst"><span class="hst-n" id="stat-updated">Live</span><span class="hst-l">Last updated</span></div>
     </div>
+    <div style="margin-top:1.25rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <span style="font-size:11px;color:rgba(255,255,255,0.5);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap">🔗 Google Sheet</span>
+      <input id="sheet-url-input" type="text" placeholder="Paste your Apps Script Web App URL here..." style="flex:1;min-width:260px;padding:7px 12px;border-radius:7px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-family:'Sora',sans-serif;font-size:12px;outline:none" onfocus="this.style.borderColor='#E87722'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'" onkeydown="if(event.key==='Enter')connectSheet()" />
+      <button onclick="connectSheet()" style="padding:7px 16px;background:var(--sun);border:none;border-radius:7px;color:#fff;font-family:'Sora',sans-serif;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap">Connect</button>
+      <button onclick="loadFromSheet()" title="Refresh" style="padding:7px 10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:7px;color:rgba(255,255,255,0.6);font-size:13px;cursor:pointer">↻</button>
+      <span id="conn-status" style="font-size:11px;font-family:'JetBrains Mono',monospace"></span>
+    </div>
   </div>
 </div>
+<style>.status-ok{color:#4ADE80;font-weight:500}.status-err{color:#F87171;font-weight:500}</style>
 
 
 
@@ -2335,10 +2342,8 @@ Object.keys(STATIC_SOPS_EXTRA).forEach(dept => {
 
 let allSops=JSON.parse(JSON.stringify(STATIC_SOPS));
 let activeDept="all", activeRole="all", searchQ="", openCards=new Set();
-localStorage.removeItem("sunrise_sheet_url");
-localStorage.removeItem("sunrise_sheet_link");
-let sheetUrl="";
-let sheetLink="";
+let sheetUrl=localStorage.getItem("sunrise_sop_script_url")||"";
+let sheetLink=localStorage.getItem("sunrise_sheet_link")||"";
 
 function ini(n){return n.split(" ").map(p=>p[0]).join("").slice(0,2).toUpperCase()}
 function qs(q){document.getElementById("main-search").value=q;searchQ=q.toLowerCase();setDept("all");render();}
@@ -2349,11 +2354,10 @@ function hl(t,q){if(!q)return t;return t.replace(new RegExp("("+q.replace(/[.*+?
 function openSheet(){if(sheetLink)window.open(sheetLink,"_blank");}
 
 function connectSheet(){
-  const url=document.getElementById("sheet-url-input")||{value:""};
-  const urlVal=(url.value||"").trim();
-  if(!urlVal){return;}
+  const urlVal=(document.getElementById("sheet-url-input")||{value:""}).value.trim();
+  if(!urlVal){alert("Please paste your Google Apps Script Web App URL first.");return;}
   sheetUrl=urlVal;
-  localStorage.setItem("sunrise_sheet_url",urlVal);
+  localStorage.setItem("sunrise_sop_script_url",urlVal);
   loadFromSheet();
 }
 
@@ -2361,20 +2365,31 @@ async function loadFromSheet(){
   if(!sheetUrl){renderOffline();return;}
   document.getElementById("render").innerHTML=`<div class="loading"><div class="spinner"></div>Loading SOPs from Google Sheet...</div>`;
   try{
-    const res=await fetch(sheetUrl+"?action=getSops",{method:"GET"});
+    const res=await fetch(sheetUrl+"?action=getSops",{method:"GET",redirect:"follow"});
     const data=await res.json();
     if(data.error)throw new Error(data.error);
+    // Merge sheet SOPs on top of static ones — sheet wins for same dept
     allSops=JSON.parse(JSON.stringify(STATIC_SOPS));
     (data.sops||[]).forEach(s=>{
+      if(!s.department)return;
       if(!allSops[s.department])allSops[s.department]=[];
-      if(s.status==="active")allSops[s.department].push(s);
+      if(s.status==="active"){
+        // Replace static SOP with same title if exists
+        const idx=allSops[s.department].findIndex(x=>x.sop_title===s.sop_title);
+        if(idx>-1)allSops[s.department][idx]=s;
+        else allSops[s.department].push(s);
+      }
     });
-    if(data.sheetLink)localStorage.setItem("sunrise_sheet_link",data.sheetLink);
-    document.getElementById("conn-status").innerHTML=`<span class="status-ok">&#10003; Connected</span>`;
-    const now=new Date();document.getElementById("stat-updated").textContent=now.getHours()+":"+String(now.getMinutes()).padStart(2,"0");
+    if(data.sheetLink){sheetLink=data.sheetLink;localStorage.setItem("sunrise_sheet_link",data.sheetLink);}
+    const connEl=document.getElementById("conn-status");
+    if(connEl)connEl.innerHTML=`<span class="status-ok">&#10003; Connected — ${data.total||0} SOPs from Sheet</span>`;
+    const now=new Date();
+    const updEl=document.getElementById("stat-updated");
+    if(updEl)updEl.textContent=now.getHours()+":"+String(now.getMinutes()).padStart(2,"0");
     updateCounts();render();
   }catch(e){
-    document.getElementById("conn-status").innerHTML=`<span class="status-err">&#10007; Not connected</span>`;
+    const connEl=document.getElementById("conn-status");
+    if(connEl)connEl.innerHTML=`<span class="status-err">&#10007; ${e.message}</span>`;
     renderOffline();
   }
 }
@@ -2604,7 +2619,11 @@ function annHTML(items, deptId) {
 allSops=JSON.parse(JSON.stringify(STATIC_SOPS));
 updateCounts();
 render();
-if(sheetUrl){ loadFromSheet(); }
+if(sheetUrl){
+  const inp = document.getElementById("sheet-url-input");
+  if(inp) inp.value = sheetUrl;
+  loadFromSheet();
+} else { renderOffline(); }
 </script>
 </body>
 </html>

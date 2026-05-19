@@ -129,6 +129,15 @@ header{background:var(--navy);padding:0 2rem;position:sticky;top:0;z-index:200;b
 .status-ok{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#059669;background:#E6F5EE;padding:3px 8px;border-radius:6px;font-family:'JetBrains Mono',monospace}
 .status-err{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#DC2626;background:#FEE2E2;padding:3px 8px;border-radius:6px;font-family:'JetBrains Mono',monospace}
 mark{background:rgba(232,119,34,0.2);border-radius:2px;padding:0 1px;color:inherit}
+.archived-section{margin-top:0}
+.archived-toggle{display:flex;align-items:center;gap:8px;padding:10px 1.25rem;cursor:pointer;transition:background 0.15s;user-select:none;border-top:1px dashed var(--border)}
+.archived-toggle:hover{background:var(--bg)}
+.archived-label{font-size:12px;font-weight:500;color:var(--muted)}
+.archived-badge{font-size:10px;padding:2px 7px;border-radius:10px;background:#F3E8FF;color:#6B21A8;font-family:'JetBrains Mono',monospace;font-weight:500}
+.archived-chev{margin-left:auto;font-size:11px;color:var(--muted);transition:transform 0.2s}
+.archived-body{display:none;padding:0 1.25rem 1rem;background:var(--bg)}
+.archived-body .sop{opacity:0.7}
+.archived-body .sop:hover{opacity:1}
 footer{background:var(--navy);color:rgba(255,255,255,0.4);text-align:center;padding:1.25rem;font-size:12px;margin-top:2rem;border-top:2px solid var(--sun)}
 footer span{color:var(--sun)}
 @media(max-width:768px){.layout{grid-template-columns:1fr;padding:1rem}.sidebar{position:static}.rt{display:none}.config-banner{margin:1rem}}
@@ -1847,6 +1856,26 @@ const STATIC_SOPS_EXTRA = {
           </div>`
         },
         {
+          title:"Send Adders Approval to Group Chat",
+          detail:`Send a message to the <strong>"Adders Approval"</strong> Google Chat group for each project that has adders identified during Pipeline Review.<br><br>
+          <div style="padding:9px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 6px 6px 0;font-size:12px;color:#78350F;margin-bottom:12px">
+            ⚠ Send <strong>one message per project</strong> so each project can be discussed within its own thread without confusion.
+          </div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Include the following in each message</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept"><strong>Existing Adders</strong> — list all adders identified during pipeline review</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>EPC</strong> — attach the EPC document</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>System Size</strong> — include the proposed AC/DC system size</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept"><strong>Number of Batteries</strong> — specify battery quantity (0 if none)</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept"><strong>Repairs Needed</strong> — list any roof, structural, or electrical repairs required</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept"><strong>Customer Agreement</strong> — attach the signed customer agreement</div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept"><strong>Sales Rep &amp; Customer Name</strong> — include both names for easy identification</div></div>
+          </div>
+          <div style="margin-top:12px;padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            Wait for approval in the thread before proceeding to request the Planset from Greentech.
+          </div>`
+        },
+        {
           title:"Request Planset from Greentech",
           detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
             <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Login</div>
@@ -2097,25 +2126,55 @@ const STATIC_SOPS_EXTRA = {
         },
         {
           title:"Reservation M1 — Upload Documents",
-          detail:`Upload all required documents into the <strong>Submit Incentive Reservation Requirement</strong> task in the Sunrun portal.<br><br>
-          <div style="padding:8px 12px;background:var(--navy-lt,#E6F0F9);border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A;margin-bottom:10px">
-            All uploaded documents must be <strong>labeled accordingly</strong> — see the Incentive Reservation example for reference.
-          </div>
-          <strong style="font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted)">All IL Projects — Required Documents:</strong>
-          <div class="steps" style="margin-top:8px">
-            <div class="step"><div class="stepn">a</div><div class="stept"><strong>Original signed ABP Lease Disclosure Form</strong> (most recent and accurate version, if applicable) + <strong>Inverter Spec Sheet</strong>.</div></div>
-            <div class="step"><div class="stepn">b</div><div class="stept"><strong>Customer Utility Bill.</strong> If the customer name on the Utility Bill differs from the Sunrun customer agreement, attach a <strong>Relationship Clarification Form</strong>. <br><br><a href="relationship_template.pdf" download="Relationship_Clarification_Template.pdf" download="Relationship_Clarification_Template.pdf" style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:8px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">📄 Relationship Clarification Template &#8595;</a></div></div>
-            <div class="step"><div class="stepn">c</div><div class="stept"><strong>Installation Photos — the following are required:</strong><br><br>
-              <ul style="margin-top:6px;display:flex;flex-direction:column;gap:4px">
-                <li>Meter (with legible labels and reading)</li>
-                <li>Inverter with legible labels — nameplate, serial ID, settings. If using a Single Use SKU SE inverter, include a commissioning photo showing the model size and serial number match the sticker.</li>
-                <li>Array(s) and modules — must be countable.</li>
-              </ul>
+          detail:`<div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;font-family:'JetBrains Mono',monospace">Incentive Reservation — Step by Step</div>
+          <div class="steps" style="margin-bottom:16px">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to the <strong>Sunrun Portal</strong> and click <strong>Milestone Management</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Submit Incentive Requirements."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select <strong>"Show Service Contracts Needing Incentive Reservation"</strong> then click <strong>Search</strong>.<br><br>
+              <img src="https://raw.githubusercontent.com/jhai-sunrise/jhai-sunrise/main/m1_search.png" style="max-width:100%;border-radius:8px;border:1px solid var(--border);margin-top:6px" onerror="this.style.display='none'">
             </div></div>
-            <div class="step"><div class="stepn">d</div><div class="stept"><strong>Utility Portal Access — DG Rebate Section:</strong><br><br>
-              <strong>ComEd:</strong> Add Sunrun as a collaborator (<code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">partnerincentives@sunrun.com</code>) on the Interconnection application. If missed, email <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">Interconnect@ComEd.com</code> to request Sunrun be added as a collaborator.<br><br>
-              <strong>Ameren:</strong> Create a new account exclusively for Sunrun projects and grant Sunrun access by entering <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">partnerincentives@sunrun.com</code> in the "Grant Access" section under "Tools." You can also add Sunrun to each individual project instead.
+            <div class="step"><div class="stepn">4</div><div class="stept">Click the <strong>checkbox</strong> on the left side of the homeowner you will submit for, then click <strong>"Upload Incentive."</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Upload the required documents below. <strong>File naming format:</strong><br><br>
+              <div style="padding:8px 12px;background:var(--bg);border-radius:6px;border:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:11px;color:#0F2D4A;margin-bottom:10px">
+                [Homeowner Street Address] – [Document Type]<br>
+                <span style="color:var(--muted)">Example: 14305 Oak St – Disclosure Form</span><br>
+                <span style="color:var(--muted)">Example: 14305 Oak St – Utility Bill</span>
+              </div>
+              <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Required Documents</div>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+                  <strong>📄 Disclosure Form</strong>
+                </div>
+                <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+                  <strong>📄 Utility Bill</strong><br>
+                  <span style="color:var(--muted);font-size:11.5px">If the customer name on the Utility Bill differs from the Sunrun customer agreement, attach a <strong>Relationship Clarification Form</strong> using Sunrun's template.</span><br><br>
+                  <a href="IL_Relationship_Clarification_Form_2024_-_Google_Docs.pdf" download style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:8px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">📄 Sunrun Relationship Clarification Form ↓</a>
+                </div>
+                <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+                  <strong>📄 Specs Sheet</strong>
+                </div>
+                <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+                  <strong>📸 Installation Photos</strong> — combine all into one PDF file<br>
+                  <ul style="margin-top:6px;display:flex;flex-direction:column;gap:3px;font-size:11.5px;color:var(--muted)">
+                    <li>Meter (with legible labels and reading)</li>
+                    <li>Inverter (with legible nameplate, serial ID and settings)</li>
+                    <li>Array(s) and modules (must be clear and countable)</li>
+                  </ul>
+                </div>
+                <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+                  <strong>⚡ DG Rebate — Utility Portal Access</strong><br><br>
+                  <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px">
+                    <div style="padding:7px 10px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+                      <strong>ComEd:</strong> Add Sunrun as a collaborator (<code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:11px">partnerincentives@sunrun.com</code>) on the Interconnection application. If you miss this step, email <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:11px">Interconnect@ComEd.com</code> to request Sunrun be added.
+                    </div>
+                    <div style="padding:7px 10px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 6px 6px 0;font-size:12px;color:#065F46">
+                      <strong>Ameren:</strong> Create a new account exclusively for Sunrun projects. Grant Sunrun access by entering <code style="background:rgba(0,0,0,0.06);padding:1px 5px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:11px">partnerincentives@sunrun.com</code> in the "Grant Access" section under "Tools." You can also add Sunrun to each individual project instead.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Once all documents are gathered, click <strong>"Upload Incentive Reservation"</strong> and upload all required documents.</div></div>
           </div>`
         },
         {
@@ -2209,17 +2268,109 @@ const STATIC_SOPS_EXTRA = {
     {
       sop_title:"Sunrun — M2 & M3 Submission",
       role:"Team Member",
-      tags:"sunrun,m2,m3,milestone,submission,inspection,passed",
-      summary:"M2 and M3 milestone submission process for Sunrun projects.",
+      tags:"sunrun,m2,m3,milestone,submission,inspection,passed,final incentive,pto,coc,demographics",
+      summary:"Full M2, M3, and Final Incentive submission process for Sunrun projects — from milestone uploads through final incentive requirements.",
       department:"Regular Project Management",
       status:"active",
-      steps:[{title:"Coming Soon",detail:"M2 and M3 submission process to be added. Contact Ara Pascual for guidance."}],
-      note:"M2 only requires uploading the passed inspection result to the Sunrun portal to trigger the milestone."
+      steps:[
+        {
+          title:"Project M2",
+          detail:`<div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;font-family:'JetBrains Mono',monospace">M2 — Substantial Completion</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to the <strong>Sunrun Portal</strong> and click <strong>Milestone Management</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Submit Milestone."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select <strong>"Show Service Contracts Needing M2"</strong> then click <strong>Search</strong>.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click the <strong>checkbox</strong> on the left side of the homeowner you will submit M2 for, then click <strong>"Upload Milestone."</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Upload M2"</strong> and upload the <strong>Passed Final Inspection Report</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Project M3",
+          detail:`<div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;font-family:'JetBrains Mono',monospace">M3 — PTO Recorded</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to the <strong>Sunrun Portal</strong> and click <strong>Milestone Management</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Submit Milestone."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select <strong>"Show Service Contracts Needing M3"</strong> then click <strong>Search</strong>.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click the <strong>checkbox</strong> on the left side of the homeowner you will submit M3 for, then click <strong>"Upload Milestone."</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Upload M3"</strong> and upload the <strong>COC Approval Report</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Final Incentive M3",
+          detail:`<div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;font-family:'JetBrains Mono',monospace">Final Incentive Upload</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to the <strong>Sunrun Portal</strong> and click <strong>Milestone Management</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Submit Incentive Requirements."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select <strong>"Show Service Contracts Needing Incentive Reservation"</strong> then click <strong>Search</strong>.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click the <strong>checkbox</strong> on the left side of the homeowner, then click <strong>"Upload Incentive."</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Upload Final Incentive"</strong> and upload the following:<br><br>
+              <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px">
+                <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Net Metering Approval Report</div>
+                <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 COC Approval Report</div>
+                <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 IL Demographics Card</div>
+              </div>
+            </div></div>
+          </div>`
+        },
+        {
+          title:"Final Incentive Requirements — Document Checklist",
+          detail:`Upload all documents into the <strong>Submit Final Incentive Requirement</strong> task. Provide the following to Sunrun:<br><br>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>1. Final Interconnection Approval Letter from Utility (PTO)</strong><br>
+              <span style="color:var(--muted);font-size:11.5px">Ameren only</span>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>2. Final Net Metering Approval / Application</strong><br>
+              <span style="color:var(--muted);font-size:11.5px">ComEd → Final Net Metering Approval &nbsp;|&nbsp; Ameren → Final Net Metering Application</span>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>3. Certificate of Completion (COC)</strong><br>
+              <span style="color:var(--muted);font-size:11.5px">Must be signed by EDC and list the same installer as the application.</span><br>
+              <div style="margin-top:4px;padding:5px 8px;background:#FEF3C7;border-radius:5px;font-size:11.5px;color:#78350F">⚠ Ameren COC must include <strong>Acceptance and Final Approval</strong>.</div>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>4. IL Demographics Card</strong><br>
+              <div style="margin-top:6px;padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border);font-size:11.5px;color:var(--muted);margin-bottom:8px">
+                Fill in the following fields:<br>
+                <span style="color:var(--text)"><strong>Service Contract</strong></span> — Service Contract number<br>
+                <span style="color:var(--text)"><strong>Owner</strong></span> — Name of the customer<br>
+                <span style="color:var(--text)"><strong>Address</strong></span> — Address of the customer<br>
+                <span style="color:var(--text)"><strong>Certificate of Completion Date</strong></span> — PTO date from the Utility company<br>
+                <span style="color:var(--text)"><strong>Qualified Person</strong></span> — Name of foreman who completed the install
+              </div>
+              <a href="IL_Demographics_Template.docx" download style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:8px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">📄 Download IL Demographics Template ↓</a>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>5. Inverter Serial Number Registration</strong><br>
+              <span style="color:var(--muted);font-size:11.5px">Additional photos may be required in the future to prove certain inverter settings are compliant with DG Rebate.</span><br>
+              <a href="https://docs.google.com/document/d/15MVCiMyPQ7HM1SbC0Fsf9gjNudXyYEkPkQIJZ2Ye-tQ/edit" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:7px;text-decoration:none;color:#065F46;font-size:11.5px;font-weight:500;margin-top:6px">↗ Inverter Serial Number Registration</a>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>6. DG Applications — AC/DC Size Verification</strong><br>
+              <span style="color:var(--muted);font-size:11.5px">Ensure that the DG Applications within the utility portals reflect the <strong>correct AC/DC size</strong>.</span>
+            </div>
+          </div>`
+        }
+      ],
+      note:"M2 requires the Passed Final Inspection Report. M3 requires the COC Approval Report. Final Incentive requires Net Metering, COC, and the completed IL Demographics Card."
     },
-    { sop_title:"Lightreach — Full PM Workflow (End-to-End)", role:"Team Member", tags:"lightreach,regular,pm,workflow", summary:"Complete end-to-end PM workflow for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Loan — Full PM Workflow (End-to-End)", role:"Team Member", tags:"loan,regular,pm,workflow,financing", summary:"Complete end-to-end PM workflow for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Cash — Full PM Workflow (End-to-End)", role:"Team Member", tags:"cash,regular,pm,workflow,payment", summary:"Complete end-to-end PM workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Prepaid — Full PM Workflow (End-to-End)", role:"Team Member", tags:"prepaid,regular,pm,workflow,payment", summary:"Complete end-to-end PM workflow for Prepaid projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Lightreach — Pre-M1 Workflow", role:"Team Member", tags:"lightreach,regular,pm,pre-m1,workflow", summary:"Pre-M1 workflow for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Lightreach — M1 Submission", role:"Team Member", tags:"lightreach,regular,pm,m1,submission,milestone", summary:"M1 milestone submission for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Lightreach — Pre-M2 Workflow", role:"Team Member", tags:"lightreach,regular,pm,pre-m2,workflow", summary:"Pre-M2 workflow for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Lightreach — M2 Submission", role:"Team Member", tags:"lightreach,regular,pm,m2,submission,milestone", summary:"M2 milestone submission for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Loan — Pre-Part 1 Workflow", role:"Team Member", tags:"loan,regular,pm,pre-part 1,workflow,financing", summary:"Pre-Part 1 workflow for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Loan — Part 1 Submission", role:"Team Member", tags:"loan,regular,pm,part 1,submission,financing", summary:"Part 1 submission for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Loan — Pre-Part 2 Workflow", role:"Team Member", tags:"loan,regular,pm,pre-part 2,workflow,financing", summary:"Pre-Part 2 workflow for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Loan — Part 2 Submission", role:"Team Member", tags:"loan,regular,pm,part 2,submission,financing", summary:"Part 2 submission for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Cash — Pre-Part 1 Workflow", role:"Team Member", tags:"cash,regular,pm,pre-part 1,workflow,payment", summary:"Pre-Part 1 workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Cash — Part 1 Submission", role:"Team Member", tags:"cash,regular,pm,part 1,submission,payment", summary:"Part 1 submission for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Cash — Pre-Part 2 Workflow", role:"Team Member", tags:"cash,regular,pm,pre-part 2,workflow,payment", summary:"Pre-Part 2 workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Cash — Part 2 Submission", role:"Team Member", tags:"cash,regular,pm,part 2,submission,payment", summary:"Part 2 submission for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Prepaid (Cash and Loan) — Pre-Part 1 Workflow", role:"Team Member", tags:"prepaid,cash,loan,regular,pm,pre-part 1,workflow", summary:"Pre-Part 1 workflow for Prepaid (Cash and Loan) projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Prepaid (Cash and Loan) — Part 1 Submission", role:"Team Member", tags:"prepaid,cash,loan,regular,pm,part 1,submission", summary:"Part 1 submission for Prepaid (Cash and Loan) projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Prepaid (Cash and Loan) — Pre-Part 2 Workflow", role:"Team Member", tags:"prepaid,cash,loan,regular,pm,pre-part 2,workflow", summary:"Pre-Part 2 workflow for Prepaid (Cash and Loan) projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Prepaid (Cash and Loan) — Part 2 Submission", role:"Team Member", tags:"prepaid,cash,loan,regular,pm,part 2,submission", summary:"Part 2 submission for Prepaid (Cash and Loan) projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
   ],
   "Utility Department": [
     { sop_title:"Interconnection Application — ComEd", role:"Team Member", tags:"interconnection,ic,comed,utility,grid", summary:"Process for submitting an IC Application to ComEd.", department:"Utility Department", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Veronica Serna for guidance."}], note:"" },
@@ -2397,6 +2548,9 @@ const STATIC_SOPS_EXTRA = {
     { sop_title:"Welcome Call", role:"Team Member", tags:"welcome call,customer,onboarding,homeowner,script,sfa,regular", summary:"Script and process for conducting welcome calls with new homeowners.", department:"Customer Service / Customer Success", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Dyana Banian for guidance."}], note:"" },
   ],
 };
+
+// Archived SOPs — hidden by default but preserved for record
+const ARCHIVED_SOPS = {};
 
 // Merge extra SOPs into STATIC_SOPS
 Object.keys(STATIC_SOPS_EXTRA).forEach(dept => {
@@ -2580,7 +2734,21 @@ function render(){
         ${annHTML(annItems, d.id)}
       </div>
     </div>`;
-    return `<div class="ds"><div class="dsh"><div class="dstripe" style="background:${d.color}"></div><div class="di"><h2>${hl(d.id,q)}</h2><div class="ml">${avs}<span style="margin-left:2px">${d.managers.length>1?"Managers":"Manager"}: <b>${hl(d.managers.join(", "),q)}</b></span></div></div></div><div class="dept-body">${mgrSec}${memSec}${annSec}</div></div>`;
+    const archSops = (ARCHIVED_SOPS[d.id]||[]);
+    const archId = d.id.replace(/[^a-zA-Z0-9]/g,"_")+"_archpanel";
+    const archSec = archSops.length ? `<div class="archived-section">
+      <div onclick="toggleArchPanel('${archId}')" id="archpanel-btn-${archId}" class="archived-toggle">
+        <span style="font-size:14px">🗂️</span>
+        <span class="archived-label">Archived SOPs</span>
+        <span class="archived-badge">${archSops.length} archived</span>
+        <span id="archpanel-chev-${archId}" class="archived-chev">▾</span>
+      </div>
+      <div id="archpanel-${archId}" class="archived-body">
+        <div style="padding:8px 0 10px;font-size:11.5px;color:var(--muted);font-style:italic">These SOPs are no longer active but are kept for reference.</div>
+        ${archSops.map((s,i)=>sopHTML(s,d.id+"-arch",i)).join("")}
+      </div>
+    </div>` : "";
+    return `<div class="ds"><div class="dsh"><div class="dstripe" style="background:${d.color}"></div><div class="di"><h2>${hl(d.id,q)}</h2><div class="ml">${avs}<span style="margin-left:2px">${d.managers.length>1?"Managers":"Manager"}: <b>${hl(d.managers.join(", "),q)}</b></span></div></div></div><div class="dept-body">${mgrSec}${memSec}${annSec}${archSec}</div></div>`;
   }).join("");
 }
 
@@ -2636,6 +2804,15 @@ function toggleAnnPanel(id) {
   if (chev) chev.style.transform = isOpen ? "" : "rotate(180deg)";
 }
 
+
+function toggleArchPanel(id) {
+  const panel = document.getElementById("archpanel-"+id);
+  const chev = document.getElementById("archpanel-chev-"+id);
+  if (!panel) return;
+  const isOpen = panel.style.display !== "none";
+  panel.style.display = isOpen ? "none" : "block";
+  if (chev) chev.style.transform = isOpen ? "" : "rotate(180deg)";
+}
 
 function toggleAnn(id) {
   const el = document.getElementById("ann-"+id);

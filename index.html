@@ -1746,6 +1746,137 @@ const STATIC_SOPS={
 const STATIC_SOPS_EXTRA = {
   "Regular Project Management": [
     {
+      sop_title:"Regular PM — Manager Overview & Responsibilities",
+      role:"Manager",
+      tags:"manager,regular pm,ara pascual,assign,workload,pipeline review,m1,m2,clawback,solar insure,part 1,part 2,monitoring,rti,installation",
+      summary:"Full overview of the Regular PM Manager responsibilities — project assignment, installation checklist, M1/M2 monitoring, clawback extensions, Solar Insure, Part 1/2 monitoring, and weekly pipeline reviews.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Task 1 — Assigning Projects to PMs",
+          detail:`Monitor the following group chats regularly for new project requests:<br><br>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+            <span style="padding:4px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px;color:#1E3A8A;font-weight:500">Welcome Call</span>
+            <span style="padding:4px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px;color:#1E3A8A;font-weight:500">IPA</span>
+            <span style="padding:4px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px;color:#1E3A8A;font-weight:500">Sokolov IPA</span>
+            <span style="padding:4px 10px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:6px;font-size:12px;color:#1E3A8A;font-weight:500">Desadigit IPA</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px">
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>Lightreach</strong> → Must be <span style="background:#D1FAE5;color:#065F46;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:500">NTP Approved</span>
+            </div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>Sunrun</strong> → Must be <span style="background:#D1FAE5;color:#065F46;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:500">IPA Signed</span>
+            </div>
+          </div>
+          Review PMs&#39; current workload on the tracker then assign the new project to the appropriate PM.`
+        },
+        {
+          title:"Task 2 — Pre-Installation Checklist Monitoring",
+          detail:`Once a project receives permit and IC approval, Ara and the PM must verify the following before including it on the <strong>RTI (Ready to Install)</strong> list:<br><br>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span><strong>NTP Approved</strong></span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span><strong>Permit and Interconnection Approved</strong></span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Verify <strong>Contract and Disclosure Forms</strong> match the system size on the plan set and proposal</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Check <strong>updated proposal on SOLO</strong> — confirm it matches the layout and equipment on the plan set</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Verify <strong>pipeline review comments</strong> — if additional work is required by the HO, follow up with SR and HO to confirm it is completed</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Ensure <strong>adders/upgrades/trenching email</strong> has been sent to SR for the project</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Check if the <strong>roof is in good condition</strong> prior to installation</span></div>
+            <div style="padding:7px 12px;background:#FEF3C7;border:1px solid #FDE68A;border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#B45309;font-weight:600;flex-shrink:0">✓</span><span>If the project requires <strong>re-roofing, attic repair, or cement trenching</strong> — confirm with SR and HO that it is completed before scheduling installation</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Double-check with <strong>Eugene</strong> for proper project review — send to the <em>Planset Revision</em> group chat to confirm planset is good to go</span></div>
+          </div>
+          <div style="padding:9px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            Once verified, <strong>Ara will send the project as "Ready for Install"</strong> to Mo&#39;s group chat for approval. If approved, Mo or Ms. Sheena will provide a schedule — PM should then coordinate with SR and HO.
+          </div>`
+        },
+        {
+          title:"Task 3 — M1 Project Monitoring",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">At the <strong>day of installation</strong>, before EOD, PM must review installation photos then submit for <strong>M1</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Update adders in CRM</strong> (if applicable).</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Include the project in <strong>Ahmad&#39;s M1/M2 Tracker</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Task 4 — M2 Project Monitoring",
+          detail:`If a project is approved for PTO, PM will submit M2. Verify the following <strong>before submitting</strong>:<br><br>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Check and upload <strong>PTO, COC Approval, and NEM Approval</strong> on the LR portal</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Check <strong>CompanyCam photos</strong>:<br><span style="color:var(--muted)">• CTs should be above the B-taps (Tesla) &nbsp;|&nbsp; White sticker should be under the main panel and above the utility (Tesla)</span></span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:600;flex-shrink:0">✓</span><span>Check <strong>System Powerhub (Tesla)</strong>:<br><span style="color:var(--muted)">• Strings should be working (all positive) &nbsp;|&nbsp; Metering and neurio meter should be positive &nbsp;|&nbsp; Check graphing — if not correlating, refer to the sample reference of good monitoring</span></span></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">If Project is Rejected for M2</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Ara will send the rejection comments to <strong>Layth</strong> and update it on the <strong>M2 Rejections Google Sheet</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Layth will advise if a <strong>revisit is needed</strong> or if it can be <strong>fixed remotely</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">If a revisit is needed, PM will ask HO for availability — then Ara will <strong>plot it on CRM</strong> under Revisit &amp; Repair.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Once plotted, inform <strong>Layth</strong> that it is scheduled so he can assign a technician for M2 Corrections.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Send <strong>daily M2 updates</strong> to Abdal&#39;s group chat (Install and M&#39;s Progress).</div></div>
+          </div>`
+        },
+        {
+          title:"Task 5 — Clawback Extension Request",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Monitor Lightreach projects nearing the <strong>clawback period</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Identify priority projects: those <strong>>100 days from Install Approved date</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Notify the PM to <strong>submit an extension request</strong>.</div></div>
+          </div>
+          <div style="margin-top:8px;padding:8px 12px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 6px 6px 0;font-size:12px;color:#7F1D1D">
+            ⚠ Only <strong>ONE (1) ticket per project</strong> is allowed.
+          </div>`
+        },
+        {
+          title:"Task 6 — Applying for Solar Insure",
+          detail:`<div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A;margin-bottom:10px">
+            Applicable for <strong>Cash and Loan projects only</strong>. Confirm with SR if Solar Insure is required before proceeding.
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Access the portal: <a href="https://app.solarinsure.com/login" target="_blank" style="color:#2563EB;text-decoration:underline">↗ app.solarinsure.com</a></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Create warranty: select <strong>"Enroll a single warranty"</strong> (for one project).</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Choose coverage: <strong>Solar only</strong>, <strong>Battery only</strong>, or <strong>Solar + Battery</strong>.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Enter required details: <strong>Customer Name, Address, Email, Contact Number</strong>.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Fill out System Info:<br><br>
+              <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Installation Date</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Panel Model</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Number of Panels</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">System Size</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Inverter Model</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Battery Model</div>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Click <strong>Submit</strong> to complete the application.</div></div>
+          </div>`
+        },
+        {
+          title:"Task 7 — Part 1 / Part 2 Monitoring",
+          detail:`<div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A;margin-bottom:10px">
+            Applicable for <strong>Cash and Loan projects only</strong>.
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Once the project is installed, submit for <strong>Part 1</strong> (see Part 1 Submission SOP).</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Check email from the <strong>Illinois Shines Program Administrator</strong> for any corrections. Estimated review time: <strong>1–2 weeks</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Once Part 1 is approved, submit for <strong>PJM</strong> — approval typically takes <strong>1–2 days</strong>.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Once PJM is approved, submit for <strong>Standing Order</strong> — verify the Utility Buyer is correct before submitting.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Once the Standing Order is approved, submit for <strong>Part 2</strong>.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Check email from the <strong>Illinois Shines Program Administrator</strong> for any corrections on Part 2.</div></div>
+          </div>`
+        },
+        {
+          title:"Task 8 — Weekly Pipeline Review with Regular Project PMs",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Review each PM&#39;s projects <strong>one by one</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Identify projects that <strong>require follow-up</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Send follow-ups to the <strong>SR Manager</strong> for any pending items.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Check for <strong>missing details in the CRM</strong>.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Inform the assigned PM to <strong>update any incomplete information</strong>.</div></div>
+          </div>`
+        }
+      ],
+      note:"Pre-installation checklist must be fully verified before adding any project to the RTI list. Only one clawback extension ticket is allowed per project."
+    },
+    {
       sop_title:"Sunrun — Pre-M1 Workflow",
       role:"Team Member",
       tags:"sunrun,regular,pm,workflow,crm,ntp,planset,site survey,company cam,upgrade,msp,greentech,pre-m1",

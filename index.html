@@ -2486,14 +2486,492 @@ const STATIC_SOPS_EXTRA = {
       ],
       note:"M2 requires the Passed Final Inspection Report. M3 requires the COC Approval Report. Final Incentive requires Net Metering, COC, and the completed IL Demographics Card."
     },
-    { sop_title:"Lightreach — Pre-M1 Workflow", role:"Team Member", tags:"lightreach,regular,pm,pre-m1,workflow", summary:"Pre-M1 workflow for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Lightreach — M1 Submission", role:"Team Member", tags:"lightreach,regular,pm,m1,submission,milestone", summary:"M1 milestone submission for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Lightreach — Pre-M2 Workflow", role:"Team Member", tags:"lightreach,regular,pm,pre-m2,workflow", summary:"Pre-M2 workflow for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Lightreach — M2 Submission", role:"Team Member", tags:"lightreach,regular,pm,m2,submission,milestone", summary:"M2 milestone submission for Lightreach projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Loan — Pre-Part 1 Workflow", role:"Team Member", tags:"loan,regular,pm,pre-part 1,workflow,financing", summary:"Pre-Part 1 workflow for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Loan — Part 1 Submission", role:"Team Member", tags:"loan,regular,pm,part 1,submission,financing", summary:"Part 1 submission for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Loan — Pre-Part 2 Workflow", role:"Team Member", tags:"loan,regular,pm,pre-part 2,workflow,financing", summary:"Pre-Part 2 workflow for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Loan — Part 2 Submission", role:"Team Member", tags:"loan,regular,pm,part 2,submission,financing", summary:"Part 2 submission for Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    {
+      sop_title:"Lightreach — Pre-M1 Workflow",
+      role:"Team Member",
+      tags:"lightreach,regular,pm,pre-m1,workflow,crm,ntp,planset,site survey,company cam,upgrade,msp,greentech,palmetto",
+      summary:"Complete pre-M1 workflow for Lightreach projects — from project assignment through NTP submission and installation day.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Step 1 — Receive Project Assignment",
+          detail:`The <strong>SPM</strong> will assign the project through the Google Chat group <strong>"New Assigned Project."</strong><br><br>
+          Acknowledge receipt in the group chat before proceeding.`
+        },
+        {
+          title:"Step 2 — Search or Create Opportunity in CRM (Zoho)",
+          detail:`Search for the opportunity in the CRM first. If it already exists, continue using it. If not, create a new contact and opportunity.<br><br>
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">If no existing record — Create a Contact first</div>
+          <div class="steps" style="margin-bottom:14px">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>Contacts</strong> in the CRM</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Create Contact"</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Fill out: <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Phone</strong>, <strong>Email</strong> → click <strong>Save</strong></div></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Create the Opportunity</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">4</div><div class="stept">Open the contact → click <strong>Opportunities</strong> in the left sidebar → click <strong>"New Opportunity"</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Make sure it is under <strong>"Standard"</strong> pipeline type</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Fill out the following fields:<br><br>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Opportunity Name</span><span>Customer Name — Project Address</span></div>
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Senior Project Manager</span><span><strong>Ara Pascual</strong> (always)</span></div>
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Project Manager</span><span>Name of the assigned PM</span></div>
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Program</span><span><strong>Lightreach</strong></span></div>
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Financer Portal</span><span>Link to the Lightreach account in the Lightreach portal</span></div>
+                <div style="padding:5px 10px;font-size:12px;display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Project Address</span><span>Full street, city, state, zip, county, own/rent</span></div>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Click <strong>Save</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Step 3 — Upload Documents from Portal to CRM",
+          detail:`Once the Opportunity is created, upload all relevant documents from the <strong>Lightreach portal</strong> into the CRM.<br><br>
+          Documents to upload include (as applicable):<br><br>
+          <ul style="display:flex;flex-direction:column;gap:4px">
+            <li style="font-size:12px">Customer Agreement (PPA/Contract)</li>
+            <li style="font-size:12px">IPA</li>
+            <li style="font-size:12px">Proposal / Design Plans</li>
+            <li style="font-size:12px">Any other project-specific documents from the Lightreach portal</li>
+          </ul>`
+        },
+        {
+          title:"Step 4 — CRM Updating",
+          detail:`Send two update requests in the respective group chats:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Send the <strong>CRM Project link</strong> to the <strong>"Lead Source Correction"</strong> group chat, then tag <strong>Charlyn</strong> and <strong>Katrina</strong> to update the Lead Source.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Send the <strong>CRM Project link</strong> to the <strong>"Proposal Updates"</strong> group chat, then tag <strong>Mark</strong> and <strong>Kean</strong> to update the <strong>Project Size and Production</strong> fields in the CRM (Module, Number of Modules, Module Production, Inverter, Number of Inverters, Battery info, Proposed AC/DC System Size, Number of Arrays, etc.).</div></div>
+          </div>`
+        },
+        {
+          title:"Step 5 — Create CompanyCam Site Survey Checklist",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Login Credentials</div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Link:</span> <a href="https://companycam.com/" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open CompanyCam</a></div>
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Username:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">jhai@sunrisesolar-il.com</code></div>
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Password:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">Sunrise1234%</code></div>
+            </div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click the <strong>circle with a Plus (+) icon</strong> on the upper left of the CompanyCam dashboard.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Create a Project"</strong> from the menu that appears.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Add the <strong>Project Name</strong> and <strong>Project Address</strong>. Make sure the correct house is pinned on the map, then click <strong>"Create a Project."</strong></div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Inside the project, go to the <strong>"Checklists"</strong> tab.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Create a Checklist"</strong> then choose <strong>"Use a Template."</strong></div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Select the <strong>"Site Survey Template"</strong> (5 sections · 50 fields, last updated Apr 13, 2026) then click <strong>"Use Template."</strong></div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Click the <strong>"Site Survey Template"</strong> checklist, then fill out the <strong>"Homeowner &amp; Project Information"</strong> section:<br><br>
+              <ul style="margin-top:4px">
+                <li><strong>Homeowner Name</strong> — add the customer&#39;s full name</li>
+                <li><strong>Homeowner Address</strong> — add the full project address</li>
+                <li><strong>Project Scope</strong> — select: Ground Mount, Roof Mount, or Flat Roof</li>
+                <li><strong>Project Scope Notes</strong> — select: <strong>Lightreach Project</strong></li>
+              </ul>
+            </div></div>
+            <div class="step"><div class="stepn">8</div><div class="stept">Upload the <strong>Proposal Layout</strong> to the <strong>"Homeowner &amp; Project Information / Project Proposal"</strong> section. Photos are required for this field.</div></div>
+            <div class="step"><div class="stepn">9</div><div class="stept">Click the <strong>"Assign"</strong> button and assign: the <strong>assigned Surveyor</strong>, <strong>Brian Pastirik</strong>, and <strong>Isaac Irizarry</strong>.</div></div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:var(--navy-lt,#E6F0F9);border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            Once the checklist is fully set up, send the CompanyCam project link to the Google Chat group <strong>"SS Request for Kean/Mark"</strong> with all relevant project details.
+          </div>`
+        },
+        {
+          title:"Step 6 — Pipeline Review",
+          detail:`After the site survey is completed:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Download SS photos from CompanyCam, then upload them to <strong>Google Drive</strong> and the <strong>CRM</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Update the project milestone/stage in the CRM to <strong>"Site Survey Completed."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Send a message in the <strong>Pipeline Meetings group chat</strong> and provide the customer name to line them up for pipeline review.</div></div>
+          </div>`
+        },
+        {
+          title:"Step 7 — Send Adders Approval to Group Chat",
+          detail:`Send a message to the <strong>"Adders Approval"</strong> Google Chat group for each project that has adders identified during Pipeline Review.<br><br>
+          <div style="padding:9px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 6px 6px 0;font-size:12px;color:#78350F;margin-bottom:12px">
+            ⚠ Send <strong>one message per project</strong> so each project can be discussed within its own thread without confusion.
+          </div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Include the following in each message</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept"><strong>Existing Adders</strong> — list all adders identified during pipeline review</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>EPC</strong> — attach the EPC document</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>System Size</strong> — include the proposed AC/DC system size</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept"><strong>Number of Batteries</strong> — specify battery quantity (0 if none)</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept"><strong>Repairs Needed</strong> — list any roof, structural, or electrical repairs required</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept"><strong>Customer Agreement</strong> — attach the signed customer agreement</div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept"><strong>Sales Rep &amp; Customer Name</strong> — include both names for easy identification</div></div>
+          </div>
+          <div style="margin-top:12px;padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            Wait for approval in the thread before proceeding to request the Planset from Greentech.
+          </div>`
+        },
+        {
+          title:"Step 8 — Request Planset from Greentech",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Login</div>
+            <div style="font-size:12px"><a href="https://greentechrenewables.com" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open Greentech</a> &nbsp;|&nbsp; Account: <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">98650 - CREDIT</code></div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Log in → go to <strong>Projects</strong> tab → click <strong>+ New Project</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Project Name: enter <strong>exactly as it appears on the Utility Bill</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Get CompanyCam share link: open project → Share → Share All Images → Copy Link</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Paste link in <strong>Share Project Link</strong> field → click <strong>Save Project</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">From Project Dashboard → click <strong>Create a Service Order</strong> → Order Type: <strong>Residential Intake</strong></div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Services: Residential Permit = <strong>Unstamped</strong> | Electrical Stamp = <strong>YES</strong> | Structural Stamp = <strong>YES</strong></div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Fill out Site Info, Utility, Site Sketch (upload Proposal + UB), Existing Equipment, Electrical Notes from Pipeline Review → <strong>Submit Service Order</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Step 9 — Request PE Stamp from Greentech",
+          detail:`Once the Design Team confirms the planset is <strong>good to go</strong> via the "Planset Approval" group chat:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Log back in to <strong>Greentech</strong> and open the project.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Go to the <strong>Plansets</strong> section on the left menu.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Locate the planset in <strong>Pre-Stamp Approval</strong> status.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Review the planset to confirm everything is correct.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Approve Documents"</strong> to proceed with PE Stamping.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Wait for status to change to <strong>Deliverables Ready</strong> — stamped and complete.</div></div>
+          </div>`
+        },
+        {
+          title:"Step 10 — Upgrade Notification Email (If Applicable)",
+          detail:`If after Pipeline Review there is an <strong>MSP Upgrade, Meter Upgrade, Roof Upgrade</strong>, or any other upgrade required, notify the Sales Rep by email.<br><br>
+          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Email Details</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">To:</span> Sales Rep, Sales Organization Leader</div>
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">CC:</span> <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">jhai@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">ara@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">keith@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">abdal@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">karim@sunrisesolar-il.com</code></div>
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">Attach:</span> Adders reference document</div>
+            </div>
+          </div>
+          <strong>Email Template:</strong><br><br>
+          <div style="padding:14px 16px;background:var(--bg);border-radius:8px;border:1px solid var(--border);font-size:12.5px;line-height:1.9;color:var(--text)">
+            <div style="margin-bottom:4px"><strong>Subject:</strong> [UPGRADE TYPE] &amp; [UPGRADE TYPE] CONFIRMATION | [CUSTOMER FULL NAME]</div>
+            <div style="border-top:1px solid var(--border);margin:8px 0;padding-top:8px">Hi [Sales Rep Name],</div>
+            <div style="margin-bottom:6px">I hope you&#39;re doing well.</div>
+            <div style="margin-bottom:6px">Following our pipeline review for <strong>[Customer Full Name]</strong>, we have determined that a <strong>[describe upgrade]</strong> is required to proceed with the project. The cost for the upgrade is as follows:</div>
+            <div style="margin-bottom:6px;padding:8px 12px;background:var(--white);border-radius:6px;border:1px solid var(--border);font-weight:500">[Upgrade Type]: $[Amount]</div>
+            <div style="margin-bottom:6px">Please confirm whether you will cover the cost or if the homeowner will be responsible for it. Kindly provide your response within <strong>24 hours</strong>. If we do not receive a reply, we will proceed with the project.</div>
+            <div>Regards,<br>[Your Name]<br>Project Manager<br>Sunrise Solar</div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:#FEF3C7;border-left:3px solid #D97706;border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            ⚠️ <strong>CRM Requirement:</strong> All upgrades/adders identified during pipeline review must be logged in the <strong>CRM portal</strong> before sending the notification email.
+          </div>`
+        },
+        {
+          title:"Step 11 — Send Permit & IC Application Requests",
+          detail:`Send a request to the <strong>"Permit Application"</strong> Google Chat group:<br><br>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:10px">
+            <strong>Project Name</strong> | <strong>CRM Link</strong> | <strong>HOA Info</strong> (if applicable)
+          </div>
+          Send a request to the <strong>"Interconnection Application Request"</strong> Google Chat group:<br><br>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+            <strong>Project Name</strong> | <strong>CRM Link</strong>
+          </div>`
+        },
+        {
+          title:"Step 12 — Confirm Installation Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed installation date.<br><br>
+          PM must confirm the installation date directly with the <strong>Homeowner (HO)</strong> — ensure they are available and someone will be home during the installation.`
+        },
+        {
+          title:"Step 13 — Installation Day",
+          detail:`Monitor install photos throughout the installation day and coordinate with installers.<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Monitor the install photos with <strong>Install QA</strong> to ensure all required photos are uploaded for submission.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Once all photos are complete, proceed with <strong>M1 submission</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">If there are any <strong>rejections</strong>, send the rejection comment to the crew so they can provide the correct photos.</div></div>
+          </div>`
+        }
+      ],
+      note:"Always confirm the NTP is approved before assigning a Lightreach project. Project Scope Notes in CompanyCam must be set to 'Lightreach Project' (not SunRun Project)."
+    },
+    {
+      sop_title:"Lightreach — M1 Submission",
+      role:"Team Member",
+      tags:"lightreach,regular,pm,m1,submission,milestone,palmetto,solo,install,serial number,permit,photo",
+      summary:"Full M1 submission process for Lightreach projects — from Palmetto portal setup through install photos and final submission.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Step 1 — Access Project in Palmetto Portal",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Search the homeowner&#39;s name on the <strong>Palmetto Portal</strong> then click the name.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Scroll down to the <strong>Install Package</strong> section and click <strong>"+ Install Package."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Step 2 — Get Estimated Yearly Production from SOLO",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Go to the <strong>SOLO Portal</strong>, search for the homeowner&#39;s name and click on it.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"New Solar Proposal"</strong> then view the proposal.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Get the <strong>Estimated Yearly Production</strong> from the proposal.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Enter it on the <strong>LR Portal</strong>, then click <strong>"Check"</strong> then <strong>"Save."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Step 3 — Fill Out Equipment Category",
+          detail:`Fill in the following equipment details:<br><br>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Panel Manufacturer</strong></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Panel Model</strong></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Inverter Manufacturer</strong></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Inverter Model</strong></div>
+          </div>`
+        },
+        {
+          title:"Step 4 — Fill Out Mounting Category",
+          detail:`<div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Mounting Hardware — Rail</div>
+          <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;margin-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:11px">Pegasus - PSR-M84-US-Rail-Mill 84&#34;-USA</div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Mounting Hardware — Fastener Clamp</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:11px">Pegasus-PSR-MCZ-US (End) - Multi-Clamp-Mid/End 30-40mm - Black Ano-USA (End)</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:11px">Pegasus-PSR-MCZ-US (Mid) - Multi-Clamp-Mid/End 30-40mm - Black Ano-USA (Mid)</div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Mounting Hardware — Fastener MLPE</div>
+          <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:11px;margin-bottom:10px">Pegasus-PSR-MLP-US-MLPE Mount-USA</div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Mounting Hardware — Fastener Splice</div>
+          <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:11px;margin-bottom:12px">Pegasus-PSR-SPLS-US-Bonded Structural Splice-USA</div>
+
+          Click <strong>"Calculate"</strong> then <strong>"Next."</strong>`
+        },
+        {
+          title:"Step 5 — Module Serial Numbers & Required Fields",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Fill out the <strong>Module Serial Numbers</strong> for all panels.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Fill out the following required fields:<br><br>
+              <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px">
+                <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>ICC Docket Number:</strong> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">23-0672</code></div>
+                <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Qualified Person Onsite First Name:</strong> Pedro</div>
+                <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Qualified Person Onsite Last Name:</strong> Love-Paramo-Mascote</div>
+                <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Inverter Monitoring ID:</strong> Enphase Site ID</div>
+                <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px"><strong>Approved Permit:</strong> Upload the Permit</div>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept"><strong>Skip</strong> the following fields:<br><br>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
+                <span style="padding:3px 8px;background:#F3F4F6;border:1px solid var(--border);border-radius:5px;font-size:11px;color:var(--muted)">Permit Application Submitted</span>
+                <span style="padding:3px 8px;background:#F3F4F6;border:1px solid var(--border);border-radius:5px;font-size:11px;color:var(--muted)">Permit Application Approval</span>
+                <span style="padding:3px 8px;background:#F3F4F6;border:1px solid var(--border);border-radius:5px;font-size:11px;color:var(--muted)">Install Date</span>
+                <span style="padding:3px 8px;background:#F3F4F6;border:1px solid var(--border);border-radius:5px;font-size:11px;color:var(--muted)">Expected PTO Date</span>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Double-check that the <strong>Utility</strong> field is complete and accurate.</div></div>
+          </div>`
+        },
+        {
+          title:"Step 6 — Market Specific Requirements",
+          detail:`Under <strong>Market Specific Requirements</strong>:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Upload the <strong>updated Disclosure Form</strong> (signed).</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Upload the <strong>signed DG Rebate</strong> form.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">If the utility bill is under a different name, upload a <strong>Relationship Document</strong> stating the name on the bill is the spouse.<br><br>
+              <div style="padding:8px 12px;background:#FEF3C7;border-left:3px solid #B45309;border-radius:0 6px 6px 0;font-size:12px;color:#78350F">
+                ⚠ Lightreach only accepts <strong>spouses</strong> as the relationship type for name discrepancies.
+              </div>
+              <div style="margin-top:10px">
+                <a href="LR_Relationship_Clarification_Letter.docx" download style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:8px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">📄 Download LR Relationship Clarification Letter ↓</a>
+              </div>
+            </div></div>
+          </div>`
+        },
+        {
+          title:"Step 7 — Design Package",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept"><strong>Plan Set:</strong> Upload the Final Plan Set (even if not stamped).</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Shade Report / Production Model:</strong> Get the screenshots from the SOLO proposal and upload them <strong>separately</strong> on the portal.</div></div>
+          </div>`
+        },
+        {
+          title:"Step 8 — Install Photo Documentation",
+          detail:`Get all photos from <strong>CompanyCam</strong> and label them based on the Lightreach photo guide.<br><br>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Photo Categories Required</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:#059669;flex-shrink:0"></span><strong>Project Site</strong></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:#059669;flex-shrink:0"></span><strong>Roof</strong></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:#059669;flex-shrink:0"></span><strong>Electrical</strong></div>
+            <div style="padding:7px 12px;background:#F3F4F6;border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:#9CA3AF;flex-shrink:0"></span><strong>Storage</strong> <span style="color:var(--muted);font-size:11px">— SKIP</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:#059669;flex-shrink:0"></span><strong>System Commissioning</strong></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Lightreach Photo & Compliance Guides</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <a href="https://help.palmetto.finance/en/articles/8306274-solar-energy-plan-install-m1-photo-documentation" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:7px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">↗ M1 Photo Documentation Guide</a>
+            <a href="https://help.palmetto.finance/en/articles/11705727-solar-energy-plan-monitoring-portal-deliverables-m1#h_9083c87842" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:7px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">↗ Monitoring Portal Deliverables M1</a>
+            <a href="https://help.palmetto.finance/en/articles/8708580-solar-energy-plan-eligible-sites" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:7px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">↗ Eligible Sites Guide</a>
+            <a href="https://help.palmetto.finance/en/articles/9185615-illinois-compliance-process" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:7px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">↗ Illinois Compliance Process</a>
+            <a href="https://help.palmetto.finance/en/articles/12524213-solar-energy-plan-avl-all-things-hardware" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:#EBF5FB;border:1px solid #BEE3F8;border-radius:7px;text-decoration:none;color:#1E3A8A;font-size:12px;font-weight:500">↗ AVL — All Things Hardware</a>
+          </div>`
+        },
+        {
+          title:"Step 9 — Submit for Review",
+          detail:`Once all sections are complete, click <strong>"Submit for Review."</strong><br><br>
+          <div style="padding:10px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:13px;color:#14532D;text-align:center;font-weight:500">
+            🎉 M1 Submission Complete!
+          </div>`
+        }
+      ],
+      note:"Label all install photos based on the Lightreach photo documentation guide. Storage category is skipped. LR only accepts spouses as relationship type for utility bill name discrepancies."
+    },
+    {
+      sop_title:"Lightreach — Pre-M2 Workflow",
+      role:"Team Member",
+      tags:"lightreach,regular,pm,pre-m2,workflow,placard,inspection,pto,monitoring,layth",
+      summary:"Pre-M2 workflow for Lightreach projects — from ordering the Placard through inspection confirmation and PTO approval go signal.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Step 1 — Order the Placard",
+          detail:`Once confirmed by the Design Team, send an email to order the Placard.<br><br>
+          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">📧 Email Details</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:30px;display:inline-block">To:</span> <a href="mailto:Branden@fcdlabels.com" style="color:#2563EB">Branden@fcdlabels.com</a>, <a href="mailto:order@familycustomdesigns.com" style="color:#2563EB">order@familycustomdesigns.com</a></div>
+              <div><span style="color:var(--muted);min-width:30px;display:inline-block">CC:</span> Drew, Hester, SPM, Jhai</div>
+              <div><span style="color:var(--muted);min-width:30px;display:inline-block">Attach:</span> <strong>Stamped Planset</strong></div>
+            </div>
+          </div>
+          <div style="padding:12px 14px;background:var(--bg);border-radius:8px;border:1px solid var(--border);font-size:12px;line-height:1.9">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">✉️ Email Template</div>
+            Hi Team,<br><br>
+            Good day!<br><br>
+            I would like to request the ordering of a placard for the attached stamped plan set.<br><br>
+            If possible, could you please prioritize this project? The placard will be required for the upcoming inspection.<br><br>
+            <strong>Installer:</strong> Sunrise Solar<br>
+            <strong>Name:</strong> [Homeowner&#39;s Full Name]<br>
+            <strong>Shipping Address:</strong> 825 W 75th St, Unit E, Willowbrook, IL 60527<br><br>
+            [Add any additional notes if required by the AHJ or inspector]<br><br>
+            Please let us know if this is possible.<br><br>
+            Thank you!
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:#FEF3C7;border-left:3px solid #D97706;border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            ⚠️ The shipping address is <strong>always Sunrise Solar&#39;s office</strong> (825 W 75th St, Unit E, Willowbrook, IL 60527) — <strong>never</strong> the homeowner&#39;s address.
+          </div>`
+        },
+        {
+          title:"Step 2 — Confirm Inspection Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed inspection date.<br><br>
+          Once received, the PM must confirm the inspection date directly with the <strong>Homeowner (HO)</strong> to make sure they are available for the visit.`
+        },
+        {
+          title:"Step 3 — Await PTO Approval & Get Go Signal for M2",
+          detail:`Once <strong>PTO is approved</strong>, the PM will be informed.<br><br>
+          Before proceeding with M2 submission, PM must confirm the project is ready by checking <strong>at least one</strong> of the following:<br><br>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px">
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;display:flex;align-items:flex-start;gap:8px">
+              <span style="color:#059669;font-weight:700;flex-shrink:0;font-size:14px">📸</span>
+              <span><strong>Install Photos</strong> — review photos to confirm installation is complete and correct</span>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;display:flex;align-items:flex-start;gap:8px">
+              <span style="color:#059669;font-weight:700;flex-shrink:0;font-size:14px">📊</span>
+              <span><strong>Monitoring App</strong> — verify the system is producing and all readings are positive</span>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;display:flex;align-items:flex-start;gap:8px">
+              <span style="color:#059669;font-weight:700;flex-shrink:0;font-size:14px">👤</span>
+              <span><strong>Customer Success / Layth</strong> — confirm with the Customer Success Department (specifically Layth) that the project is good to proceed</span>
+            </div>
+          </div>
+          <div style="padding:9px 12px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 6px 6px 0;font-size:12px;color:#065F46">
+            Once a <strong>go signal</strong> is received, proceed with <strong>M2 submission</strong> (see Lightreach — M2 Submission SOP).
+          </div>`
+        }
+      ],
+      note:"The Placard shipping address is always Sunrise Solar's office — never the homeowner's address. Do not proceed with M2 until PTO is approved and go signal is confirmed."
+    },
+    {
+      sop_title:"Lightreach — M2 Submission",
+      role:"Team Member",
+      tags:"lightreach,regular,pm,m2,submission,milestone,palmetto,pto,coc,activation,net metering,stipulations,revisit",
+      summary:"Full M2 submission process for Lightreach projects — from Activation Package setup through PTO submission, photo/monitoring checks, and stipulation handling.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Step 1 — Access Project & Create Activation Package",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Search the homeowner&#39;s name on the <strong>Palmetto Portal</strong> then click the name.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Scroll down to <strong>Activation Package</strong> and click <strong>"+ Activation Package."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Fill out and upload the following:<br><br>
+              <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
+                <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+                  <strong>PTO Granted Date</strong><br>
+                  <span style="color:var(--muted);font-size:11.5px">PTO Date from the COC document</span>
+                </div>
+                <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+                  <strong>Net Metering Approval</strong> <span style="background:#EBF5FB;color:#1E3A8A;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:500">ComEd Only</span><br>
+                  <div style="margin-top:6px;display:flex;flex-direction:column;gap:3px">
+                    <div class="step" style="padding:5px 8px"><div class="stepn" style="min-width:18px;height:18px;font-size:10px">1</div><div class="stept" style="font-size:11.5px">Go to the <strong>ComEd Portal</strong></div></div>
+                    <div class="step" style="padding:5px 8px"><div class="stepn" style="min-width:18px;height:18px;font-size:10px">2</div><div class="stept" style="font-size:11.5px">Search for the name on the bill</div></div>
+                    <div class="step" style="padding:5px 8px"><div class="stepn" style="min-width:18px;height:18px;font-size:10px">3</div><div class="stept" style="font-size:11.5px">Print the screen and save as <strong>PDF</strong></div></div>
+                    <div class="step" style="padding:5px 8px"><div class="stepn" style="min-width:18px;height:18px;font-size:10px">4</div><div class="stept" style="font-size:11.5px">Upload the saved PDF to the LR portal</div></div>
+                  </div>
+                </div>
+                <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+                  <strong>COC / PTO Approval</strong><br>
+                  <span style="color:var(--muted);font-size:11.5px">Download the signed COC approved documents and upload to the LR portal</span>
+                </div>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click <strong>"Submit PTO."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Step 2 — Check for Stipulations / Rejections",
+          detail:`After submitting PTO, check if the project has any <strong>initial rejections or stipulations</strong>.<br><br>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:10px 14px;background:#F0FDF4;border-left:3px solid #059669;border-radius:0 7px 7px 0;font-size:12px;color:#065F46">
+              <strong>✓ No Stipulations</strong> — Proceed to verify installation photos and graph monitoring on Powerhub (see Step 3).
+            </div>
+            <div style="padding:10px 14px;background:#FEE2E2;border-left:3px solid #DC2626;border-radius:0 7px 7px 0;font-size:12px;color:#7F1D1D">
+              <strong>✗ Has Stipulations</strong> — SPM should coordinate a revisit with Layth (see Steps 4–7).
+            </div>
+          </div>`
+        },
+        {
+          title:"Step 3 — Verify Photos & Powerhub Monitoring (No Stipulations)",
+          detail:`If the project has <strong>no stipulations</strong>, verify the following before final submission:<br><br>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Installation Photo Checks</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>The <strong>CTs should be above the B-taps</strong></span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>The <strong>white sticker should be under the main panel and above the utility</strong></span></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Powerhub Monitoring Checks</div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>On Powerhub, <strong>strings should be working</strong> (all should be positive)</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span><strong>Metering and Neurio meter</strong> should be positive</span></div>
+          </div>`
+        },
+        {
+          title:"Step 4–7 — Stipulation & Revisit Handling",
+          detail:`If the project <strong>has stipulations</strong> or did not pass the photo/monitoring checks:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">4</div><div class="stept">SPM should <strong>coordinate a revisit with Layth</strong>.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Update the <strong>"M2 Rejections List"</strong> Google Sheet with the project details.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Ask <strong>Layth</strong> if a revisit is needed or if the issue can be <strong>fixed remotely</strong>.</div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">If a revisit is needed: ask for availability from the <strong>SR/HO</strong>, then <strong>plot it on the calendar</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"Step 8–9 — Upload Corrections & Submit",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">8</div><div class="stept">Once the revisit is completed, <strong>double-check the photos</strong> and upload them to the <strong>specific rejections</strong> on the portal.</div></div>
+            <div class="step"><div class="stepn">9</div><div class="stept">Click <strong>"Submit for Review."</strong></div></div>
+          </div>
+          <div style="margin-top:10px;padding:10px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:13px;color:#14532D;text-align:center;font-weight:500">
+            🎉 M2 Submission Complete!
+          </div>`
+        }
+      ],
+      note:"For ComEd projects, Net Metering Approval must be a screen print saved as PDF from the ComEd portal. Always verify Powerhub monitoring before final submission. Only one M2 Rejections List entry per project."
+    },
+    { sop_title:"Sunlight Loan — Pre-Part 1 Workflow", role:"Team Member", tags:"loan,regular,pm,pre-part 1,workflow,financing", summary:"Pre-Part 1 workflow for Sunlight Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Sunlight Loan — Part 1 Submission", role:"Team Member", tags:"loan,regular,pm,part 1,submission,financing", summary:"Part 1 submission for Sunlight Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Sunlight Loan — Pre-Part 2 Workflow", role:"Team Member", tags:"loan,regular,pm,pre-part 2,workflow,financing", summary:"Pre-Part 2 workflow for Sunlight Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    { sop_title:"Sunlight Loan — Part 2 Submission", role:"Team Member", tags:"loan,regular,pm,part 2,submission,financing", summary:"Part 2 submission for Sunlight Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
     { sop_title:"Cash — Pre-Part 1 Workflow", role:"Team Member", tags:"cash,regular,pm,pre-part 1,workflow,payment", summary:"Pre-Part 1 workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
     { sop_title:"Cash — Part 1 Submission", role:"Team Member", tags:"cash,regular,pm,part 1,submission,payment", summary:"Part 1 submission for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
     { sop_title:"Cash — Pre-Part 2 Workflow", role:"Team Member", tags:"cash,regular,pm,pre-part 2,workflow,payment", summary:"Pre-Part 2 workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },

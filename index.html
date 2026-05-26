@@ -1769,6 +1769,12 @@ const STATIC_SOPS_EXTRA = {
             <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
               <strong>Sunrun</strong> → Must be <span style="background:#D1FAE5;color:#065F46;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:500">IPA Signed</span>
             </div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>Prepaid — Loan</strong> → Must be <span style="background:#D1FAE5;color:#065F46;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:500">NTP Approved</span>
+            </div>
+            <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>Prepaid — Cash</strong> → Must be <span style="background:#D1FAE5;color:#065F46;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:500">NTP Approved</span>
+            </div>
           </div>
           Review PMs&#39; current workload on the tracker then assign the new project to the appropriate PM.`
         },
@@ -1828,25 +1834,41 @@ const STATIC_SOPS_EXTRA = {
         },
         {
           title:"Task 6 — Applying for Solar Insure",
-          detail:`<div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A;margin-bottom:10px">
-            Applicable for <strong>Cash and Loan projects only</strong>. Confirm with SR if Solar Insure is required before proceeding.
+          detail:`<div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A;margin-bottom:12px">
+            Applicable for <strong>Cash and Loan projects only</strong>. Before submitting, confirm with the <strong>Sales Rep</strong> that Solar Insure is required. If confirmed, submit the application <strong>immediately after installation is completed</strong>.
           </div>
           <div class="steps">
-            <div class="step"><div class="stepn">1</div><div class="stept">Access the portal: <a href="https://app.solarinsure.com/login" target="_blank" style="color:#2563EB;text-decoration:underline">↗ app.solarinsure.com</a></div></div>
-            <div class="step"><div class="stepn">2</div><div class="stept">Create warranty: select <strong>"Enroll a single warranty"</strong> (for one project).</div></div>
-            <div class="step"><div class="stepn">3</div><div class="stept">Choose coverage: <strong>Solar only</strong>, <strong>Battery only</strong>, or <strong>Solar + Battery</strong>.</div></div>
-            <div class="step"><div class="stepn">4</div><div class="stept">Enter required details: <strong>Customer Name, Address, Email, Contact Number</strong>.</div></div>
-            <div class="step"><div class="stepn">5</div><div class="stept">Fill out System Info:<br><br>
-              <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
-                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Installation Date</div>
-                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Panel Model</div>
-                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Number of Panels</div>
-                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">System Size</div>
-                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Inverter Model</div>
-                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Battery Model</div>
+            <div class="step"><div class="stepn">1</div><div class="stept">Access and log in to the <a href="https://app.solarinsure.com/login" target="_blank" style="color:#2563EB;text-decoration:underline">↗ Solar Insure Warranty Portal</a></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Add Warranty"</strong> → <strong>"Enroll a Single Warranty."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Choose the appropriate warranty coverage based on the project:<br><br>
+              <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px">
+                <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">30-Year Solar Warranty</div>
+                <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">30-Year Battery Only Warranty</div>
+                <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">30-Year Solar and Battery Warranty</div>
               </div>
             </div></div>
-            <div class="step"><div class="stepn">6</div><div class="stept">Click <strong>Submit</strong> to complete the application.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Click <strong>Continue</strong>.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept"><strong>Warranty Holder Information:</strong><br><br>
+              <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">First Name</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Last Name</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Email</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Phone Number</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Address</div>
+              </div>
+              <br>Then click <strong>Continue</strong>.
+            </div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept"><strong>System Information:</strong><br><br>
+              <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Date of Installation</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Panel Model</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Number of Panels</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">System Size (kW)</div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border)">Inverters</div>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Click <strong>"Submit Warranty."</strong></div></div>
+            <div class="step"><div class="stepn">8</div><div class="stept"><strong>Download the Warranty Document</strong> and save it to the <strong>CRM or Google Drive</strong> for documentation and future reference.</div></div>
           </div>`
         },
         {
@@ -2203,9 +2225,67 @@ const STATIC_SOPS_EXTRA = {
           </div>`
         },
         {
-          title:"Confirm Installation Date with Homeowner",
-          detail:`The <strong>Install Team</strong> will inform the PM of the proposed installation date.<br><br>
-          PM must confirm the installation date directly with the <strong>Homeowner (HO)</strong> — ensure they are available and someone will be home during the installation.`
+          title:"Sunrun — Project Installation Readiness",
+          detail:`<div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A;margin-bottom:14px">
+            Ensure all required checks, repairs, approvals, and scheduling are completed before proceeding with project installation.
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 1 — Review Project Requirements</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            Once the project receives both <strong>IC and Permit approval</strong>, the assigned PM must:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Review the <strong>pipeline comments</strong> thoroughly.</li>
+              <li>Check if there are any required <strong>roof repairs or additional work</strong> needed prior to installation, including:<br>
+                <span style="color:var(--muted);font-size:11.5px">Rafter sistering · Decking/patching repair · Other roof-related repairs · Moving of equipment or clearing the area near the MSP</span>
+              </li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 2 — Coordinate Required Repairs</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            If repairs or additional work are needed:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Inform <strong>Ms. Sheena&#39;s team</strong> immediately (if the homeowner will not cover the required repairs).</li>
+              <li>Coordinate with <strong>Daniel</strong> to schedule and complete the required work before the installation date.</li>
+              <li>If the homeowner will cover the required repair, remind the <strong>Sales Rep</strong> to fix or complete it prior to installation.</li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 3 — Planset Review</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            In parallel with the repair coordination:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Send the planset to <strong>Arianne</strong> for planset review.</li>
+              <li>Ensure <strong>Eugene&#39;s team</strong> completes the checking and review process.</li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 4 — Verify Adders Approval</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            Once the planset review is completed and approved:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Check the <strong>Adders Approval</strong> group chat.</li>
+              <li>Confirm that the project is marked as <strong>approved</strong> in the group chat thread.</li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 5 — Endorse Project for Installation</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            After confirming adders approval:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Endorse the project as <strong>"Ready for Install"</strong> to <strong>Mo or Ms. Sheena</strong>.</li>
+              <li>Coordinate regarding the installation schedule.</li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 6 — Notify Sales Representative</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+            Once the installation schedule is confirmed:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Inform the assigned <strong>Sales Representative</strong> about the scheduled installation.</li>
+              <li>Wait for the Sales Representative&#39;s <strong>confirmation</strong> before proceeding further.</li>
+            </ul>
+          </div>`
         },
         {
           title:"FIC Assignment",
@@ -2670,9 +2750,77 @@ const STATIC_SOPS_EXTRA = {
           </div>`
         },
         {
-          title:"Step 12 — Confirm Installation Date with Homeowner",
-          detail:`The <strong>Install Team</strong> will inform the PM of the proposed installation date.<br><br>
-          PM must confirm the installation date directly with the <strong>Homeowner (HO)</strong> — ensure they are available and someone will be home during the installation.`
+          title:"Lightreach — Project Installation Readiness",
+          detail:`<div style="padding:8px 12px;background:#EBF5FB;border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A;margin-bottom:14px">
+            Ensure all required checks, repairs, approvals, and scheduling are completed before proceeding with project installation.
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 1 — Review Project Requirements</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            Once the project receives both <strong>IC and Permit approval</strong>:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:6px">
+              <li>The <strong>SPM</strong> must send the following details to the <strong>LR Install group chat</strong> for <strong>Abdal&#39;s approval</strong>:
+                <div style="margin-top:6px;padding:7px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border);font-size:11.5px;color:var(--muted)">
+                  Project Name · Project Address · System Size · Sales Representative · Updated Planset
+                </div>
+              </li>
+              <li>Once approval from <strong>Abdal</strong> is received, the PM must complete the following checks:
+                <div class="steps" style="margin-top:8px">
+                  <div class="step"><div class="stepn" style="min-width:20px;height:20px;font-size:10px">1</div><div class="stept" style="font-size:11.5px">Review the <strong>pipeline comments</strong> thoroughly.</div></div>
+                  <div class="step"><div class="stepn" style="min-width:20px;height:20px;font-size:10px">2</div><div class="stept" style="font-size:11.5px">Double-check the <strong>PV system information on the Palmetto portal</strong> — ensure all equipment information is updated and aligned with the latest approved planset.</div></div>
+                  <div class="step"><div class="stepn" style="min-width:20px;height:20px;font-size:10px">3</div><div class="stept" style="font-size:11.5px">Check if there are any required <strong>roof repairs or additional work</strong> needed prior to installation, including:<br>
+                    <span style="color:var(--muted)">Rafter sistering · Decking/patching repair · Other roof-related repairs · Moving of equipment or clearing the area near the MSP</span>
+                  </div></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 2 — Coordinate Required Repairs</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            If repairs or additional work are needed:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Inform <strong>Ms. Sheena&#39;s team</strong> immediately if the homeowner will not cover the required repairs.</li>
+              <li>Coordinate with <strong>Daniel</strong> to schedule and complete the required work before the installation date.</li>
+              <li>If the homeowner will cover the required repairs, remind the <strong>Sales Representative</strong> to ensure the work is completed prior to installation.</li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 3 — Planset Review</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            In parallel with the repair coordination process:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Send the planset to <strong>Arianne</strong> for planset review.</li>
+              <li>Ensure <strong>Eugene&#39;s team</strong> completes the checking and review process.</li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 4 — Verify Adders Approval</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            Once the planset review has been completed and approved:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Check the <strong>Adders Approval</strong> group chat.</li>
+              <li>Confirm that the project has been marked as <strong>approved</strong> in the group chat thread.</li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 5 — Endorse Project for Installation</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:12px">
+            After confirming adders approval:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Endorse the project as <strong>"Ready for Install"</strong> to <strong>Mo or Ms. Sheena</strong>.</li>
+              <li>Coordinate regarding the installation schedule.</li>
+            </ul>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Step 6 — Notify Sales Representative</div>
+          <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+            Once the installation schedule is confirmed:
+            <ul style="margin-top:8px;display:flex;flex-direction:column;gap:5px">
+              <li>Inform the assigned <strong>Sales Representative</strong> about the scheduled installation.</li>
+              <li>Wait for the Sales Representative&#39;s <strong>confirmation</strong> before proceeding further.</li>
+            </ul>
+          </div>`
         },
         {
           title:"Step 13 — Installation Day",
@@ -2968,10 +3116,570 @@ const STATIC_SOPS_EXTRA = {
       ],
       note:"For ComEd projects, Net Metering Approval must be a screen print saved as PDF from the ComEd portal. Always verify Powerhub monitoring before final submission. Only one M2 Rejections List entry per project."
     },
-    { sop_title:"Sunlight Loan — Pre-Part 1 Workflow", role:"Team Member", tags:"loan,regular,pm,pre-part 1,workflow,financing", summary:"Pre-Part 1 workflow for Sunlight Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Sunlight Loan — Part 1 Submission", role:"Team Member", tags:"loan,regular,pm,part 1,submission,financing", summary:"Part 1 submission for Sunlight Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Sunlight Loan — Pre-Part 2 Workflow", role:"Team Member", tags:"loan,regular,pm,pre-part 2,workflow,financing", summary:"Pre-Part 2 workflow for Sunlight Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
-    { sop_title:"Sunlight Loan — Part 2 Submission", role:"Team Member", tags:"loan,regular,pm,part 2,submission,financing", summary:"Part 2 submission for Sunlight Loan projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
+    {
+      sop_title:"Sunlight Loan — Pre-Part 1 Workflow",
+      role:"Team Member",
+      tags:"sunlight,loan,regular,pm,pre-part 1,workflow,financing,crm,planset,site survey,company cam,greentech,installation",
+      summary:"Complete pre-Part 1 workflow for Sunlight Loan projects — from project assignment through installation day.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Step 1 — Receive Project Assignment",
+          detail:`The <strong>SPM</strong> will assign the project through the Google Chat group <strong>"New Assigned Project."</strong><br><br>
+          Acknowledge receipt in the group chat before proceeding.`
+        },
+        {
+          title:"Step 2 — Search or Create Opportunity in CRM (Zoho)",
+          detail:`Search for the opportunity in the CRM first. If it already exists, continue using it. If not, create a new contact and opportunity.<br><br>
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">If no existing record — Create a Contact first</div>
+          <div class="steps" style="margin-bottom:14px">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>Contacts</strong> in the CRM</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Create Contact"</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Fill out: <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Phone</strong>, <strong>Email</strong> → click <strong>Save</strong></div></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace">Create the Opportunity</div>
+          <div class="steps">
+            <div class="step"><div class="stepn">4</div><div class="stept">Open the contact → click <strong>Opportunities</strong> in the left sidebar → click <strong>"New Opportunity"</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Make sure it is under <strong>"Standard"</strong> pipeline type</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Fill out the following fields:<br><br>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Opportunity Name</span><span>Customer Name — Project Address</span></div>
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Senior Project Manager</span><span><strong>Ara Pascual</strong> (always)</span></div>
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Project Manager</span><span>Name of the assigned PM</span></div>
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Program</span><span><strong>Sunlight</strong></span></div>
+                <div style="padding:5px 10px;font-size:12px;border-bottom:1px solid var(--border);display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Financer Portal</span><span>Link to the Sunlight account in the Sunlight portal</span></div>
+                <div style="padding:5px 10px;font-size:12px;display:flex;gap:8px"><span style="min-width:160px;font-weight:500">Project Address</span><span>Full street, city, state, zip, county, own/rent</span></div>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Click <strong>Save</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Step 3 — Send Proposal for AHJ / Fire Setback Review",
+          detail:`Send the proposal to the <strong>Sales Organization Group Chat</strong> and ask the <strong>Design Team</strong> to check the proposal if it follows the <strong>AHJ requirements for Fire Setback</strong> and other codes required by the municipality.`
+        },
+        {
+          title:"Step 4 — Upload Documents from Portal to CRM",
+          detail:`Upload all relevant documents to the CRM:<br><br>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 IPA</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Utility Bill</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Customer Agreement (PPA/Contract)</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Proposal / Design Plans</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Signed DG Rebate Form</div>
+          </div>`
+        },
+        {
+          title:"Step 5 — Create CompanyCam Site Survey Checklist",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Login Credentials</div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Link:</span> <a href="https://companycam.com/" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open CompanyCam</a></div>
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Username:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">jhai@sunrisesolar-il.com</code></div>
+              <div style="font-size:12px"><span style="color:var(--muted);min-width:80px;display:inline-block">Password:</span> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">Sunrise1234%</code></div>
+            </div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click the <strong>circle with a Plus (+) icon</strong> on the upper left of the CompanyCam dashboard.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"Create a Project"</strong> from the menu that appears.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Add the <strong>Project Name</strong> and <strong>Project Address</strong>. Make sure the correct house is pinned on the map, then click <strong>"Create a Project."</strong></div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Inside the project, go to the <strong>"Checklists"</strong> tab.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Create a Checklist"</strong> then choose <strong>"Use a Template."</strong></div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Select the <strong>"Site Survey Template"</strong> then click <strong>"Use Template."</strong></div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Click the <strong>"Site Survey Template"</strong> checklist, then fill out the <strong>"Homeowner &amp; Project Information"</strong> section:<br><br>
+              <ul style="margin-top:4px">
+                <li><strong>Homeowner Name</strong> — add the customer&#39;s full name</li>
+                <li><strong>Homeowner Address</strong> — add the full project address</li>
+                <li><strong>Project Scope</strong> — select: Ground Mount, Roof Mount, or Flat Roof</li>
+                <li><strong>Project Scope Notes</strong> — select: <strong>Sunlight Project</strong></li>
+              </ul>
+            </div></div>
+            <div class="step"><div class="stepn">8</div><div class="stept">Upload the <strong>Proposal Layout</strong> to the <strong>"Homeowner &amp; Project Information / Project Proposal"</strong> section. Photos are required for this field.</div></div>
+            <div class="step"><div class="stepn">9</div><div class="stept">Click the <strong>"Assign"</strong> button and assign: the <strong>assigned Surveyor</strong>, <strong>Brian Pastirik</strong>, and <strong>Isaac Irizarry</strong>.</div></div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:var(--navy-lt,#E6F0F9);border-left:3px solid #2563EB;border-radius:0 6px 6px 0;font-size:12px;color:#1E3A8A">
+            Once the checklist is fully set up, send the CompanyCam project link to the Google Chat group <strong>"SS Request for Kean/Mark"</strong> with all relevant project details.
+          </div>`
+        },
+        {
+          title:"Step 6 — Pipeline Review",
+          detail:`After the site survey is completed:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Download SS photos from CompanyCam, then upload them to <strong>Google Drive</strong> and the <strong>CRM</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Update the project milestone/stage in the CRM to <strong>"Site Survey Completed."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Send a message in the <strong>Pipeline Meetings group chat</strong> and provide the customer name to line them up for pipeline review.</div></div>
+          </div>`
+        },
+        {
+          title:"Step 7 — Request Planset from Greentech",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;font-family:'JetBrains Mono',monospace">Login</div>
+            <div style="font-size:12px"><a href="https://greentechrenewables.com" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open Greentech</a> &nbsp;|&nbsp; Account: <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">98650 - CREDIT</code></div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Log in → go to <strong>Projects</strong> tab → click <strong>+ New Project</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Project Name: enter <strong>exactly as it appears on the Utility Bill</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Get CompanyCam share link: open project → Share → Share All Images → Copy Link</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Paste link in <strong>Share Project Link</strong> field → click <strong>Save Project</strong></div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">From Project Dashboard → click <strong>Create a Service Order</strong> → Order Type: <strong>Residential Intake</strong></div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Services: Residential Permit = <strong>Unstamped</strong> | Electrical Stamp = <strong>YES</strong> | Structural Stamp = <strong>YES</strong></div></div>
+            <div class="step"><div class="stepn">7</div><div class="stept">Fill out Site Info, Utility, Site Sketch (upload Proposal + UB), Existing Equipment, Electrical Notes from Pipeline Review → <strong>Submit Service Order</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Step 8 — Request PE Stamp from Greentech",
+          detail:`Once the Design Team confirms the planset is <strong>good to go</strong> via the "Planset Approval" group chat:<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Log back in to <strong>Greentech</strong> and open the project.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Go to the <strong>Plansets</strong> section on the left menu.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Locate the planset in <strong>Pre-Stamp Approval</strong> status.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Review the planset to confirm everything is correct.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Click <strong>"Approve Documents"</strong> to proceed with PE Stamping.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Wait for status to change to <strong>Deliverables Ready</strong> — stamped and complete.</div></div>
+          </div>`
+        },
+        {
+          title:"Step 9 — Upgrade Notification Email (If Applicable)",
+          detail:`If after Pipeline Review there is an <strong>MSP Upgrade, Meter Upgrade, Roof Upgrade</strong>, or any other upgrade required, notify the Sales Rep by email.<br><br>
+          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Email Details</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">To:</span> Sales Rep, Sales Organization Leader</div>
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">CC:</span> <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">jhai@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">ara@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">keith@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">abdal@sunrisesolar-il.com</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px;font-family:'JetBrains Mono',monospace">karim@sunrisesolar-il.com</code></div>
+              <div><span style="color:var(--muted);min-width:60px;display:inline-block">Attach:</span> Adders reference document</div>
+            </div>
+          </div>
+          <div style="padding:14px 16px;background:var(--bg);border-radius:8px;border:1px solid var(--border);font-size:12.5px;line-height:1.9;color:var(--text)">
+            <div style="margin-bottom:4px"><strong>Subject:</strong> [UPGRADE TYPE] &amp; [UPGRADE TYPE] CONFIRMATION | [CUSTOMER FULL NAME]</div>
+            <div style="border-top:1px solid var(--border);margin:8px 0;padding-top:8px">Hi [Sales Rep Name],</div>
+            <div style="margin-bottom:6px">Following our pipeline review for <strong>[Customer Full Name]</strong>, we have determined that a <strong>[describe upgrade]</strong> is required. The cost is as follows:</div>
+            <div style="margin-bottom:6px;padding:8px 12px;background:var(--white);border-radius:6px;border:1px solid var(--border);font-weight:500">[Upgrade Type]: $[Amount]</div>
+            <div style="margin-bottom:6px">Please confirm whether you will cover the cost or if the homeowner will be responsible. Kindly respond within <strong>24 hours</strong>.</div>
+            <div>Regards,<br>[Your Name]<br>Project Manager<br>Sunrise Solar</div>
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:#FEF3C7;border-left:3px solid #D97706;border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            ⚠️ <strong>CRM Requirement:</strong> All upgrades/adders must be logged in the CRM portal before sending the notification email.
+          </div>`
+        },
+        {
+          title:"Step 10 — Send Permit & IC Application Requests",
+          detail:`Send a request to the <strong>"Permit Application"</strong> Google Chat group:<br><br>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px;margin-bottom:10px">
+            <strong>Project Name</strong> | <strong>CRM Link</strong> | <strong>HOA Info</strong> (if applicable)
+          </div>
+          Send a request to the <strong>"Interconnection Application Request"</strong> Google Chat group:<br><br>
+          <div style="padding:8px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+            <strong>Project Name</strong> | <strong>CRM Link</strong>
+          </div>`
+        },
+        {
+          title:"Step 11 — Pre-Installation Checklist",
+          detail:`Once the project receives both <strong>Permit and IC approval</strong>, verify the following before scheduling installation:<br><br>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span><strong>NTP Approved</strong></span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span><strong>Permit and Interconnection Approved</strong></span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>Verify <strong>Contract and Disclosure Forms</strong> match the system size on the plan set and proposal</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>Check <strong>updated proposal on SOLO</strong> — confirm it matches the layout and equipment on the plan set</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>Verify <strong>pipeline review comments</strong> — if additional work is required, follow up with SR and HO to confirm it is completed</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>Ensure <strong>adders/upgrades/trenching email</strong> has been sent to SR</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>Check if the <strong>roof is in good condition</strong> prior to installation</span></div>
+            <div style="padding:7px 12px;background:#FEF3C7;border:1px solid #FDE68A;border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#B45309;font-weight:700;flex-shrink:0">✓</span><span>If the project requires <strong>re-roofing, attic repair, or cement trenching</strong> — confirm with SR and HO that it is completed before scheduling installation</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>Double-check with <strong>Eugene</strong> for proper project review</span></div>
+          </div>`
+        },
+        {
+          title:"Step 12 — Installation Day",
+          detail:`Monitor photos throughout the installation day and coordinate with installers.<br><br>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Monitor the install photos to ensure all required photos are uploaded.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Follow up with the crew if photos are incomplete.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Once all photos are complete, proceed with <strong>Part 1 submission</strong>.</div></div>
+          </div>`
+        }
+      ],
+      note:"Project Scope Notes in CompanyCam must be set to 'Sunlight Project'. Step 3 (AHJ/Fire Setback review) is unique to Sunlight Loan — always send proposal to Design Team before proceeding."
+    },
+    {
+      sop_title:"Sunlight Loan — Part 1 & M1 Submission",
+      role:"Team Member",
+      tags:"sunlight,loan,regular,pm,part 1,m1,submission,financing,illinois abp,portal,planset,installation,equipment,disclosure",
+      summary:"Full M1 and Part 1 submission process for Sunlight Loan projects — from Sunlight Financial Portal M1 through Illinois ABP Part 1 application.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"M1 Submission — Login to Sunlight Financial Portal",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Portal Access</div>
+            <div style="font-size:12px"><a href="https://slfportal.com/orange/#/login" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open Sunlight Financial Portal</a></div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Access the link and <strong>log in</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>Ops Dashboard</strong>.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Search for the <strong>project name</strong> you would like to submit for M1.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Before submitting M1, make sure that the <strong>Credit, Loan, and NTP stage</strong> are all approved — they should be highlighted <strong style="color:#059669">green</strong>.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Once NTP is approved, click on the <strong>Installation stage</strong>.</div></div>
+          </div>`
+        },
+        {
+          title:"M1 Submission — Fill Out Installation Details",
+          detail:`<div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">1. Equipment Details</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:160px;font-weight:500;color:var(--muted)">Panels</span><span>—</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:160px;font-weight:500;color:var(--muted)">Qty of Panels</span><span>—</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:160px;font-weight:500;color:var(--muted)">Inverter</span><span>—</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:160px;font-weight:500;color:var(--muted)">Qty of Inverters</span><span>—</span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:160px;font-weight:500;color:var(--muted)">Annual Production (kWh)</span><span>—</span></div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">2. Final Design — Upload</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Final stamped planset and structural letter</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Approved permit</div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">3. Installation Photos — Upload</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📸 Photo(s) showing each full array on the roof and all installed panels</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📸 Photo(s) showing inverter(s) or envoy/combiner for microinverters</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📸 Photo(s) showing POI (Point of Interconnection) to the main service panel or utility meter</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📸 Photo(s) showing battery, critical load panel, and EV charger <span style="color:var(--muted);font-size:11px">(if applicable)</span></div>
+          </div>
+
+          <div class="steps">
+            <div class="step"><div class="stepn">✓</div><div class="stept">Once completed, click <strong>"Submit Installation."</strong><br><span style="color:var(--muted);font-size:11.5px">Approval may take up to <strong>2 business days</strong> once submitted.</span></div></div>
+          </div>`
+        },
+        {
+          title:"Part 1 — Access the Illinois ABP Portal",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Portal Access</div>
+            <div style="font-size:12px"><a href="https://portal.illinoisabp.com/" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; portal.illinoisabp.com</a> — log in using the <strong>Cash/Loan IPA credentials</strong></div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click on <strong>"Vendor Menu"</strong> then select <strong>"Project Application Menu."</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Choose <strong>"Create DG"</strong> to start a DG project application.</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">A list of completed Disclosure Forms will be shown. Select the desired form and proceed by choosing <strong>"Start Application."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Part 1 — Section I: Project Location",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">The option to modify the <strong>property owner&#39;s name</strong> is available if required.</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">If no alterations are necessary, select <strong>"Save and Continue."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Part 1 — Section II: Project Details",
+          detail:`<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Project Type</span><span>Non-Residential</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Financing Structure</span><span>Customer Owned</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Completed project on same parcel?</span><span>No</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Expansion of existing facility?</span><span>No</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Located on Public School land?</span><span>No</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Project Category</span><span>Select EEC</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">EEC Category</span><span>Refer to planset — Small DG (≤25 kW) or Large DG (&gt;25 kW)</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Request Advance of Capital?</span><span>Yes</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Use Advance of Capital for collateral?</span><span>No</span></div>
+          </div>
+          Click <strong>"Save and Continue."</strong>`
+        },
+        {
+          title:"Part 1 — Section III: Owner and Installer Information",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click <strong>"Use My Property Location Information"</strong> to populate details from the project application.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept"><strong>Is the system installer known at this time?</strong> → Yes</div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Click <strong>"Use My Vendor Information."</strong></div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept"><strong>Has this installer received DG Installer certification from the ICC?</strong> → Yes</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept"><strong>Number of Job Training Program Graduates intended to work on project:</strong> <code style="background:var(--bg);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:11px">2</code> (Shadi and Qais)</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Click <strong>"Save and Continue."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Part 1 — Section IV: System Details and Performance",
+          detail:`<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Total Inverter Size (kW AC)</span><span>Refer to planset for AC system size</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Inverter Efficiency (%)</span><span><strong>96</strong></span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Ground Cover Ratio</span><span><strong>0.40</strong></span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:220px;font-weight:500;color:var(--muted)">Meets Minimal Shading Criteria?</span><span>Yes</span></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Array Orientation (at least one required)</div>
+          <div class="steps" style="margin-bottom:10px">
+            <div class="step"><div class="stepn">1</div><div class="stept">Click the <strong>"Add"</strong> button.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Fill in the following fields from the planset:<br><br>
+              <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border);display:flex;gap:8px"><span style="min-width:180px;font-weight:500;color:var(--muted)">Module Power Rating</span><span>DC System Size</span></div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border);display:flex;gap:8px"><span style="min-width:180px;font-weight:500;color:var(--muted)">Number of Modules</span><span>Refer to planset</span></div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border);display:flex;gap:8px"><span style="min-width:180px;font-weight:500;color:var(--muted)">System Tilt</span><span>Refer to planset</span></div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border);display:flex;gap:8px"><span style="min-width:180px;font-weight:500;color:var(--muted)">System Azimuth</span><span>Refer to planset</span></div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border);display:flex;gap:8px"><span style="min-width:180px;font-weight:500;color:var(--muted)">Mounting Location</span><span>Ground</span></div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border);display:flex;gap:8px"><span style="min-width:180px;font-weight:500;color:var(--muted)">Tracking Type</span><span>Fixed Mount – Open Rack</span></div>
+                <div style="padding:5px 10px;background:var(--bg);border-radius:5px;font-size:12px;border:1px solid var(--border);display:flex;gap:8px"><span style="min-width:180px;font-weight:500;color:var(--muted)">Bifacial Panels?</span><span>No</span></div>
+              </div>
+            </div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Click <strong>"Save"</strong> then <strong>"Save and Continue."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Part 1 — Section V: REC Estimate",
+          detail:`<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">REC Estimate Methodology</span><span>Custom Capacity Factor</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Custom Capacity Factor (%)</span><span>Engineer Input</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Explanation of Custom Capacity Factor</span><span>Calculated by an engineer.</span></div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Select the <strong>"Calculate"</strong> button.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Click <strong>"OK."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select <strong>"Save and Continue."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Part 1 — Section VI: Interconnection Details",
+          detail:`<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px">
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Name of Utility</span><span>ComEd or Ameren</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Construction completed on/before Sep 15, 2021?</span><span>No</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Final Interconnection Approval Date</span><span>Insert actual or estimated date</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Explanation of Utility Account / Owner Relationship</span><span>Insert if applicable</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Inverter Details</span><span>Refer to planset</span></div>
+          </div>
+          Select <strong>"Save and Continue."</strong>`
+        },
+        {
+          title:"Part 1 — Upload Documents & Submit",
+          detail:`Upload the following required documents:<br><br>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Proof of Site Control (Contract or PPA)</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Plot Diagram or Site Map for all systems</div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">Upon uploading all documents, select <strong>"Go Back."</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Check the box for <strong>"Required Attestation."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select <strong>"Submit Project Application."</strong></div></div>
+          </div>
+          <div style="margin-top:12px;padding:10px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:13px;color:#14532D;text-align:center;font-weight:500">
+            🎉 Part 1 Submitted!
+          </div>`
+        }
+      ],
+      note:"M1 approval may take up to 2 business days. For Part 1, use the Cash/Loan IPA credentials to log in to the Illinois ABP portal. Job Training Program Graduates: 2 (Shadi and Qais)."
+    },
+    {
+      sop_title:"Sunlight Loan — Pre-Part 2 Workflow",
+      role:"Team Member",
+      tags:"sunlight,loan,regular,pm,pre-part 2,workflow,placard,inspection,pto",
+      summary:"Pre-Part 2 workflow for Sunlight Loan projects — from ordering the Placard through inspection confirmation and Part 2 / M2 submission.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"Step 1 — Order the Placard",
+          detail:`Once confirmed by the Design Team, send an email to order the Placard.<br><br>
+          <div style="padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">📧 Email Details</div>
+            <div style="display:flex;flex-direction:column;gap:5px;font-size:12px">
+              <div><span style="color:var(--muted);min-width:30px;display:inline-block">To:</span> <a href="mailto:Branden@fcdlabels.com" style="color:#2563EB">Branden@fcdlabels.com</a>, <a href="mailto:order@familycustomdesigns.com" style="color:#2563EB">order@familycustomdesigns.com</a></div>
+              <div><span style="color:var(--muted);min-width:30px;display:inline-block">CC:</span> Drew, Hester, SPM, Jhai</div>
+              <div><span style="color:var(--muted);min-width:30px;display:inline-block">Attach:</span> <strong>Stamped Planset</strong></div>
+            </div>
+          </div>
+          <div style="padding:12px 14px;background:var(--bg);border-radius:8px;border:1px solid var(--border);font-size:12px;line-height:1.9">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">✉️ Email Template</div>
+            Hi Team,<br><br>
+            Good day!<br><br>
+            I would like to request the ordering of a placard for the attached stamped plan set.<br><br>
+            If possible, could you please prioritize this project? The placard will be required for the upcoming inspection.<br><br>
+            <strong>Installer:</strong> Sunrise Solar<br>
+            <strong>Name:</strong> [Homeowner&#39;s Full Name]<br>
+            <strong>Shipping Address:</strong> 825 W 75th St, Unit E, Willowbrook, IL 60527<br><br>
+            [Add any additional notes if required by the AHJ or inspector]<br><br>
+            Please let us know if this is possible.<br><br>
+            Thank you!
+          </div>
+          <div style="margin-top:10px;padding:8px 12px;background:#FEF3C7;border-left:3px solid #D97706;border-radius:0 6px 6px 0;font-size:12px;color:#7A3A00">
+            ⚠️ The shipping address is <strong>always Sunrise Solar&#39;s office</strong> (825 W 75th St, Unit E, Willowbrook, IL 60527) — <strong>never</strong> the homeowner&#39;s address.
+          </div>`
+        },
+        {
+          title:"Step 2 — Confirm Inspection Date with Homeowner",
+          detail:`The <strong>Install Team</strong> will inform the PM of the proposed inspection date.<br><br>
+          Once received, the PM must confirm the inspection date directly with the <strong>Homeowner (HO)</strong> to make sure they are available for the visit.`
+        },
+        {
+          title:"Step 3 — Proceed to Part 2 & M2 Submission",
+          detail:`Once the inspection is passed and PTO is approved, proceed to the <strong>Sunlight Loan — Part 2 & M2 Submission</strong> SOP card.`
+        }
+      ],
+      note:"Placard shipping address is always Sunrise Solar's office — never the homeowner's address."
+    },
+    {
+      sop_title:"Sunlight Loan — Part 2 & M2 Submission",
+      role:"Team Member",
+      tags:"sunlight,loan,regular,pm,part 2,m2,submission,financing,illinois abp,portal,pjm,gats,demographic,interconnection,coc,pto",
+      summary:"Full Part 2 and M2 submission process for Sunlight Loan projects — from Sunlight Financial Portal M2 through Illinois ABP Part 2 application.",
+      department:"Regular Project Management",
+      status:"active",
+      steps:[
+        {
+          title:"M2 Submission — Sunlight Financial Portal",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">The PM will be informed once the <strong>inspection has passed</strong>. The assigned department will automatically submit for <strong>PTO</strong>.</div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Once confirmed, the PM will proceed with the <strong>M2 submission</strong>.</div></div>
+          </div><br>
+          <div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Portal Access</div>
+            <div style="font-size:12px"><a href="https://slfportal.com/orange/#/login" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; Open Sunlight Financial Portal</a></div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">3</div><div class="stept">Access the link and <strong>log in</strong> → click <strong>Ops Dashboard</strong>.</div></div>
+            <div class="step"><div class="stepn">4</div><div class="stept">Search for the <strong>project name</strong> you would like to submit for M2.</div></div>
+            <div class="step"><div class="stepn">5</div><div class="stept">Before submitting M2, confirm that <strong>Credit &amp; Loan, NTP, and Installation</strong> are all approved.</div></div>
+            <div class="step"><div class="stepn">6</div><div class="stept">Submit the necessary documents: <strong>PTO</strong> and <strong>COC Approval</strong> → then submit M2.</div></div>
+          </div>`
+        },
+        {
+          title:"Part 2 — Access Portal & Prerequisites",
+          detail:`<div style="margin-bottom:12px;padding:10px 14px;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Portal Access</div>
+            <div style="font-size:12px"><a href="https://portal.illinoisabp.com/" target="_blank" style="color:#2563EB;text-decoration:underline">&#8599; portal.illinoisabp.com</a> — log in using the <strong>Cash/Loan IPA credentials</strong></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Part 2 Prerequisites</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>The system must be <strong>interconnected</strong></span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span>The project must have achieved <strong>Part 1 verification</strong></span></div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px"><span style="color:#059669;font-weight:700;flex-shrink:0">✓</span><span><strong>ICC approval</strong> is required</span></div>
+          </div>
+          Click <strong>"View Project Applications"</strong> on the dashboard. Locate the project in the <strong>"Part 2 Status"</strong> column and select the <strong>"Edit"</strong> icon.`
+        },
+        {
+          title:"Part 2 — Section I: Project Details Review",
+          detail:`<div class="steps">
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept"><strong>Does this system still match Part I?</strong> → Select <strong>"No"</strong> if modifications are necessary.</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">Thoroughly review all aspects of the application.</div></div>
+            <div class="step"><div class="stepn">&#8250;</div><div class="stept">If no further changes are required, select <strong>"Save and Continue."</strong></div></div>
+          </div>`
+        },
+        {
+          title:"Part 2 — Section II: Interconnection Details",
+          detail:`<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:10px">
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Does system still match Part I?</span><span>"No" if modifications needed</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Interconnection Approval Date</span><span>Insert date</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Project Online Date</span><span>Insert date</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Date of Project COC or PTO</span><span>Insert date</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Date Construction Activities Completed</span><span>Insert date</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">REC Tracking System</span><span>GATS</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">PJM GATS or M-RETS Unit ID</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Name on REC Tracking System Account</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Possession of Net Metering Approval Letter?</span><span>Yes</span></div>
+          </div>
+          Select <strong>"Save and Continue."</strong>`
+        },
+        {
+          title:"Part 2 — Section III: Installer Information & Demographics",
+          detail:`<div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Installer Information</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Does system still match Part I?</span><span>"No" if modifications needed</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Name of Qualified Person</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">ICC Docket Number</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Is System Owner the Installer?</span><span>No</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Installation Contract Execution Date</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:260px;font-weight:500;color:var(--muted)">Subject to Prevailing Wage</span><span>Insert</span></div>
+          </div>
+
+          <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;font-family:'JetBrains Mono',monospace">Demographic Information</div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>Hours by Race:</strong>
+              <ul style="margin-top:6px;display:flex;flex-direction:column;gap:3px;font-size:11.5px;color:var(--muted)">
+                <li>White/Hawaiian — <strong style="color:var(--text)">16</strong></li>
+                <li>Black or African American</li>
+                <li>American Indian or Alaskan Native</li>
+                <li>Asian</li>
+              </ul>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>Hours by Ethnicity:</strong>
+              <ul style="margin-top:6px;display:flex;flex-direction:column;gap:3px;font-size:11.5px;color:var(--muted)">
+                <li>Hispanic or Latino — <strong style="color:var(--text)">16</strong></li>
+                <li>Non-Hispanic or Latino</li>
+              </ul>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>Zip Codes:</strong><br>
+              <span style="color:var(--muted);font-size:11.5px">Do you have employees who live in Illinois who worked on this project? → <strong style="color:var(--text)">Yes</strong></span><br>
+              <span style="color:var(--muted);font-size:11.5px">Click "Zip Code" and enter the corresponding Zip Code and Hours for each staff member.</span><br><br>
+              <div style="overflow-x:auto;margin-top:6px">
+                <table style="width:100%;border-collapse:collapse;font-size:11px">
+                  <thead><tr style="background:var(--navy)">
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:left">Name</th>
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:left">Zip Code</th>
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:left">Race</th>
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:left">Ethnicity</th>
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:center">Sys Des</th>
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:center">Install</th>
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:center">Sys Comm</th>
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:center">Ops &amp; Maint</th>
+                    <th style="padding:5px 8px;border:1px solid var(--border);color:#fff;text-align:center">Other</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr><td style="padding:5px 8px;border:1px solid var(--border)">Alex Ve</td><td style="padding:5px 8px;border:1px solid var(--border)">60442</td><td style="padding:5px 8px;border:1px solid var(--border)">White</td><td style="padding:5px 8px;border:1px solid var(--border)">Not H</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">8</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td></tr>
+                    <tr style="background:var(--bg)"><td style="padding:5px 8px;border:1px solid var(--border)">Aldo Sa</td><td style="padding:5px 8px;border:1px solid var(--border)">60171</td><td style="padding:5px 8px;border:1px solid var(--border)">Haw</td><td style="padding:5px 8px;border:1px solid var(--border)">Hisp</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">8</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td></tr>
+                    <tr><td style="padding:5px 8px;border:1px solid var(--border)">Pedro Lo</td><td style="padding:5px 8px;border:1px solid var(--border)">60431</td><td style="padding:5px 8px;border:1px solid var(--border)">Haw</td><td style="padding:5px 8px;border:1px solid var(--border)">Hisp</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">4</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">4</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td></tr>
+                    <tr style="background:var(--bg)"><td style="padding:5px 8px;border:1px solid var(--border)">Kerim O</td><td style="padding:5px 8px;border:1px solid var(--border)">60090</td><td style="padding:5px 8px;border:1px solid var(--border)">White</td><td style="padding:5px 8px;border:1px solid var(--border)">Not H</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">4</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">4</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td><td style="padding:5px 8px;border:1px solid var(--border);text-align:center">0</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div style="padding:9px 12px;background:var(--white);border:1px solid var(--border);border-radius:7px;font-size:12px">
+              <strong>Job Training Program Hours:</strong><br>
+              <span style="color:var(--muted);font-size:11.5px">Enter hours worked by employees participating in relevant programs, if applicable.</span>
+            </div>
+          </div>
+          Click <strong>"Save and Continue."</strong>`
+        },
+        {
+          title:"Part 2 — Section IV: Equipment Details",
+          detail:`<div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px">
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Does system still match Part I?</span><span>"No" if modifications needed</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Module Manufacturer/Maker</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Module Model</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Inverter Manufacturer/Maker</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Inverter Model</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Metering Standard</span><span>ANSI C.12</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Solar Production Meter Manufacturer</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Solar Production Meter Model</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Battery backup?</span><span>Insert</span></div>
+            <div style="padding:6px 10px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px;display:flex;gap:8px"><span style="min-width:240px;font-weight:500;color:var(--muted)">Total Project Cost</span><span>Insert</span></div>
+          </div>
+          Check the provided box. Select <strong>"Save and Continue."</strong><br><br>
+          Check all boxes for <strong>Application Attestations</strong>.`
+        },
+        {
+          title:"Part 2 — Upload Documents & Submit",
+          detail:`Upload the following required documents:<br><br>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Certificate of Completion of Interconnection</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📸 Photos of the Inverter</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Proof of Irrevocable Transfer</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📸 Photos of the Solar Production Meter</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Net Metering Application Approval Letter</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📸 Photos of Project</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📊 System Monitoring</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Shadi — Job Training Affidavit</div>
+            <div style="padding:7px 12px;background:var(--white);border:1px solid var(--border);border-radius:6px;font-size:12px">📄 Qais — Job Training Affidavit</div>
+          </div>
+          <div class="steps">
+            <div class="step"><div class="stepn">1</div><div class="stept">After uploading all documents, select <strong>"Go Back."</strong></div></div>
+            <div class="step"><div class="stepn">2</div><div class="stept">Check the box for <strong>"Required Attestation."</strong></div></div>
+            <div class="step"><div class="stepn">3</div><div class="stept">Select <strong>"Submit Part II Application."</strong></div></div>
+          </div>
+          <div style="margin-top:12px;padding:10px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:13px;color:#14532D;text-align:center;font-weight:500">
+            🎉 Part 2 Submitted!
+          </div>`
+        }
+      ],
+      note:"Part 2 prerequisites: system must be interconnected, Part 1 verified, and ICC approved. Use Cash/Loan IPA credentials to log in to the Illinois ABP portal."
+    },
     { sop_title:"Cash — Pre-Part 1 Workflow", role:"Team Member", tags:"cash,regular,pm,pre-part 1,workflow,payment", summary:"Pre-Part 1 workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
     { sop_title:"Cash — Part 1 Submission", role:"Team Member", tags:"cash,regular,pm,part 1,submission,payment", summary:"Part 1 submission for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
     { sop_title:"Cash — Pre-Part 2 Workflow", role:"Team Member", tags:"cash,regular,pm,pre-part 2,workflow,payment", summary:"Pre-Part 2 workflow for Cash projects.", department:"Regular Project Management", status:"active", steps:[{title:"Coming Soon",detail:"This SOP is being built. Contact Ara Pascual for guidance."}], note:"" },
